@@ -1,0 +1,11 @@
+scenario,order.Id,associatedDocument,subscriberId,status,type,code,message
+"Cancelamento de ordem de serviço","20230315000001","123456789","987654321","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000002","234567890","876543210","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000003","345678901","765432109","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000004","456789012","654321098","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000005","567890123","543210987","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000006","678901234","432109876","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000007","789012345","321098765","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000008","890123456","210987654","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000009","901234567","109876543","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
+"Cancelamento de ordem de serviço","20230315000010","012345678","098765432","cancelled","ServiceCancellation","200","Ordem de serviço cancelada com sucesso"
