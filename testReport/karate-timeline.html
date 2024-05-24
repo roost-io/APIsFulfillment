@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.1:87]","start":1716554290432,"end":1716554290499,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.1:87] 18:08:10.432-18:08:10.499 Product Order Information Required Event - Ordem de servico criada","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.2:87]","start":1716554290513,"end":1716554290515,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.2:87] 18:08:10.513-18:08:10.515 Product Order Information Required Event - Atualização de ordem","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.3:87]","start":1716554290524,"end":1716554290526,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.3:87] 18:08:10.524-18:08:10.526 Product Order Information Required Event - Ordem cancelada","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.4:87]","start":1716554290537,"end":1716554290539,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.4:87] 18:08:10.537-18:08:10.539 Product Order Information Required Event - Inicio do processo de obra","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.5:87]","start":1716554290547,"end":1716554290549,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.5:87] 18:08:10.547-18:08:10.549 Product Order Information Required Event - Término do processo de obra","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.6:87]","start":1716554290558,"end":1716554290559,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.6:87] 18:08:10.558-18:08:10.559 Product Order Information Required Event - Equipamento em uso","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.7:87]","start":1716554290568,"end":1716554290569,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.7:87] 18:08:10.568-18:08:10.569 Product Order Information Required Event - Ordem encerrada","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.8:87]","start":1716554290577,"end":1716554290579,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.8:87] 18:08:10.577-18:08:10.579 Product Order Information Required Event - Pendência técnica","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.9:87]","start":1716554290587,"end":1716554290588,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.9:87] 18:08:10.587-18:08:10.588 Product Order Information Required Event - Pendência do cliente","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.10:87]","start":1716554290596,"end":1716554290597,"title":"src\/test\/java\/org\/springframework\/api_tests\/listener_productOrderInformationRequiredEvent_post[1.10:87] 18:08:10.596-18:08:10.597 Product Order Information Required Event - Atualização de recurso","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
