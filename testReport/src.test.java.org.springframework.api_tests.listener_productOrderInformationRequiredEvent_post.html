@@ -1,0 +1,4037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"983997f4-f189-4115-bca2-fd9f386a1ddc",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.listener_productOrderInformationRequiredEvent_post</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">13</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2024-05-27 12:53:46 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1.1:30]"><span>[1.1:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.2:30]"><span>[1.2:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.3:30]"><span>[1.3:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.4:30]"><span>[1.4:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.5:30]"><span>[1.5:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.6:30]"><span>[1.6:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.7:30]"><span>[1.7:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.8:30]"><span>[1.8:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.9:30]"><span>[1.9:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[1.10:30]"><span>[1.10:30]</span> <span>Validate successful event notification</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2:32]"><span>[2:32]</span> <span>Invalid authorization header</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[3:42]"><span>[3:42]</span> <span>Server error simulation</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[4:51]"><span>[4:51]</span> <span>Handling request timeouts</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Product Order Information Required Event</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.1:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.1:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>129</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.1:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.1:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.1:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.21">{\notification\&quot;:{\date\&quot;:\2023-10-04T14:23:07Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1001\&quot;},\order\&quot;:{\id\&quot;:\ORD001\&quot;,\correlationOrder\&quot;:\CORR001\&quot;,\associatedDocument\&quot;:\DOC-001\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7001\&quot;},\description\&quot;:{\description\&quot;:\Pendência Cancelamento por Duplicidade\&quot;},\type\&quot;:\CLIENTE\&quot;,\observation\&quot;:\Observação detalhada aqui\&quot;,\updateDate\&quot;:\2023-10-04T14:23:07Z\&quot;,\action\&quot;:\abrir\&quot;,\task\&quot;:\Tarefa X\&quot;,\fieldActivity\&quot;:\True\&quot;,\reason\&quot;:\Cliente solicitou cancelamento\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">67</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.25">12:53:45.691 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 677
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-04T14:23:07Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1001\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD001\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR001\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-001\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7001\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Cancelamento por Duplicidade\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\CLIENTE\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Observação detalhada aqui\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-04T14:23:07Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\abrir\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa X\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\True\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Cliente solicitou cancelamento\\\&quot;&quot;}}}}
+
+12:53:45.755 response time in milliseconds: 63
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:45 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">46</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.27">12:53:45.803 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>39</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">7</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.2:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.21">{\notification\&quot;:{\date\&quot;:\2023-10-04T15:00:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1002\&quot;},\order\&quot;:{\id\&quot;:\ORD002\&quot;,\correlationOrder\&quot;:\CORR002\&quot;,\associatedDocument\&quot;:\DOC-002\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7002\&quot;},\description\&quot;:{\description\&quot;:\Pendência Agendamento Futuro Obra 7 dias\&quot;},\type\&quot;:\TECNICA\&quot;,\observation\&quot;:\Nenhuma observação\&quot;,\updateDate\&quot;:\2023-10-04T15:00:00Z\&quot;,\action\&quot;:\fechar\&quot;,\task\&quot;:\Tarefa Y\&quot;,\fieldActivity\&quot;:\False\&quot;,\reason\&quot;:\Agendamento não confirmado pelo cliente\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">25</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.25">12:53:45.834 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 684
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-04T15:00:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1002\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD002\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR002\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-002\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7002\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Agendamento Futuro Obra 7 dias\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\TECNICA\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Nenhuma observação\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-04T15:00:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\fechar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa Y\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\False\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Agendamento não confirmado pelo cliente\\\&quot;&quot;}}}}
+
+12:53:45.851 response time in milliseconds: 17
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:45 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.27">12:53:45.854 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>41</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.3:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.21">{\notification\&quot;:{\date\&quot;:\2023-10-05T09:45:30Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1003\&quot;},\order\&quot;:{\id\&quot;:\ORD003\&quot;,\correlationOrder\&quot;:\CORR003\&quot;,\associatedDocument\&quot;:\DOC-003\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7004\&quot;},\description\&quot;:{\description\&quot;:\Pendência Agendamento Futuro Obra 7 dias\&quot;},\type\&quot;:\CLIENTE\&quot;,\observation\&quot;:\Cliente não estava no local\&quot;,\updateDate\&quot;:\2023-10-05T09:45:30Z\&quot;,\action\&quot;:\redirecionar\&quot;,\task\&quot;:\Tarefa Z\&quot;,\fieldActivity\&quot;:\True\&quot;,\reason\&quot;:\Cliente ausente no momento da visita técnica\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">32</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.25">12:53:45.885 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 702
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-05T09:45:30Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1003\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD003\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR003\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-003\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7004\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Agendamento Futuro Obra 7 dias\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\CLIENTE\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Cliente não estava no local\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-05T09:45:30Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\redirecionar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa Z\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\True\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Cliente ausente no momento da visita técnica\\\&quot;&quot;}}}}
+
+12:53:45.901 response time in milliseconds: 15
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:45 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.27">12:53:45.903 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.4:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.4:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>23</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.4:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.4:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.4:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="4.21">{\notification\&quot;:{\date\&quot;:\2023-10-05T10:20:15Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1004\&quot;},\order\&quot;:{\id\&quot;:\ORD004\&quot;,\correlationOrder\&quot;:\CORR004\&quot;,\associatedDocument\&quot;:\DOC-004\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7006\&quot;},\description\&quot;:{\description\&quot;:\Pendência de Aprovisionamento 5 dias\&quot;},\type\&quot;:\TECNICA\&quot;,\observation\&quot;:\Atraso no aprovisionamento\&quot;,\updateDate\&quot;:\2023-10-05T10:20:15Z\&quot;,\action\&quot;:\abrir\&quot;,\task\&quot;:\Tarefa A1\&quot;,\fieldActivity\&quot;:\False\&quot;,\reason\&quot;:\Problemas técnicos na linha\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">18</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.25">12:53:45.922 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 674
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-05T10:20:15Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1004\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD004\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR004\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-004\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7006\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência de Aprovisionamento 5 dias\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\TECNICA\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Atraso no aprovisionamento\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-05T10:20:15Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\abrir\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa A1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\False\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Problemas técnicos na linha\\\&quot;&quot;}}}}
+
+12:53:45.935 response time in milliseconds: 13
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:45 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="4.27">12:53:45.940 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.5:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.5:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>29</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.5:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.5:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.5:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="5.21">{\notification\&quot;:{\date\&quot;:\2023-10-05T11:00:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1005\&quot;},\order\&quot;:{\id\&quot;:\ORD005\&quot;,\correlationOrder\&quot;:\CORR005\&quot;,\associatedDocument\&quot;:\DOC-005\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7007\&quot;},\description\&quot;:{\description\&quot;:\Pendência de Aprovisionamento 5 dias\&quot;},\type\&quot;:\CLIENTE\&quot;,\observation\&quot;:\Reagendamento necessário\&quot;,\updateDate\&quot;:\2023-10-05T11:00:00Z\&quot;,\action\&quot;:\fechar\&quot;,\task\&quot;:\Tarefa B1\&quot;,\fieldActivity\&quot;:\True\&quot;,\reason\&quot;:\Cliente solicitou reagendamento após atraso\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">24</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.25">12:53:45.960 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 689
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-05T11:00:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1005\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD005\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR005\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-005\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7007\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência de Aprovisionamento 5 dias\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\CLIENTE\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Reagendamento necessário\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-05T11:00:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\fechar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa B1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\True\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Cliente solicitou reagendamento após atraso\\\&quot;&quot;}}}}
+
+12:53:45.977 response time in milliseconds: 15
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:45 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="5.27">12:53:45.984 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.6:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.6:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>28</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.6:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.6:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.6:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="6.21">{\notification\&quot;:{\date\&quot;:\2023-10-06T12:00:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1006\&quot;},\order\&quot;:{\id\&quot;:\ORD006\&quot;,\correlationOrder\&quot;:\CORR006\&quot;,\associatedDocument\&quot;:\DOC-006\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7008\&quot;},\description\&quot;:{\description\&quot;:\Pendência Cancelamento por Inviabilidade Técnica\&quot;},\type\&quot;:\TECNICA\&quot;,\observation\&quot;:\Inviabilidade técnica confirmada\&quot;,\updateDate\&quot;:\2023-10-06T12:00:00Z\&quot;,\action\&quot;:\abrir\&quot;,\task\&quot;:\Tarefa C1\&quot;,\fieldActivity\&quot;:\False\&quot;,\reason\&quot;:\Inviabilidade técnica devido à infraestrutura\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.25">12:53:46.010 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 713
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-06T12:00:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1006\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD006\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR006\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-006\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7008\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Cancelamento por Inviabilidade Técnica\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\TECNICA\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Inviabilidade técnica confirmada\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-06T12:00:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\abrir\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa C1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\False\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Inviabilidade técnica devido à infraestrutura\\\&quot;&quot;}}}}
+
+12:53:46.023 response time in milliseconds: 12
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="6.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="6.27">12:53:46.025 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.7:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.7:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>23</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.7:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.7:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.7:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="7.21">{\notification\&quot;:{\date\&quot;:\2023-10-06T13:30:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1007\&quot;},\order\&quot;:{\id\&quot;:\ORD007\&quot;,\correlationOrder\&quot;:\CORR007\&quot;,\associatedDocument\&quot;:\DOC-007\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7009\&quot;},\description\&quot;:{\description\&quot;:\Pendência Cancelamento e Reemissão\&quot;},\type\&quot;:\CLIENTE\&quot;,\observation\&quot;:\Erro no processamento do pedido\&quot;,\updateDate\&quot;:\2023-10-06T13:30:00Z\&quot;,\action\&quot;:\fechar\&quot;,\task\&quot;:\Tarefa D1\&quot;,\fieldActivity\&quot;:\True\&quot;,\reason\&quot;:\Erro de sistema requer cancelamento e reemissão\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">14</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.25">12:53:46.043 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 698
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-06T13:30:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1007\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD007\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR007\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-007\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7009\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Cancelamento e Reemissão\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\CLIENTE\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Erro no processamento do pedido\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-06T13:30:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\fechar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa D1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\True\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Erro de sistema requer cancelamento e reemissão\\\&quot;&quot;}}}}
+
+12:53:46.055 response time in milliseconds: 11
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="7.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="7.27">12:53:46.060 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.8:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.8:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>23</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.8:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.8:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.8:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="8.21">{\notification\&quot;:{\date\&quot;:\2023-10-07T14:00:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1008\&quot;},\order\&quot;:{\id\&quot;:\ORD008\&quot;,\correlationOrder\&quot;:\CORR008\&quot;,\associatedDocument\&quot;:\DOC-008\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7010\&quot;},\description\&quot;:{\description\&quot;:\Pendência Equipamento Cliente\&quot;},\type\&quot;:\TECNICA\&quot;,\observation\&quot;:\Equipamento não entregue\&quot;,\updateDate\&quot;:\2023-10-07T14:00:00Z\&quot;,\action\&quot;:\redirecionar\&quot;,\task\&quot;:\Tarefa E1\&quot;,\fieldActivity\&quot;:\False\&quot;,\reason\&quot;:\Atraso na entrega de equipamento pelo fornecedor\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">20</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.25">12:53:46.070 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 693
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-07T14:00:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1008\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD008\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR008\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-008\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7010\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Equipamento Cliente\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\TECNICA\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Equipamento não entregue\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-07T14:00:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\redirecionar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa E1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\False\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Atraso na entrega de equipamento pelo fornecedor\\\&quot;&quot;}}}}
+
+12:53:46.087 response time in milliseconds: 16
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="8.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="8.27">12:53:46.089 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.9:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.9:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>29</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.9:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.9:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.9:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="9.21">{\notification\&quot;:{\date\&quot;:\2023-10-07T15:45:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1009\&quot;},\order\&quot;:{\id\&quot;:\ORD009\&quot;,\correlationOrder\&quot;:\CORR009\&quot;,\associatedDocument\&quot;:\DOC-009\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7013\&quot;},\description\&quot;:{\description\&quot;:\Pendência Cancelamento por Inviabilidade Técnica\&quot;},\type\&quot;:\CLIENTE\&quot;,\observation\&quot;:\Cliente solicita cancelamento por inviabilidade técnica\&quot;,\updateDate\&quot;:\2023-10-07T15:45:00Z\&quot;,\action\&quot;:\abrir\&quot;,\task\&quot;:\Tarefa F1\&quot;,\fieldActivity\&quot;:\True\&quot;,\reason\&quot;:\Cliente reporta inviabilidade técnica após avaliação\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">26</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="9.25">12:53:46.102 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 744
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-07T15:45:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1009\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD009\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR009\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-009\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7013\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Cancelamento por Inviabilidade Técnica\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\CLIENTE\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Cliente solicita cancelamento por inviabilidade técnica\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-07T15:45:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\abrir\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa F1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\True\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Cliente reporta inviabilidade técnica após avaliação\\\&quot;&quot;}}}}
+
+12:53:46.122 response time in milliseconds: 11
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="9.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="9.27">12:53:46.125 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.10:30]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.10:30]</span>
+                <span class="scenario-name">Validate successful event notification</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>24</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.10:30]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.10:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1.10:30]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="10.21">{\notification\&quot;:{\date\&quot;:\2023-10-08T16:30:00Z\&quot;,\customer\&quot;:{\subscriberId\&quot;:\Cust1010\&quot;},\order\&quot;:{\id\&quot;:\ORD010\&quot;,\correlationOrder\&quot;:\CORR010\&quot;,\associatedDocument\&quot;:\DOC-010\&quot;,\issue\&quot;:{\code\&quot;:{\code\&quot;:\7014\&quot;},\description\&quot;:{\description\&quot;:\Pendência Rede Interna Cliente\&quot;},\type\&quot;:\TECNICA\&quot;,\observation\&quot;:\Problemas na rede interna do cliente\&quot;,\updateDate\&quot;:\2023-10-08T16:30:00Z\&quot;,\action\&quot;:\fechar\&quot;,\task\&quot;:\Tarefa G1\&quot;,\fieldActivity\&quot;:\False\&quot;,\reason\&quot;:\Rede interna do cliente não suporta instalação\&quot;}}}}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="10.25">12:53:46.139 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 700
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;\\notification\\\&quot;&quot;:{&quot;\\date\\\&quot;&quot;:&quot;\\2023-10-08T16:30:00Z\\\&quot;&quot;,&quot;\\customer\\\&quot;&quot;:{&quot;\\subscriberId\\\&quot;&quot;:&quot;\\Cust1010\\\&quot;&quot;},&quot;\\order\\\&quot;&quot;:{&quot;\\id\\\&quot;&quot;:&quot;\\ORD010\\\&quot;&quot;,&quot;\\correlationOrder\\\&quot;&quot;:&quot;\\CORR010\\\&quot;&quot;,&quot;\\associatedDocument\\\&quot;&quot;:&quot;\\DOC-010\\\&quot;&quot;,&quot;\\issue\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:{&quot;\\code\\\&quot;&quot;:&quot;\\7014\\\&quot;&quot;},&quot;\\description\\\&quot;&quot;:{&quot;\\description\\\&quot;&quot;:&quot;\\Pendência Rede Interna Cliente\\\&quot;&quot;},&quot;\\type\\\&quot;&quot;:&quot;\\TECNICA\\\&quot;&quot;,&quot;\\observation\\\&quot;&quot;:&quot;\\Problemas na rede interna do cliente\\\&quot;&quot;,&quot;\\updateDate\\\&quot;&quot;:&quot;\\2023-10-08T16:30:00Z\\\&quot;&quot;,&quot;\\action\\\&quot;&quot;:&quot;\\fechar\\\&quot;&quot;,&quot;\\task\\\&quot;&quot;:&quot;\\Tarefa G1\\\&quot;&quot;,&quot;\\fieldActivity\\\&quot;&quot;:&quot;\\False\\\&quot;&quot;,&quot;\\reason\\\&quot;&quot;:&quot;\\Rede interna do cliente não suporta instalação\\\&quot;&quot;}}}}
+
+12:53:46.154 response time in milliseconds: 13
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.26">
+      <div class="step-ref passed">26</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="10.27">
+      <div class="step-ref failed">27</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response == &#39;#null&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="10.27">12:53:46.156 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+And match response == &#39;#null&#39;
+match failed: EQUALS
+  $ | not null (STRING:STRING)
+  &#39;&#39;
+  &#39;#null&#39;
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:27
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:32]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:32]</span>
+                <span class="scenario-name">Invalid authorization header</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>24</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:32]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:32]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref passed">33</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>header Authorization = &#39;Bearer invalid_token&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.35">{ &quot;notification&quot;: { &quot;order&quot;: { &quot;id&quot;: &quot;20230315000002&quot;, &quot;correlationOrder&quot;: &quot;11&quot;, &quot;associatedDocument&quot;: &quot;VTT002&quot;, &quot;issue&quot;: { &quot;code&quot;: &quot;7021&quot;, &quot;description&quot;: &quot;Pendencia de agendamento&quot;, &quot;type&quot;: &quot;CLIENTE&quot;, &quot;observation&quot;: &quot;&quot;, &quot;updateDate&quot;: &quot;2021-03-17T12:00:00-03:00&quot;, &quot;action&quot;: &quot;abrir&quot;, &quot;task&quot;: &quot;&quot;, &quot;fieldActivity&quot;: &quot;true&quot;, &quot;reason&quot;: &quot;PROJETO&quot; } } } }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref passed">39</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">16</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.39">12:53:46.177 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer invalid_token
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 313
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;order&quot;:{&quot;id&quot;:&quot;20230315000002&quot;,&quot;correlationOrder&quot;:&quot;11&quot;,&quot;associatedDocument&quot;:&quot;VTT002&quot;,&quot;issue&quot;:{&quot;code&quot;:&quot;7021&quot;,&quot;description&quot;:&quot;Pendencia de agendamento&quot;,&quot;type&quot;:&quot;CLIENTE&quot;,&quot;observation&quot;:&quot;&quot;,&quot;updateDate&quot;:&quot;2021-03-17T12:00:00-03:00&quot;,&quot;action&quot;:&quot;abrir&quot;,&quot;task&quot;:&quot;&quot;,&quot;fieldActivity&quot;:&quot;true&quot;,&quot;reason&quot;:&quot;PROJETO&quot;}}}}
+
+12:53:46.188 response time in milliseconds: 9
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref failed">40</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.40">12:53:46.190 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:40
+Then status 401
+status code was: 204, expected: 401, response time in milliseconds: 9, url: http://localhost:4010/listener/productOrderInformationRequiredEvent, response: 
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:40
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:42]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:42]</span>
+                <span class="scenario-name">Server error simulation</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>13</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:42]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:42]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.43">
+      <div class="step-ref passed">43</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.44">
+      <div class="step-ref passed">44</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.44">{ &quot;notification&quot;: { &quot;order&quot;: { &quot;id&quot;: &quot;20230315000003&quot;, &quot;correlationOrder&quot;: &quot;12&quot;, &quot;associatedDocument&quot;: &quot;VTT003&quot;, &quot;issue&quot;: { &quot;code&quot;: &quot;7031&quot;, &quot;description&quot;: &quot;Pendencia de agendamento&quot;, &quot;type&quot;: &quot;TECNICA&quot;, &quot;observation&quot;: &quot;&quot;, &quot;updateDate&quot;: &quot;2021-04-18T14:30:00-03:00&quot;, &quot;action&quot;: &quot;abrir&quot;, &quot;task&quot;: &quot;&quot;, &quot;fieldActivity&quot;: &quot;false&quot;, &quot;reason&quot;: &quot;MANUNTENÇÃO&quot; } } } }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">10</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.48">12:53:46.199 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 320
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;order&quot;:{&quot;id&quot;:&quot;20230315000003&quot;,&quot;correlationOrder&quot;:&quot;12&quot;,&quot;associatedDocument&quot;:&quot;VTT003&quot;,&quot;issue&quot;:{&quot;code&quot;:&quot;7031&quot;,&quot;description&quot;:&quot;Pendencia de agendamento&quot;,&quot;type&quot;:&quot;TECNICA&quot;,&quot;observation&quot;:&quot;&quot;,&quot;updateDate&quot;:&quot;2021-04-18T14:30:00-03:00&quot;,&quot;action&quot;:&quot;abrir&quot;,&quot;task&quot;:&quot;&quot;,&quot;fieldActivity&quot;:&quot;false&quot;,&quot;reason&quot;:&quot;MANUNTENÇÃO&quot;}}}}
+
+12:53:46.207 response time in milliseconds: 7
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.49">
+      <div class="step-ref failed">49</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 500</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.49">12:53:46.208 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:49
+Then status 500
+status code was: 204, expected: 500, response time in milliseconds: 7, url: http://localhost:4010/listener/productOrderInformationRequiredEvent, response: 
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:49
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[4:51]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[4:51]</span>
+                <span class="scenario-name">Handling request timeouts</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[4:51]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[4:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[4:51]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/productOrderInformationRequiredEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.53">
+      <div class="step-ref passed">53</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.53">{ &quot;notification&quot;: { &quot;order&quot;: { &quot;id&quot;: &quot;20230315000004&quot;, &quot;correlationOrder&quot;: &quot;13&quot;, &quot;associatedDocument&quot;: &quot;VTT004&quot;, &quot;issue&quot;: { &quot;code&quot;: &quot;7035&quot;, &quot;description&quot;: &quot;Pendencia de agendamento&quot;, &quot;type&quot;: &quot;CLIENTE&quot;, &quot;observation&quot;: &quot;&quot;, &quot;updateDate&quot;: &quot;2021-05-19T16:40:00-03:00&quot;, &quot;action&quot;: &quot;abrir&quot;, &quot;task&quot;: &quot;&quot;, &quot;fieldActivity&quot;: &quot;true&quot;, &quot;reason&quot;: &quot;PROJETO&quot; } } } }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.57">
+      <div class="step-ref passed">57</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.57">12:53:46.216 request:
+1 &gt; POST http://localhost:4010/listener/productOrderInformationRequiredEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 313
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;order&quot;:{&quot;id&quot;:&quot;20230315000004&quot;,&quot;correlationOrder&quot;:&quot;13&quot;,&quot;associatedDocument&quot;:&quot;VTT004&quot;,&quot;issue&quot;:{&quot;code&quot;:&quot;7035&quot;,&quot;description&quot;:&quot;Pendencia de agendamento&quot;,&quot;type&quot;:&quot;CLIENTE&quot;,&quot;observation&quot;:&quot;&quot;,&quot;updateDate&quot;:&quot;2021-05-19T16:40:00-03:00&quot;,&quot;action&quot;:&quot;abrir&quot;,&quot;task&quot;:&quot;&quot;,&quot;fieldActivity&quot;:&quot;true&quot;,&quot;reason&quot;:&quot;PROJETO&quot;}}}}
+
+12:53:46.226 response time in milliseconds: 8
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:46 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.58">
+      <div class="step-ref failed">58</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>status 504</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.58">12:53:46.227 src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:58
+Then status 504
+status code was: 204, expected: 504, response time in milliseconds: 8, url: http://localhost:4010/listener/productOrderInformationRequiredEvent, response: 
+
+src/test/java/org/springframework/api_tests/listener_productOrderInformationRequiredEvent_post.feature:58
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

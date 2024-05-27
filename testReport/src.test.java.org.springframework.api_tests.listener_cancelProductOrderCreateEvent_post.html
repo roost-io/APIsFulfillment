@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script type="text/javascript" src="res/Resemble.js"></script>
+    <script>
+!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
+  api_host:'https://app.posthog.com',
+  persistence:'localStorage',
+  autocapture:false,
+  capture_pageview:false,
+  api_transport:'sendBeacon',
+  loaded: function(posthog) { 
+    posthog.capture("report_feature",{distinct_id:"983997f4-f189-4115-bca2-fd9f386a1ddc",karate_version:"1.4.1",karate_meta:null});
+  }
+});
+</script>
+
+    <title>src.test.java.org.springframework.api_tests.listener_cancelProductOrderCreateEvent_post</title>
+  </head>
+  <body>
+    <div id="root-container">
+      <div id="leftnav">
+        
+        <div>
+  <div class="nav-logo">
+    <a href="https://karatelabs.io">
+      <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">5</div>
+    </div>
+  </div>
+  <div id="nav-env">
+    <div></div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>
+  <div id="nav-date">
+    <div>2024-05-27 12:53:43 PM</div>
+  </div>
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:19]"><span>[1:19]</span> <span>Valid request to cancel product order create event</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.1:96]"><span>[2.1:96]</span> <span>Invalid request to cancel product order with missing fields</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.2:96]"><span>[2.2:96]</span> <span>Invalid request to cancel product order with missing fields</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.3:96]"><span>[2.3:96]</span> <span>Invalid request to cancel product order with missing fields</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.4:96]"><span>[2.4:96]</span> <span>Invalid request to cancel product order with missing fields</span></a>
+          </div>
+          <div class="nav-item failed">
+            <a href="#[2.5:96]"><span>[2.5:96]</span> <span>Invalid request to cancel product order with missing fields</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Cancel Product Order Create Event By Client</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:19]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:19]</span>
+                <span class="scenario-name">Valid request to cancel product order create event</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>938</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:19]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:19]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">211</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:19]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">9</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:19]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:19]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">11</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.20">
+      <div class="step-ref passed">20</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.21">
+      <div class="step-ref passed">21</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">50</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.21">{
+  notification: {
+    date: &#39;2023-09-12T08:00:00Z&#39;,
+    customer: { subscriberId: &#39;1234567890&#39; },
+    order: {
+      id: &#39;20230315000001&#39;,
+      correlationOrder: &#39;CORR001&#39;,
+      associatedDocument: &#39;VTT001&#39;,
+      issue: {
+        code: { code: 7001 },
+        description: { description: &#39;Pendência Cancelamento por Duplicidade&#39; },
+        type: &#39;CLIENTE&#39;,
+        observation: &#39;Observação detalhada&#39;,
+        updateDate: &#39;2023-09-12T09:00:00Z&#39;,
+        action: &#39;abrir&#39;,
+        task: &#39;Task001&#39;,
+        fieldActivity: &#39;True&#39;,
+        reason: &#39;Teste de cancelamento&#39;
+      },
+      type: &#39;Tipo1&#39;,
+      code: &#39;0&#39;,
+      description: &#39;Ordem encerrada com sucesso&#39;,
+      lostEquipment: &#39;False&#39;,
+      resource: {
+        resource: {
+          gponAccess: &#39;GPON123&#39;,
+          devices: {
+            device: [
+              {
+                category: &#39;CAT1&#39;,
+                type: &#39;Tipo1&#39;,
+                description: &#39;Descrição do dispositivo&#39;,
+                state: &#39;ativo&#39;,
+                usageState: &#39;em uso&#39;,
+                startOperatingDate: &#39;2023-09-10T08:00:00Z&#39;,
+                resourceCharacteristic: [
+                  {
+                    name: &#39;Caracteristica1&#39;,
+                    value: &#39;Valor1&#39;
+                  }
+                ]
+              }
+            ]
+          },
+          fiberPath: {
+            items: {
+              item: [
+                {
+                  name: &#39;Caminho1&#39;,
+                  value: &#39;ValorCaminho1&#39;
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.83">
+      <div class="step-ref passed">83</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell passed">653</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.83">12:53:42.953 request:
+1 &gt; POST http://localhost:4010/listener/cancelProductOrderCreateEvent
+1 &gt; Authorization: Bearer dummy AUTH_TOKEN
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 939
+1 &gt; Host: localhost:4010
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.11)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;notification&quot;:{&quot;date&quot;:&quot;2023-09-12T08:00:00Z&quot;,&quot;customer&quot;:{&quot;subscriberId&quot;:&quot;1234567890&quot;},&quot;order&quot;:{&quot;id&quot;:&quot;20230315000001&quot;,&quot;correlationOrder&quot;:&quot;CORR001&quot;,&quot;associatedDocument&quot;:&quot;VTT001&quot;,&quot;issue&quot;:{&quot;code&quot;:{&quot;code&quot;:7001},&quot;description&quot;:{&quot;description&quot;:&quot;Pendência Cancelamento por Duplicidade&quot;},&quot;type&quot;:&quot;CLIENTE&quot;,&quot;observation&quot;:&quot;Observação detalhada&quot;,&quot;updateDate&quot;:&quot;2023-09-12T09:00:00Z&quot;,&quot;action&quot;:&quot;abrir&quot;,&quot;task&quot;:&quot;Task001&quot;,&quot;fieldActivity&quot;:&quot;True&quot;,&quot;reason&quot;:&quot;Teste de cancelamento&quot;},&quot;type&quot;:&quot;Tipo1&quot;,&quot;code&quot;:&quot;0&quot;,&quot;description&quot;:&quot;Ordem encerrada com sucesso&quot;,&quot;lostEquipment&quot;:&quot;False&quot;,&quot;resource&quot;:{&quot;resource&quot;:{&quot;gponAccess&quot;:&quot;GPON123&quot;,&quot;devices&quot;:{&quot;device&quot;:[{&quot;category&quot;:&quot;CAT1&quot;,&quot;type&quot;:&quot;Tipo1&quot;,&quot;description&quot;:&quot;Descrição do dispositivo&quot;,&quot;state&quot;:&quot;ativo&quot;,&quot;usageState&quot;:&quot;em uso&quot;,&quot;startOperatingDate&quot;:&quot;2023-09-10T08:00:00Z&quot;,&quot;resourceCharacteristic&quot;:[{&quot;name&quot;:&quot;Caracteristica1&quot;,&quot;value&quot;:&quot;Valor1&quot;}]}]},&quot;fiberPath&quot;:{&quot;items&quot;:{&quot;item&quot;:[{&quot;name&quot;:&quot;Caminho1&quot;,&quot;value&quot;:&quot;ValorCaminho1&quot;}]}}}}}}}
+
+12:53:43.166 response time in milliseconds: 208
+1 &lt; 204
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Headers: *
+1 &lt; Access-Control-Allow-Credentials: true
+1 &lt; Access-Control-Expose-Headers: *
+1 &lt; Content-type: text/plain
+1 &lt; Date: Mon, 27 May 2024 12:53:43 GMT
+1 &lt; Connection: keep-alive
+1 &lt; Keep-Alive: timeout=5
+
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.84">
+      <div class="step-ref passed">84</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 204</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.1:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.1:96]</span>
+                <span class="scenario-name">Invalid request to cancel product order with missing fields</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>11</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.1:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.1:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="1.88">{notification&quot;:{date&quot;:2023-03-16T13:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12346&quot;},order&quot;:{id&quot;:ORD002&quot;,correlationOrder&quot;:CORR002&quot;,associatedDocument&quot;:DOC002&quot;,issue&quot;:{code&quot;:{code&quot;:7008},description&quot;:{description&quot;:Pendência Cancelamento por Inviabilidade Técnica&quot;},type&quot;:TECNICA&quot;,observation&quot;:Second notification&quot;,updateDate&quot;:2023-03-16T13:00:00Z&quot;,action&quot;:fechar&quot;,task&quot;:Task2&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Technical issue&quot;}}}</div>
+
+  
+
+  <div class="preformatted" data-parent="1.88">12:53:43.235 src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+And request
+&quot;&quot;&quot;
+{notification&quot;:{date&quot;:2023-03-16T13:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12346&quot;},order&quot;:{id&quot;:ORD002&quot;,correlationOrder&quot;:CORR002&quot;,associatedDocument&quot;:DOC002&quot;,issue&quot;:{code&quot;:{code&quot;:7008},description&quot;:{description&quot;:Pendência Cancelamento por Inviabilidade Técnica&quot;},type&quot;:TECNICA&quot;,observation&quot;:Second notification&quot;,updateDate&quot;:2023-03-16T13:00:00Z&quot;,action&quot;:fechar&quot;,task&quot;:Task2&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Technical issue&quot;}}}
+&quot;&quot;&quot;
+net.minidev.json.parser.ParseException: Unexpected End Of File position 421: null
+src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.92">
+      <div class="step-ref skipped">92</div>
+      
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.93">
+      <div class="step-ref skipped">93</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status closed</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.2:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.2:96]</span>
+                <span class="scenario-name">Invalid request to cancel product order with missing fields</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>5</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.2:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.2:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.2:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="2.88">{notification&quot;:{date&quot;:2023-03-18T15:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12348&quot;},order&quot;:{id&quot;:ORD004&quot;,correlationOrder&quot;:CORR004&quot;,associatedDocument&quot;:DOC004&quot;,issue&quot;:{code&quot;:{code&quot;:7015},description&quot;:{description&quot;:Pendência Cancelamento por Desistência do Serviço&quot;},type&quot;:TECNICA&quot;,observation&quot;:Fourth notification&quot;,updateDate&quot;:2023-03-18T15:00:00Z&quot;,action&quot;:abrir&quot;,task&quot;:Task4&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Service cancellation by client&quot;}}}</div>
+
+  
+
+  <div class="preformatted" data-parent="2.88">12:53:43.259 src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+And request
+&quot;&quot;&quot;
+{notification&quot;:{date&quot;:2023-03-18T15:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12348&quot;},order&quot;:{id&quot;:ORD004&quot;,correlationOrder&quot;:CORR004&quot;,associatedDocument&quot;:DOC004&quot;,issue&quot;:{code&quot;:{code&quot;:7015},description&quot;:{description&quot;:Pendência Cancelamento por Desistência do Serviço&quot;},type&quot;:TECNICA&quot;,observation&quot;:Fourth notification&quot;,updateDate&quot;:2023-03-18T15:00:00Z&quot;,action&quot;:abrir&quot;,task&quot;:Task4&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Service cancellation by client&quot;}}}
+&quot;&quot;&quot;
+net.minidev.json.parser.ParseException: Unexpected End Of File position 436: null
+src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.92">
+      <div class="step-ref skipped">92</div>
+      
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.93">
+      <div class="step-ref skipped">93</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status open</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.3:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.3:96]</span>
+                <span class="scenario-name">Invalid request to cancel product order with missing fields</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>4</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.3:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.3:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.3:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="3.88">{notification&quot;:{date&quot;:2023-03-20T17:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12350&quot;},order&quot;:{id&quot;:ORD006&quot;,correlationOrder&quot;:CORR006&quot;,associatedDocument&quot;:DOC006&quot;,issue&quot;:{code&quot;:{code&quot;:7029},description&quot;:{description&quot;:Pendência Agendamento&quot;},type&quot;:TECNICA&quot;,observation&quot;:Sixth notification&quot;,updateDate&quot;:2023-03-20T17:00:00Z&quot;,action&quot;:redirecionar&quot;,task&quot;:Task6&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Scheduling issue&quot;}}}</div>
+
+  
+
+  <div class="preformatted" data-parent="3.88">12:53:43.275 src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+And request
+&quot;&quot;&quot;
+{notification&quot;:{date&quot;:2023-03-20T17:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12350&quot;},order&quot;:{id&quot;:ORD006&quot;,correlationOrder&quot;:CORR006&quot;,associatedDocument&quot;:DOC006&quot;,issue&quot;:{code&quot;:{code&quot;:7029},description&quot;:{description&quot;:Pendência Agendamento&quot;},type&quot;:TECNICA&quot;,observation&quot;:Sixth notification&quot;,updateDate&quot;:2023-03-20T17:00:00Z&quot;,action&quot;:redirecionar&quot;,task&quot;:Task6&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Scheduling issue&quot;}}}
+&quot;&quot;&quot;
+net.minidev.json.parser.ParseException: Unexpected End Of File position 400: null
+src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.92">
+      <div class="step-ref skipped">92</div>
+      
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.93">
+      <div class="step-ref skipped">93</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status redirect</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.4:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.4:96]</span>
+                <span class="scenario-name">Invalid request to cancel product order with missing fields</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>4</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.4:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.4:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.4:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">1</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="4.88">{notification&quot;:{date&quot;:2023-03-22T19:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12352&quot;},order&quot;:{id&quot;:ORD008&quot;,correlationOrder&quot;:CORR008&quot;,associatedDocument&quot;:DOC008&quot;,issue&quot;:{code&quot;:{code&quot;:7035},description&quot;:{description&quot;:Pendência área de Risco Momentânea&quot;},type&quot;:TECNICA&quot;,observation&quot;:Eighth notification&quot;,updateDate&quot;:2023-03-22T19:00:00Z&quot;,action&quot;:fechar&quot;,task&quot;:Task8&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Temporary risk area&quot;}}}</div>
+
+  
+
+  <div class="preformatted" data-parent="4.88">12:53:43.288 src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+And request
+&quot;&quot;&quot;
+{notification&quot;:{date&quot;:2023-03-22T19:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12352&quot;},order&quot;:{id&quot;:ORD008&quot;,correlationOrder&quot;:CORR008&quot;,associatedDocument&quot;:DOC008&quot;,issue&quot;:{code&quot;:{code&quot;:7035},description&quot;:{description&quot;:Pendência área de Risco Momentânea&quot;},type&quot;:TECNICA&quot;,observation&quot;:Eighth notification&quot;,updateDate&quot;:2023-03-22T19:00:00Z&quot;,action&quot;:fechar&quot;,task&quot;:Task8&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Temporary risk area&quot;}}}
+&quot;&quot;&quot;
+net.minidev.json.parser.ParseException: Unexpected End Of File position 411: null
+src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.92">
+      <div class="step-ref skipped">92</div>
+      
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="4.93">
+      <div class="step-ref skipped">93</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status closed</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2.5:96]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2.5:96]</span>
+                <span class="scenario-name">Invalid request to cancel product order with missing fields</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>5</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2.5:96]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2.5:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.14">
+      <div class="step-ref bg-step">14</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def urlBase = karate.properties[&#39;url.base&#39;] || karate.get(&#39;urlBase&#39;, &#39;http://localhost:4010&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.15">
+      <div class="step-ref bg-step">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url urlBase</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.16">
+      <div class="step-ref bg-step">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def authToken = karate.properties[&#39;AUTH_TOKEN&#39;]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[2.5:96]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.17">
+      <div class="step-ref bg-step">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>header Authorization = &#39;Bearer &#39; + authToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;/listener/cancelProductOrderCreateEvent&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.88">
+      <div class="step-ref failed">88</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="5.88">{notification&quot;:{date&quot;:2023-03-24T21:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12354&quot;},order&quot;:{id&quot;:ORD010&quot;,correlationOrder&quot;:CORR010&quot;,associatedDocument&quot;:DOC010&quot;,issue&quot;:{code&quot;:{code&quot;:7042},description&quot;:{description&quot;:Pendência Local Fechado&quot;},type&quot;:TECNICA&quot;,observation&quot;:Tenth notification&quot;,updateDate&quot;:2023-03-24T21:00:00Z&quot;,action&quot;:abrir&quot;,task&quot;:Task10&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Closed location&quot;}}}</div>
+
+  
+
+  <div class="preformatted" data-parent="5.88">12:53:43.305 src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+And request
+&quot;&quot;&quot;
+{notification&quot;:{date&quot;:2023-03-24T21:00:00Z&quot;,customer&quot;:{subscriberId&quot;:CUST12354&quot;},order&quot;:{id&quot;:ORD010&quot;,correlationOrder&quot;:CORR010&quot;,associatedDocument&quot;:DOC010&quot;,issue&quot;:{code&quot;:{code&quot;:7042},description&quot;:{description&quot;:Pendência Local Fechado&quot;},type&quot;:TECNICA&quot;,observation&quot;:Tenth notification&quot;,updateDate&quot;:2023-03-24T21:00:00Z&quot;,action&quot;:abrir&quot;,task&quot;:Task10&quot;,fieldActivity&quot;:False&quot;,reason&quot;:Closed location&quot;}}}
+&quot;&quot;&quot;
+net.minidev.json.parser.ParseException: Unexpected End Of File position 395: null
+src/test/java/org/springframework/api_tests/listener_cancelProductOrderCreateEvent_post.feature:88
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.92">
+      <div class="step-ref skipped">92</div>
+      
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method POST</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="5.93">
+      <div class="step-ref skipped">93</div>
+      
+      <div class="step-cell skipped">
+        <span>Then</span>&nbsp;<span>status open</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
