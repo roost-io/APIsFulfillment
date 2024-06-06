@@ -1,0 +1,7 @@
+date,subscriberId,id,correlationOrder,associatedDocument,code,description,type,observation,updateDate,action,task,fieldActivity,reason,lostEquipment,gponAccess,device,item,statusCode,scenario
+"2022-05-15","SVTAL001","ID1234","10","VTT001","","","Instalacao","","2022-05-15","Create","","","","False","","","","204","Operação realizada com sucesso"
+"2022-05-16","SVBX001","ID1235","15","BX001","","","Bloqueio","","2022-05-16","Update","","","","True","","","","400","BadRequest"
+"2022-05-17","SVMX001","ID1236","20","MX001","","","Desbloqueio","","2022-05-17","Delete","","","","False","","","","401","Unauthorized"
+"2022-05-18","SVFX001","ID1237","30","FX001","","","Modificacao de Velocidade","","2022-05-18","Archive","","","","True","","","","500","ServerError"
+"2022-05-19","SVGX001","ID1238","40","GX001","","","RemanejamentoPonto","","2022-05-19","Read","","","","False","","","","503","Unavailable"
+"2022-05-20","SVHX001","ID1239","50","HX001","","","AssociarCPE","","2022-05-20","Scan","","","","True","","","","504","Timeout"
