@@ -1,0 +1,11 @@
+addressId^|^AdditionalCSVvaluInfo^|^RequestBody^|^statusCode
+1^|^{\"address with id\": 14393}^|^{\"request\":\"details\"}^|^200
+2^|^{\"address with id\": 14393}^|^{\"request\":\"update\"}^|^403
+3^|^{\"address with id\": 14393}^|^{\"request\":\"create\"}^|^404
+4^|^{\"address with id\": 14393}^|^{\"request\":\"delete\"}^|^500
+5^|^{\"address with id\": 14393}^|^{\"request\":\"query\"}^|^503
+6^|^{\"address with id\": 14393}^|^{\"request\":\"modify\"}^|^200
+7^|^{\"address with id\": 14393}^|^{\"request\":\"fetch\"}^|^429
+8^|^{\"address with id\": 14393}^|^{\"request\":\"get\"}^|^400
+9^|^{\"address with id\": 14393}^|^{\"request\":\"post\"}^|^504
+10^|^{\"address with id\": 14393}^|^{\"request\":\"put\"}^|^200
