@@ -1,0 +1,11 @@
+stateAbreviation^|^AdditionalCSVvaluInfo^|^city^|^RequestBody^|^statusCode
+CA^|^Nilópolis^|^Los Angeles^|^{\"request\":\"get user details\",\"parameters\":{\"user_id\":1234}}^|^200
+TX^|^Nilópolis^|^Houston^|^{\"request\":\"update user profile\",\"parameters\":{\"user_id\":5678}}^|^403
+FL^|^Nilópolis^|^Miami^|^{\"request\":\"delete account\",\"parameters\":{\"user_id\":9101}}^|^404
+NY^|^Nilópolis^|^New York^|^{\"request\":\"fetch transaction\",\"parameters\":{\"transaction_id\":1121}}^|^429
+WA^|^Nilópolis^|^Seattle^|^{\"request\":\"create new account\",\"parameters\":{\"email\":\"test@example.com\"}}^|^500
+IL^|^Nilópolis^|^Chicago^|^{\"request\":\"reset password\",\"parameters\":{\"user_id\":3141}}^|^503
+GA^|^Nilópolis^|^Atlanta^|^{\"request\":\"query order status\",\"parameters\":{\"order_id\":1617}}^|^504
+NC^|^Nilópolis^|^Charlotte^|^{\"request\":\"post comment\",\"parameters\":{\"user_id\":1820,\"content\":\"Great service!\"}}^|^200
+OH^|^Nilópolis^|^Columbus^|^{\"request\":\"modify booking\",\"parameters\":{\"booking_id\":2122}}^|^403
+PA^|^Nilópolis^|^Philadelphia^|^{\"request\":\"cancel subscription\",\"parameters\":{\"user_id\":2324}}^|^404

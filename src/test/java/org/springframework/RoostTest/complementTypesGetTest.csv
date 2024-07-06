@@ -1,0 +1,11 @@
+RequestBody^|^statusCode
+{"userId":1,"info":{"name":"John D.","age":28}}^|^200
+{"userId":2,"info":{"name":"Jane D.","age":32}}^|^200
+{"userId":3,"info":{"name":"Alice M.","age":24}}^|^403
+{"userId":4,"info":{"name":"Bob C.","age":29}}^|^404
+{"userId":5,"info":{"name":"Charlie B.","age":33}}^|^429
+{"userId":6,"info":{"name":"Diana W.","age":27}}^|^500
+{"userId":7,"info":{"name":"Evan S.","age":31}}^|^503
+{"userId":8,"info":{"name":"Fiona R.","age":25}}^|^504
+{"userId":9,"info":{"name":"George K.","age":34}}^|^200
+{"userId":10,"info":{"name":"Helen L.","age":30}}^|^403

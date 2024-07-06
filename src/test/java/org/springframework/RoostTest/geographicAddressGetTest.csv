@@ -1,0 +1,11 @@
+address^|^AdditionalCSVvaluInfo^|^number^|^RequestBody^|^statusCode
+123 Elm St^|^71^|^A12345^|^{\"key\":\"value\"}^|^200
+456 Oak St^|^71^|^B23456^|^{\"key\":\"value\"}^|^404
+789 Pine St^|^71^|^C34567^|^{\"key\":\"value\"}^|^503
+101 Maple St^|^71^|^D45678^|^{\"key\":\"value\"}^|^429
+234 Cedar St^|^71^|^E56789^|^{\"key\":\"value\"}^|^500
+567 Birch St^|^71^|^F67890^|^{\"key\":\"value\"}^|^403
+890 Walnut St^|^71^|^G78901^|^{\"key\":\"value\"}^|^200
+321 Spruce St^|^71^|^H89012^|^{\"key\":\"value\"}^|^404
+654 Redwood St^|^71^|^I90123^|^{\"key\":\"value\"}^|^503
+987 Willow St^|^71^|^J01234^|^{\"key\":\"value\"}^|^429
