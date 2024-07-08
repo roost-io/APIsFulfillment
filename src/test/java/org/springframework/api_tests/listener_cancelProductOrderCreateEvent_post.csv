@@ -1,0 +1,7 @@
+requestBody,statusCode,responseBody
+"{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000001"}}}","204","{}"
+"{"notification":{"order":{"associatedDocument":"wrongDoc","id":"20230315000002"}}}","400","{"error":"BadRequest"}"
+"{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000003"}}}","401","{"error":"Unauthorized"}"
+"{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000004"}}}","500","{"error":"ServerError"}"
+"{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000005"}}}","503","{"error":"Unavailable"}"
+"{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000006"}}}","504","{"error":"Timeout"}"

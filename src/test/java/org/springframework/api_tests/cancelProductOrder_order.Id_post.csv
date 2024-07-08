@@ -1,0 +1,12 @@
+orderId,associatedDocument,subscriberId,status,expectedResponse
+"'20230315000001'","'VTT001'","'SVTAL001'","200","{control: {type: 'S', code: '200', message: 'OK'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","400","{control: {type: 'E', code: '400', message: 'Bad Request'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","401","{control: {type: 'E', code: '401', message: 'Unauthorized'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","403","{control: {type: 'E', code: '403', message: 'Forbidden - Scope Not Permitted'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","404","{control: {type: 'E', code: '404', message: 'Not Found'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","406","{control: {type: 'E', code: '406', message: 'Not Acceptable (AssociatedDocument já existente/utilizado)'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","423","{control: {type: 'E', code: '423', message: 'Agendamento não pode ser alterado'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","429","{control: {type: 'E', code: '429', message: 'Too Many Requests - Exceeded Quota'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","500","{control: {type: 'T', code: '500', message: 'Internal Server Error'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","503","{control: {type: 'T', code: '503', message: 'Service Unavailable'} }"
+"'20230315000001'","'VTT001'","'SVTAL001'","504","{control: {type: 'T', code: '504', message: 'Gateway Timeout'} }"

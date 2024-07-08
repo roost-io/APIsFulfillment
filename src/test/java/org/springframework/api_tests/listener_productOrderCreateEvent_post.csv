@@ -1,0 +1,9 @@
+method,requestBody,status,responseBody
+"'post'","{"notification":{"date":"2021-06-05T20:23:29-03:00","order":{"id":"20230315000001","associatedDocument":"VTT001","correlationOrder":"10"}}}","204","''"
+"'post'","{"notification":{"date":"2021-06-05T20:23:29/03:00","order":{"id":"","associatedDocument":"","correlationOrder":""}}}","400","{"description":"BadRequest"}"
+"'post'","{}","401","{"description":"Unauthorized"}"
+"'post'","{"notification":{}}","500","{"description":"ServerError"}"
+"'post'","{"notification":{"date":"2021-06-05T20:23:29-03:00","order":{"id":"20230315000001","associatedDocument":"VTT001","correlationOrder":"10"}}}","204","{"description":"Unauthorized"}"
+"'post'","{"notification":{"date":"2021-06-05T20:23:29/03:00","order":{"id":"","associatedDocument":"","correlationOrder":""}}}","400","{"description":"ServerError"}"
+"'post'","{}","401","{"description":"Unauthorized"}"
+"'post'","{"notification":{}}","500","{"description":"ServerError"}"

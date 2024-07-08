@@ -1,0 +1,2 @@
+order_Id,requestBody,statusCode,responseBody
+"'20230315000001'","read('classpath:requests/schedule-pendency-resolution.json')","200","read('classpath:responses/success.json')"
