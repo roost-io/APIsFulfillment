@@ -1,0 +1,11 @@
+subscriberId^|^addressId^|^type^|^description^|^value
+ID12345^|^456^|^RES^|^Single Family Home^|^550000
+ID67890^|^789^|^COM^|^Office Building^|^1.2 million
+ID23456^|^012^|^RES^|^Apartment^|^300000
+ID34567^|^234^|^IND^|^Warehouse^|^not available
+ID45678^|^345^|^RES^|^Townhouse^|^450000
+ID56789^|^567^|^COM^|^Retail Space^|^850000
+ID67891^|^678^|^RES^|^Duplex^|^500000
+ID78901^|^890^|^COM^|^Mall^|^3.5 million
+ID89012^|^901^|^IND^|^Factory^|^2 million
+ID90123^|^123^|^RES^|^Condo^|^400000
