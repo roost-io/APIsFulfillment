@@ -1,0 +1,71 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Test API from Alphavantage.co",
+    "description": "This is a description",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "https://www.alphavantage.co"
+    }
+  ],
+  "paths": {
+    "/query": {
+      "get": {
+        "description": "Auto generated using Swagger Inspector",
+        "parameters": [
+          {
+            "name": "symbol",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "IBM"
+          },
+          {
+            "name": "apikey",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "demo"
+          },
+          {
+            "name": "function",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "TIME_SERIES_DAILY_ADJUSTED"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers": [
+          {
+            "url": "https://www.alphavantage.co"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "https://www.alphavantage.co"
+        }
+      ]
+    }
+  },
+  "components": {}
+}
