@@ -8,7 +8,7 @@
 Feature: Geographic Address Validation and Service Availability Check
 
 Scenario: Successful Geographic Address Validation and Service Availability Check
-  Given the user has an address with ID "ADD001"
+  Given the user has an address with ID 10000
   When the user validates the address using the Geographic Address Management API
   And retrieves the address complements
   And checks the service availability for the address
