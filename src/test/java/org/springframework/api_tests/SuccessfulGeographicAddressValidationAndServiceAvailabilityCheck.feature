@@ -36,31 +36,11 @@ Feature: Geographic Address Validation and Service Availability Check
     And path '/geographicAddress/ADD001'
     When method get
     Then status 200
-    And match response == """
-    {
-      addresses: '#object', 
-      control: {
-        code: '#string', 
-        message: '#string', 
-        type: '#string'
-      }
-    }
-    """
+    And match response == { addresses: '#object', control: { code: '#string', message: '#string', type: '#string' } }
 
   Scenario: Successful Service Availability Check
     * url GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B_URL
     And path '/addressComplements/ADD001'
     When method get
     Then status 200
-    And match response == """
-    {
-      complementList: {
-        complementList: '#array'
-      }, 
-      control: {
-        code: '#string', 
-        message: '#string', 
-        type: '#string'
-      }
-    }
-    """
+    And match response == { complementList: { complementList: '#array' }, control: { code: '#string', message: '#string', type: '#string' } }
