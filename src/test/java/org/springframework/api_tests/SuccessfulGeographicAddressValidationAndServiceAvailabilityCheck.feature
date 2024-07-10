@@ -13,7 +13,7 @@
 #   rule: null,
 #   scenario: {
 #     title: 'Scenario: Successful Geographic Address Validation and Service Availability Check',
-#     steps: 'Given the user has an address with ID "ADD001"\n' +
+#     steps: 'Given the user has an address with ID 10000\n' +
 #       'When the user validates the address using the Geographic Address Management API\n' +
 #       'And retrieves the address complements\n' +
 #       'And checks the service availability for the address\n' +
@@ -33,14 +33,14 @@ Feature: Geographic Address Validation and Service Availability Check
 
   Scenario: Successful Geographic Address Validation
     * url GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B_URL
-    And path '/geographicAddress/ADD001'
+    And path '/geographicAddress/10000'
     When method get
     Then status 200
-    And match response == { addresses: '#object', control: { code: '#string', message: '#string', type: '#string' } }
+    And match response == { address: '#object', control: { code: '#string', message: '#string', type: '#string' } }
 
   Scenario: Successful Service Availability Check
     * url GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B_URL
-    And path '/addressComplements/ADD001'
+    And path '/addressComplements/10000'
     When method get
     Then status 200
-    And match response == { complementList: { complementList: '#array' }, control: { code: '#string', message: '#string', type: '#string' } }
+    And match response == { complementList: '#array', control: { code: '#string', message: '#string', type: '#string' } }
