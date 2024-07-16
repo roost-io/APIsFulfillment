@@ -1,1 +1,2203 @@
-{"openapi":"3.0.1","info":{"title":"Service Test Management","version":"2.0.0"},"tags":[{"name":"ServiceTest"},{"name":"Notification"}],"paths":{"/serviceTest":{"post":{"tags":["ServiceTest"],"summary":"Request Opening Service Test","operationId":"Request Opening Service Test","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/serviceTestRequest"},"examples":{"Diagnostic":{"value":{"serviceTest":{"type":"diagnostic","customer":{"subscriberId":"SVTAL001"}}}}}}}},"responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/serviceTestResponse"},"example":{"control":{"type":"S","code":"200","message":"OK"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449"}}}}},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"406":{"$ref":"#/components/responses/NotAcceptable"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}},"/listener/serviceTestResultEvent":{"post":{"tags":["Notification"],"summary":"State Change Event","operationId":"State Change Event","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/notificationEvent"},"examples":{"Notification Diagnostic - state:IN_PROGRESS":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-24T14:38:19-03","state":"IN_PROGRESS","diagnostic":{"code":"NOK","messages":[{"errorCode":1,"description":"Foram identificados problemas e serão executadas ações de correção"}]}}}}},"Notification Diagnostic - state:NOT_FOUND":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-24T11:50:15-03","endDate":"2023-05-24T11:50:15-03","state":"NOT_FOUND"}}}},"Notification Diagnostic - state:INVENTORY_FAULT":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-24T11:50:15-03","endDate":"2023-05-24T11:50:15-03","state":"INVENTORY_FAULT"}}}},"Notification Diagnostic - state:FINISHED code:OK (without messages)":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-25T17:20:03-03","endDate":"2023-05-25T17:21:26-03","state":"FINISHED","diagnostic":{"code":"OK","messages":[]},"hintOperations":{"actions":[{"type":"Instruir o Cliente","hintType":"MANUAL"}]},"result":{"services":[{"perfil":"600 MBPS"}],"devices":[{"idGPON":"1-ONXK7","operationalState":"Up","administrativeState":"active","lastHour":"04/11/2022 00:47","vendor":"ALCL","model":"NOCLEICODEG1425GA","serialNumber":"ALCLFBD32300","firmwareVersion":"3FE48077HJIJ86","hardware":"3FE48054BDAA01","temperature":"37","ontPowerTx":"2.162","ontPowerRx":"-21.366"}],"wan":[{"physicalState":"Up","receivedBytes":"7413166343","sendBytes":"496095715","uptimeHGW":"276338","internalClient":""}],"lan":{"devices":[{"addressingType":"","hostName":"deco_M5","ipAddress":"192.168.100.50","interfaceType":"Ethernet","macAddress":"24:76:7d:8a:50:49","type":"","vendor":"Cisco SPVTG","active":false}],"gates":[{"port":"1","active":true,"status":"Up","receivedBytes":"872342342","sendBytes":"3123123"},{"port":"2","active":true,"status":"Down","receivedBytes":"0","sendBytes":"0"}]},"wifi":[{"vendor":"Huawei Technologies Co., Ltd.","model":"HG8245W5-6T","serialNumber":"48575443961E0C9F","firmware":"V5R019C30S050","hardware":"","wlanConfiguration":[{"enable":true,"status":"Down","ssid":"DESCUBRA","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"11i","basicEncryptionModes":"None","wpaEncryptionModes":"AESEncryption","totalBytesReceived":"1072","totalBytesSent":"2522","maxBitRate":"Auto","channel":"4","channelMode":"Auto","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"2.4GHz","radioEnabled":true,"wifiIndex":"1","devices":[{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"S20-de-Jose","ipAddress":"192.168.100.4","macAddress":"8a:61:a5:58:ed:b5","vendor":"Samsung Electronics Co.,Ltd","active":true},{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"G60-LMF","ipAddress":"192.168.100.9","macAddress":"5a:44:b4:32:gh:w3","vendor":"","active":true}]},{"enable":true,"status":"Down","ssid":"ALHN-8597-4","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"WPAand11i","basicEncryptionModes":"None","wpaEncryptionModes":"TKIPandAESEncryption","totalBytesReceived":"0","totalBytesSent":"0","maxBitRate":"Auto","channel":"2","channelMode":"Manual","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"5.0GHz","radioEnabled":true,"wifiIndex":"10","devices":[{"frequencyBand":"5.0GHz","ssid":"ALHN-8597-4","addressSource":"DHCP","hostName":"TVLG-25578673","ipAddress":"192.168.100.10","macAddress":"3b:22:f5:21:wd:k9","vendor":"","active":true}]}]}],"nass":{"hsiLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210","voipLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"},"bng":{"ipAddress":"179.67.227.148","macAddress":"78:17:35:f9:01:d1"}}}}}},"Notification Diagnostic - state:FINISHED code:OK (with messages)":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-07T20:55:11-03","endDate":"2023-05-07T20:55:23-03","state":"FINISHED","diagnostic":{"code":"OK","messages":[{"errorCode":"HGW_WIFI_02","description":"[42] Interface Wifi inativa. Necessário verificar com o cliente se a interface wifi deve ser ativada e proceder a ação se confirmado.","criticity":0}]},"result":{"services":[{"perfil":"600 MBPS"}],"orders":[{"id":22829,"associatedDocument":"R-312839"},{"id":22833,"associatedDocument":"R-312840"},{"id":23038,"associatedDocument":"R-312855"},{"id":23042,"associatedDocument":"R-312856"},{"id":23165,"associatedDocument":"R-31302"},{"id":23185,"associatedDocument":"R-31305"},{"id":23189,"associatedDocument":"R-31310"}],"devices":[{"idGPON":"1-ONXK7","operationalState":"Up","administrativeState":"active","lastHour":"04/11/2022 00:47","vendor":"ALCL","model":"NOCLEICODEG1425GA","serialNumber":"ALCLFBD32300","firmwareVersion":"3FE48077HJIJ86","hardware":"3FE48054BDAA01","temperature":"37","ontPowerTx":"2.162","ontPowerRx":"-21.366"}],"wan":[{"physicalState":"Up","receivedBytes":"7413166343","sendBytes":"496095715","uptimeHGW":"276338","internalClient":""}],"lan":{"devices":[{"addressingType":"","hostName":"deco_M5","ipAddress":"192.168.100.50","interfaceType":"Ethernet","macAddress":"24:76:7d:8a:50:49","type":"","vendor":"Cisco SPVTG","active":false}],"gates":[{"port":"1","active":true,"status":"Up","receivedBytes":"872342342","sendBytes":"3123123"},{"port":"2","active":true,"status":"Down","receivedBytes":"872342342","sendBytes":"3123123"}]},"wifi":[{"vendor":"Huawei Technologies Co., Ltd.","model":"HG8245W5-6T","serialNumber":"48575443961E0C9F","firmware":"V5R019C30S050","hardware":"","wlanConfiguration":[{"enable":true,"status":"Down","ssid":"DESCUBRA","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"11i","basicEncryptionModes":"None","wpaEncryptionModes":"AESEncryption","totalBytesReceived":"1072","totalBytesSent":"2522","maxBitRate":"Auto","channel":"4","channelMode":"Auto","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"2.4GHz","radioEnabled":true,"wifiIndex":"1","devices":[{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"S20-de-Jose","ipAddress":"192.168.100.4","macAddress":"8a:61:a5:58:ed:b5","vendor":"Samsung Electronics Co.,Ltd","active":true},{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"G60-LMF","ipAddress":"192.168.100.9","macAddress":"5a:44:b4:32:gh:w3","vendor":"","active":true}]},{"enable":true,"status":"Down","ssid":"ALHN-8597-4","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"WPAand11i","basicEncryptionModes":"None","wpaEncryptionModes":"TKIPandAESEncryption","totalBytesReceived":"0","totalBytesSent":"0","maxBitRate":"Auto","channel":"2","channelMode":"Manual","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"5.0GHz","radioEnabled":true,"wifiIndex":"10","devices":[{"frequencyBand":"5.0GHz","ssid":"ALHN-8597-4","addressSource":"DHCP","hostName":"TVLG-25578673","ipAddress":"192.168.100.10","macAddress":"3b:22:f5:21:wd:k9","vendor":"","active":true}]}]}],"nass":{"hsiLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210","voipLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"},"bng":{"ipAddress":"179.67.227.148","macAddress":"78:17:35:f9:01:d1"}}}}}},"Notification Diagnostic - state:FINISHED code:OK (with OS)":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-07T20:55:11-03","endDate":"2023-05-07T20:55:23-03","state":"FINISHED","diagnostic":{"code":"OK","messages":[]},"result":{"services":[{"perfil":"600 MBPS"}],"orders":[{"id":22829,"associatedDocument":"R-312839"},{"id":22833,"associatedDocument":"R-312840"},{"id":23038,"associatedDocument":"R-312855"},{"id":23042,"associatedDocument":"R-312856"},{"id":23165,"associatedDocument":"R-31302"},{"id":23185,"associatedDocument":"R-31305"},{"id":23189,"associatedDocument":"R-31310"}],"devices":[{"idGPON":"1-ONXK7","operationalState":"Up","administrativeState":"active","lastHour":"04/11/2022 00:47","vendor":"ALCL","model":"NOCLEICODEG1425GA","serialNumber":"ALCLFBD32300","firmwareVersion":"3FE48077HJIJ86","hardware":"3FE48054BDAA01","temperature":"37","ontPowerTx":"2.162","ontPowerRx":"-21.366"}],"wan":[{"physicalState":"Up","receivedBytes":"7413166343","sendBytes":"496095715","uptimeHGW":"276338","internalClient":""}],"lan":{"devices":[{"addressingType":"","hostName":"deco_M5","ipAddress":"192.168.100.50","interfaceType":"Ethernet","macAddress":"24:76:7d:8a:50:49","type":"","vendor":"Cisco SPVTG","active":false}],"gates":[{"port":"1","active":true,"status":"Up","receivedBytes":"872342342","sendBytes":"3123123"},{"port":"2","active":true,"status":"Down","receivedBytes":"872342342","sendBytes":"3123123"}]},"wifi":[{"vendor":"Huawei Technologies Co., Ltd.","model":"HG8245W5-6T","serialNumber":"48575443961E0C9F","firmware":"V5R019C30S050","hardware":"","wlanConfiguration":[{"enable":true,"status":"Down","ssid":"DESCUBRA","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"11i","basicEncryptionModes":"None","wpaEncryptionModes":"AESEncryption","totalBytesReceived":"1072","totalBytesSent":"2522","maxBitRate":"Auto","channel":"4","channelMode":"Auto","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"2.4GHz","radioEnabled":true,"wifiIndex":"1","devices":[{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"S20-de-Jose","ipAddress":"192.168.100.4","macAddress":"8a:61:a5:58:ed:b5","vendor":"Samsung Electronics Co.,Ltd","active":true},{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"G60-LMF","ipAddress":"192.168.100.9","macAddress":"5a:44:b4:32:gh:w3","vendor":"","active":true}]},{"enable":true,"status":"Down","ssid":"ALHN-8597-4","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"WPAand11i","basicEncryptionModes":"None","wpaEncryptionModes":"TKIPandAESEncryption","totalBytesReceived":"0","totalBytesSent":"0","maxBitRate":"Auto","channel":"2","channelMode":"Manual","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"5.0GHz","radioEnabled":true,"wifiIndex":"10","devices":[{"frequencyBand":"5.0GHz","ssid":"ALHN-8597-4","addressSource":"DHCP","hostName":"TVLG-25578673","ipAddress":"192.168.100.10","macAddress":"3b:22:f5:21:wd:k9","vendor":"","active":true}]}]}],"nass":{"hsiLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210","voipLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"},"bng":{"ipAddress":"179.67.227.148","macAddress":"78:17:35:f9:01:d1"}}}}}},"Notification Diagnostic - state:FINISHED code:NOK":{"value":{"notification":{"customer":{"subscriberId":"TesteFTTH002"},"serviceTest":{"id":"a84141b6-67c0-4103-b01b-f77e00e43b4e","type":"diagnostic","startDate":"2023-05-25T19:15:41-03","endDate":"2023-05-25T19:18:05-03","state":"FINISHED","diagnostic":{"code":"NOK","messages":[]},"hintOperations":{"actions":[{"type":"Abrir Chamado Tecnico","hintType'":"MANUAL"}]},"result":{"services":[{"perfil":"600 MBPS"}],"devices":[{"idGPON":"1-ONXK7","operationalState":"Up","administrativeState":"active","lastHour":"04/11/2022 00:47","vendor":"ALCL","model":"NOCLEICODEG1425GA","serialNumber":"ALCLFBD32300","firmwareVersion":"3FE48077HJIJ86","hardware":"3FE48054BDAA01","temperature":"37","ontPowerTx":"2.162","ontPowerRx":"-21.366"}],"wan":[{"physicalState":"Up","receivedBytes":"7413166343","sendBytes":"496095715","uptimeHGW":"276338","internalClient":""}],"lan":{"devices":[{"addressingType":"","hostName":"deco_M5","ipAddress":"192.168.100.50","interfaceType":"Ethernet","macAddress":"24:76:7d:8a:50:49","type":"","vendor":"Cisco SPVTG","active":false}],"gates":[{"port":"1","active":true,"status":"Up","receivedBytes":"872342342","sendBytes":"3123123"},{"port":"2","active":true,"status":"Down","receivedBytes":"872342342","sendBytes":"3123123"}]},"wifi":[{"vendor":"Huawei Technologies Co., Ltd.","model":"HG8245W5-6T","serialNumber":"48575443961E0C9F","firmware":"V5R019C30S050","hardware":"","wlanConfiguration":[{"enable":true,"status":"Down","ssid":"DESCUBRA","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"11i","basicEncryptionModes":"None","wpaEncryptionModes":"AESEncryption","totalBytesReceived":"1072","totalBytesSent":"2522","maxBitRate":"Auto","channel":"4","channelMode":"Auto","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"2.4GHz","radioEnabled":true,"wifiIndex":"1","devices":[{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"S20-de-Jose","ipAddress":"192.168.100.4","macAddress":"8a:61:a5:58:ed:b5","vendor":"Samsung Electronics Co.,Ltd","active":true},{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"G60-LMF","ipAddress":"192.168.100.9","macAddress":"5a:44:b4:32:gh:w3","vendor":"","active":true}]},{"enable":true,"status":"Down","ssid":"ALHN-8597-4","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"WPAand11i","basicEncryptionModes":"None","wpaEncryptionModes":"TKIPandAESEncryption","totalBytesReceived":"0","totalBytesSent":"0","maxBitRate":"Auto","channel":"2","channelMode":"Manual","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"5.0GHz","radioEnabled":true,"wifiIndex":"10","devices":[{"frequencyBand":"5.0GHz","ssid":"ALHN-8597-4","addressSource":"DHCP","hostName":"TVLG-25578673","ipAddress":"192.168.100.10","macAddress":"3b:22:f5:21:wd:k9","vendor":"","active":true}]}]}],"nass":{"hsiLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210","voipLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"},"bng":{"ipAddress":"179.67.227.148","macAddress":"78:17:35:f9:01:d1"}}}}}},"Notification Diagnostic - state:FINISHED without code (diagnostic)":{"value":{"notification":{"customer":{"subscriberId":"SVTAL001"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449","type":"diagnostic","startDate":"2023-05-24T14:55:24-03","endDate":"2023-05-24T14:58:28-03","state":"FINISHED","hintOperations":{"actions":[{"type":"Abrir Chamado Tecnico","hintType'":"MANUAL"}]},"result":{"services":[{"perfil":"600 MBPS"}],"devices":[{"idGPON":"1-ONXK7","operationalState":"Up","administrativeState":"active","lastHour":"04/11/2022 00:47","vendor":"ALCL","model":"NOCLEICODEG1425GA","serialNumber":"ALCLFBD32300","firmwareVersion":"3FE48077HJIJ86","hardware":"3FE48054BDAA01","temperature":"37","ontPowerTx":"2.162","ontPowerRx":"-21.366"}],"wan":[{"physicalState":"Up","receivedBytes":"7413166343","sendBytes":"496095715","uptimeHGW":"276338","internalClient":""}],"lan":{"devices":[{"addressingType":"","hostName":"deco_M5","ipAddress":"192.168.100.50","interfaceType":"Ethernet","macAddress":"24:76:7d:8a:50:49","type":"","vendor":"Cisco SPVTG","active":false}],"gates":[{"port":"1","active":true,"status":"Up","receivedBytes":"872342342","sendBytes":"3123123"},{"port":"2","active":true,"status":"Down","receivedBytes":"872342342","sendBytes":"3123123"}]},"wifi":[{"vendor":"Huawei Technologies Co., Ltd.","model":"HG8245W5-6T","serialNumber":"48575443961E0C9F","firmware":"V5R019C30S050","hardware":"","wlanConfiguration":[{"enable":true,"status":"Down","ssid":"DESCUBRA","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"11i","basicEncryptionModes":"None","wpaEncryptionModes":"AESEncryption","totalBytesReceived":"1072","totalBytesSent":"2522","maxBitRate":"Auto","channel":"4","channelMode":"Auto","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"2.4GHz","radioEnabled":true,"wifiIndex":"1","devices":[{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"S20-de-Jose","ipAddress":"192.168.100.4","macAddress":"8a:61:a5:58:ed:b5","vendor":"Samsung Electronics Co.,Ltd","active":true},{"frequencyBand":"2.4GHz","ssid":"DESCUBRA","addressSource":"DHCP","hostName":"G60-LMF","ipAddress":"192.168.100.9","macAddress":"5a:44:b4:32:gh:w3","vendor":"","active":true}]},{"enable":true,"status":"Down","ssid":"ALHN-8597-4","ssidBCastEnabled":true,"macAddressControlEnabled":false,"basicAuthenticationMode":"None","beaconType":"WPAand11i","basicEncryptionModes":"None","wpaEncryptionModes":"TKIPandAESEncryption","totalBytesReceived":"0","totalBytesSent":"0","maxBitRate":"Auto","channel":"2","channelMode":"Manual","wpaAuthenticationMode":"PSKAuthentication","authentication":"","encryption":"","packetsDropped":"","packetsErrored":"","frequencyBand":"5.0GHz","radioEnabled":true,"wifiIndex":"10","devices":[{"frequencyBand":"5.0GHz","ssid":"ALHN-8597-4","addressSource":"DHCP","hostName":"TVLG-25578673","ipAddress":"192.168.100.10","macAddress":"3b:22:f5:21:wd:k9","vendor":"","active":true}]}]}],"nass":{"hsiLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210","voipLineId":"RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"},"bng":{"ipAddress":"179.67.227.148","macAddress":"78:17:35:f9:01:d1"}}}}}}}}}},"responses":{"204":{"description":"No Content"},"400":{"description":"BadRequest"},"401":{"description":"Unauthorized"},"500":{"description":"ServerError"},"503":{"description":"Unavailable"},"504":{"description":"Timeout"}}}}},"components":{"schemas":{"control":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da mensagem de retorno. (S - Sucesso, T - Erro Técnico, E - Erro)","enum":["S","T","E"],"maxLength":1},"message":{"type":"string","description":"Descrição da mensagem de retorno.","maxLength":250},"code":{"type":"string","description":"Codigo de Retorno.","maxLength":10}}},"serviceTestRequest":{"type":"object","properties":{"serviceTest":{"type":"object","required":["type"],"properties":{"type":{"type":"string","description":"Tipo do teste","maxLength":50,"enum":["diagnostic"]},"customer":{"$ref":"#/components/schemas/customerType"}}}}},"serviceTestResponse":{"type":"object","properties":{"control":{"$ref":"#/components/schemas/control"},"serviceTest":{"properties":{"id":{"type":"string","maxLength":40,"description":"Identificador da operação de Service Test"}}}}},"notificationEvent":{"$ref":"#/components/schemas/notificationType"},"serviceTestType":{"type":"object","required":["type"],"properties":{"id":{"type":"string","maxLength":40,"description":"Identificador da operação de Service Test"},"type":{"type":"string","description":"Tipo do teste","maxLength":50,"enum":["diagnostic"]},"startDate":{"type":"string","description":"Data de início do processamento da operação","maxLength":25},"endDate":{"type":"string","description":"Data de término do processamento da operação","maxLength":25},"state":{"type":"string","maxLength":30,"description":"Estado da operação.","enum":["IN_PROGRESS","FINISHED","NOT_FOUND","INTERNAL_FAULT","REJECTED","INVENTORY_FAULT"]},"diagnostic":{"$ref":"#/components/schemas/diagnosticType"},"hintOperations":{"$ref":"#/components/schemas/hintOperationsType"},"result":{"$ref":"#/components/schemas/resultType"}}},"customerType":{"type":"object","required":["subscriberId"],"properties":{"subscriberId":{"type":"string","description":"Número identificador do cliente","maxLength":30}}},"notificationType":{"properties":{"notification":{"type":"object","properties":{"customer":{"type":"object","properties":{"subscriberId":{"type":"string","description":"Número identificador do cliente","maxLength":15}}},"serviceTest":{"$ref":"#/components/schemas/serviceTestType"}}}}},"diagnosticType":{"type":"object","properties":{"code":{"type":"string","description":"Resultado do diagnostico completo","enum":["OK","NOK","''"],"maxLength":3},"messages":{"$ref":"#/components/schemas/messagesType"}}},"messagesType":{"type":"array","items":{"type":"object","properties":{"errorCode":{"type":"string","maxLength":50,"description":"Código do diagnóstico."},"description":{"type":"string","description":"Descrição do diagnóstico.","maxLength":200},"criticity":{"type":"number","description":"Criticidade do diagnóstico (0 - informativo, 1 - Alerta e 2 - crítico).","enum":[0,1,2],"maxLength":1}}}},"hintOperationsType":{"type":"object","properties":{"actions":{"type":"array","items":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da ação a ser realizada","maxLength":200},"hintType":{"type":"string","description":"Descrição da ação","maxLength":100}}}}}},"resultType":{"type":"object","properties":{"services":{"$ref":"#/components/schemas/servicesType"},"orders":{"$ref":"#/components/schemas/ordersType"},"massiveIncidents":{"$ref":"#/components/schemas/massiveIncidentsType"},"devices":{"$ref":"#/components/schemas/devicesType"},"wan":{"$ref":"#/components/schemas/wanType"},"lan":{"$ref":"#/components/schemas/lanType"},"wifi":{"$ref":"#/components/schemas/wifiType"},"nass":{"$ref":"#/components/schemas/nassType"},"bng":{"$ref":"#/components/schemas/bngType"}}},"servicesType":{"type":"array","items":{"type":"object","properties":{"type":{"type":"string","description":"Tipo do serviço","maxLength":200},"perfil":{"type":"string","description":"Perfil do serviço","maxLength":200}}}},"ordersType":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"Id da ordem","maxLength":20},"associatedDocument":{"type":"string","description":"Número do documento associado","maxLength":30}}}},"massiveIncidentsType":{"type":"array","items":{"type":"object","properties":{"id":{"type":"string","description":"Id do incidente","maxLength":20},"type":{"type":"string","description":"Tipo do incidente","maxLength":200},"promiseDate":{"type":"string","description":"Data promessa","maxLength":30},"communicationId":{"type":"string","description":"Id do comunicado","maxLength":255}}}},"wanType":{"type":"array","items":{"type":"object","properties":{"physicalState":{"type":"string","description":"Status atual da conexão wan","maxLength":255},"receivedBytes":{"type":"string","description":"Quantidade de Bytes recebidos","maxLength":255},"sendBytes":{"type":"string","description":"Quantidade de Bytes enviados","maxLength":255},"uptimeHGW":{"type":"string","description":"Tempo, em segundos, de atividade desde a última ativação do equipamento","maxLength":255},"internalClient":{"type":"string","description":"Identificador de Cliente Interno","maxLength":255}}}},"lanType":{"type":"array","items":{"type":"object","properties":{"devices":{"type":"array","items":{"type":"object","properties":{"addressingType":{"type":"string","description":"Tipo de enderecamento","maxLength":255},"hostName":{"type":"string","description":"Nome do Host do equipamento conectado na LAN","maxLength":255},"ipAddress":{"type":"string","description":"IP do equipamento conectado na LAN","maxLength":255},"interfaceType":{"type":"string","description":"Tipo da interface de conexão - Ethernet/wifi","maxLength":255},"macAddress":{"type":"string","description":"MAC do equipamento conectado na LAN","maxLength":255},"type":{"type":"string","description":"Tipo do equipamento","maxLength":255},"vendor":{"type":"string","description":"Fabricante do equipamento","maxLength":255},"active":{"type":"boolean","description":"Status atual do equipamento"}}}},"gates":{"type":"array","items":{"type":"object","properties":{"port":{"type":"string","description":"Identificação da porta LAN do equipamento ONT","maxLength":255},"active":{"type":"boolean","description":"Estado administrativo da porta LAN do equipamento ONT - true/false"},"status":{"type":"string","description":"Estado de uso/operacional da porta LAN do equipamento ONT - up/down","maxLength":255},"receivedBytes":{"type":"string","description":"Quantidade de Bytes recebidos","maxLength":255},"sendBytes":{"type":"string","description":"Quantidade de Bytes enviados","maxLength":255}}}}}}},"wifiType":{"type":"array","items":{"type":"object","properties":{"vendor":{"type":"string","description":"Fabricante da ONT (HDM)","maxLength":255},"model":{"type":"string","description":"Modelo da ONT (HDM)","maxLength":255},"serialNumber":{"type":"string","description":"Numero serial da ONT (HDM)","maxLength":255},"firmware":{"type":"string","description":"Firmware da ONT (HDM)","maxLength":255},"hardware":{"type":"string","description":"Identificador do hardware da ONT (HDM)","maxLength":255},"wlanConfiguration":{"type":"array","items":{"type":"object","properties":{"enable":{"type":"boolean","description":"Status do wifi","maxLength":5},"status":{"type":"string","description":"Status da rede","maxLength":255},"ssid":{"type":"string","description":"Identificador do wifi","maxLength":255},"ssidBCastEnabled":{"type":"boolean","description":"Status de visibilidade do ssid","maxLength":5},"macAddressControlEnabled":{"type":"boolean","description":"Status do controle de MAC Address","maxLength":5},"basicAuthenticationMode":{"type":"string","description":"Modos de autenticação","maxLength":255},"beaconType":{"type":"string","description":"Modo de criptografia da rede wifi","maxLength":255},"basicEncryptionModes":{"type":"string","description":"Modos de criptografia","maxLength":255},"wpaEncryptionModes":{"type":"string","description":"Modos de criptografia de WPA","maxLength":255},"totalBytesReceived":{"type":"string","description":"Total de bytes recebidos","maxLength":255},"totalBytesSent":{"type":"string","description":"Total de bytes enviados","maxLength":255},"maxBitRate":{"type":"string","description":"Limite de bitrate","maxLength":255},"channel":{"type":"string","description":"Canal do wifi","maxLength":255},"channelMode":{"type":"string","description":"Modo do canal","maxLength":255},"wpaAuthenticationMode":{"type":"string","description":"Modos de autenticação WPA","maxLength":255},"authentication":{"type":"string","description":"Autenticação","maxLength":255},"encryption":{"type":"string","description":"Criptografia","maxLength":255},"packetsDropped":{"type":"string","description":"Indicador de queda de pacotes de rede","maxLength":255},"packetsErrored":{"type":"string","description":"Indicador de pacotes de rede com erro","maxLength":255},"frequencyBand":{"type":"string","description":"Frequência da rede wifi","maxLength":255},"radioEnabled":{"type":"boolean","description":"Indicador do status do wifi","maxLength":5},"wifiIndex":{"type":"string","description":"Indicador de index da rede wifi","maxLength":25},"devices":{"type":"array","items":{"type":"object","properties":{"frequencyBand":{"type":"string","description":"Frequencia da banda","maxLength":255},"ssid":{"type":"string","description":"Identificador/nome da rede wifi","maxLength":255},"addressSource":{"type":"string","description":"Origem do IP (fixo ou dinamico/DHCP)","maxLength":255},"hostName":{"type":"string","description":"Nome do Host do equipamento conectado","maxLength":255},"ipAddress":{"type":"string","description":"Endereço IP do equipamento conectado","maxLength":255},"macAddress":{"type":"string","description":"MAC do equipamento conectado","maxLength":255},"vendor":{"type":"string","description":"Fabricante do equipamento conectado","maxLength":255},"active":{"type":"boolean","description":"Status do equipamento conectado"}}}}}}}}}},"nassType":{"type":"object","properties":{"hsiLineId":{"type":"string","description":"Identificador do LineID do HSI(banda larga)","maxLength":255},"voipLineId":{"type":"string","description":"Identificador do LineID do VOIP","maxLength":255}}},"bngType":{"type":"object","properties":{"ipAddress":{"type":"string","description":"Endereço IP no roteador de borda(bng)","maxLength":55},"macAddress":{"type":"string","description":"Endereço MAC no roteador de borda(bng)","maxLength":55}}},"devicesType":{"type":"array","items":{"type":"object","properties":{"idGPON":{"type":"string","description":"Identificador do GPON","maxLength":255},"lastHour":{"type":"string","description":"Ultima hora de sincronismo do equipamento ONT","maxLength":255},"operationalState":{"type":"string","description":"Estado operacional do equipamento ONT","enum":["Up","Down"]},"administrativeState":{"type":"string","description":"Estado administrativo do equipamento ONT","enum":["active","inactive"]},"vendor":{"type":"string","description":"Fabricante do equipamento ONT","maxLength":255},"serialNumber":{"type":"string","description":"Numero serial do equipamento ONT","maxLength":255},"model":{"type":"string","description":"Modelo do equipamento ONT","maxLength":255},"firmwareVersion":{"type":"string","description":"Firmware do equipamento ONT","maxLength":255},"hardware":{"type":"string","description":"Identificador do hardware do equipamento ONT","maxLength":255},"temperature":{"type":"string","description":"Temperatura atual do equipamento ONT em grau celsius","maxLength":10},"vlans":{"type":"array","items":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da VLAN","maxLength":10},"svlan":{"type":"string","description":"Identificador da SVLAN","maxLength":10},"cvlan":{"type":"string","description":"Identificador da CVLAN","maxLength":10}}}},"oltPowerTx":{"type":"string","description":"Nivel TX da OLT","maxLength":10},"oltPowerRx":{"type":"string","description":"Nivel RX da OLT","maxLength":10},"ontPowerTx":{"type":"string","description":"Nivel TX da ONT","maxLength":10},"ontPowerRx":{"type":"string","description":"Nivel RX da ONT","maxLength":10},"ontRFPower":{"type":"string","description":"Nivel RF da ONT","maxLength":10},"hostname":{"type":"string","description":"hostname da OLT","maxLength":10}}}}},"responses":{"Success":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"S","code":"200","message":"OK"},"serviceTest":{"id":"22119329-13de-41da-9255-eb3e1606b449"}}}}},"BadRequest":{"description":"Bad Request","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"400","message":"Bad Request"}}}}},"Unauthorized":{"description":"Unauthorized","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"401","message":"Unauthorized"}}}}},"Forbidden":{"description":"Forbidden - Scope Not Permitted","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Invalid or expired credentials":{"value":{"control":{"type":"E","code":"403","message":"Forbidden - Scope Not Permitted"}}},"Unauthorized credentials":{"value":{"control":{"type":"E","code":"403","message":"Aplicação não autorizada ou não informada!"}}}}}}},"NotFound":{"description":"Not Found","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"404","message":"Not Found"}}}}},"NotAcceptable":{"description":"Not Acceptable","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Not Acceptable":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable"}}},"subscriberId not exist":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] inativo ou inexistente)"}}},"subscriberId already exist":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] já existente/instalado))"}}},"subscriberId in provisioning":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] em aprovisionamento)"}}}}}}},"TooManyRequests":{"description":"Too Many Requests - Exceeded Quota","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"429","message":"Too Many Requests - Exceeded Quota"}}}}},"ServerError":{"description":"Internal Server Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"500","message":"Internal Server Error"}}}}},"Unavailable":{"description":"Service Unavailable","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"503","message":"Service Unavailable"}}}}},"Timeout":{"description":"Gateway Timeout","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"504","message":"Gateway Timeout"}}}}}}}}
+{
+   "components" : {
+      "responses" : {
+         "BadRequest" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "400",
+                        "message" : "Bad Request",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Bad Request"
+         },
+         "Forbidden" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Invalid or expired credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "403",
+                              "message" : "Forbidden - Scope Not Permitted",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "Unauthorized credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "403",
+                              "message" : "AplicaÃ§Ã£o nÃ£o autorizada ou nÃ£o informada!",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Forbidden - Scope Not Permitted"
+         },
+         "NotAcceptable" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Not Acceptable" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId already exist" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] jÃ¡ existente/instalado))",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId in provisioning" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] em aprovisionamento)",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId not exist" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] inativo ou inexistente)",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Acceptable"
+         },
+         "NotFound" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "404",
+                        "message" : "Not Found",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Found"
+         },
+         "ServerError" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "500",
+                        "message" : "Internal Server Error",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Internal Server Error"
+         },
+         "Success" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "200",
+                        "message" : "OK",
+                        "type" : "S"
+                     },
+                     "serviceTest" : {
+                        "id" : "22119329-13de-41da-9255-eb3e1606b449"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Success"
+         },
+         "Timeout" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "504",
+                        "message" : "Gateway Timeout",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Gateway Timeout"
+         },
+         "TooManyRequests" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "429",
+                        "message" : "Too Many Requests - Exceeded Quota",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Too Many Requests - Exceeded Quota"
+         },
+         "Unauthorized" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "401",
+                        "message" : "Unauthorized",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Unauthorized"
+         },
+         "Unavailable" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "503",
+                        "message" : "Service Unavailable",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Service Unavailable"
+         }
+      },
+      "schemas" : {
+         "bngType" : {
+            "properties" : {
+               "ipAddress" : {
+                  "description" : "EndereÃ§o IP no roteador de borda(bng)",
+                  "maxLength" : 55,
+                  "type" : "string"
+               },
+               "macAddress" : {
+                  "description" : "EndereÃ§o MAC no roteador de borda(bng)",
+                  "maxLength" : 55,
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "control" : {
+            "properties" : {
+               "code" : {
+                  "description" : "Codigo de Retorno.",
+                  "maxLength" : 10,
+                  "type" : "string"
+               },
+               "message" : {
+                  "description" : "DescriÃ§Ã£o da mensagem de retorno.",
+                  "maxLength" : 250,
+                  "type" : "string"
+               },
+               "type" : {
+                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃ©cnico, E - Erro)",
+                  "enum" : [
+                     "S",
+                     "T",
+                     "E"
+                  ],
+                  "maxLength" : 1,
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "customerType" : {
+            "properties" : {
+               "subscriberId" : {
+                  "description" : "NÃºmero identificador do cliente",
+                  "maxLength" : 30,
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "subscriberId"
+            ],
+            "type" : "object"
+         },
+         "devicesType" : {
+            "items" : {
+               "properties" : {
+                  "administrativeState" : {
+                     "description" : "Estado administrativo do equipamento ONT",
+                     "enum" : [
+                        "active",
+                        "inactive"
+                     ],
+                     "type" : "string"
+                  },
+                  "firmwareVersion" : {
+                     "description" : "Firmware do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "hardware" : {
+                     "description" : "Identificador do hardware do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "hostname" : {
+                     "description" : "hostname da OLT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "idGPON" : {
+                     "description" : "Identificador do GPON",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "lastHour" : {
+                     "description" : "Ultima hora de sincronismo do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "model" : {
+                     "description" : "Modelo do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "oltPowerRx" : {
+                     "description" : "Nivel RX da OLT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "oltPowerTx" : {
+                     "description" : "Nivel TX da OLT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "ontPowerRx" : {
+                     "description" : "Nivel RX da ONT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "ontPowerTx" : {
+                     "description" : "Nivel TX da ONT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "ontRFPower" : {
+                     "description" : "Nivel RF da ONT",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "operationalState" : {
+                     "description" : "Estado operacional do equipamento ONT",
+                     "enum" : [
+                        "Up",
+                        "Down"
+                     ],
+                     "type" : "string"
+                  },
+                  "serialNumber" : {
+                     "description" : "Numero serial do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "temperature" : {
+                     "description" : "Temperatura atual do equipamento ONT em grau celsius",
+                     "maxLength" : 10,
+                     "type" : "string"
+                  },
+                  "vendor" : {
+                     "description" : "Fabricante do equipamento ONT",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "vlans" : {
+                     "items" : {
+                        "properties" : {
+                           "cvlan" : {
+                              "description" : "Identificador da CVLAN",
+                              "maxLength" : 10,
+                              "type" : "string"
+                           },
+                           "svlan" : {
+                              "description" : "Identificador da SVLAN",
+                              "maxLength" : 10,
+                              "type" : "string"
+                           },
+                           "type" : {
+                              "description" : "Tipo da VLAN",
+                              "maxLength" : 10,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : "array"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "diagnosticType" : {
+            "properties" : {
+               "code" : {
+                  "description" : "Resultado do diagnostico completo",
+                  "enum" : [
+                     "OK",
+                     "NOK",
+                     "''"
+                  ],
+                  "maxLength" : 3,
+                  "type" : "string"
+               },
+               "messages" : {
+                  "$ref" : "#/components/schemas/messagesType"
+               }
+            },
+            "type" : "object"
+         },
+         "hintOperationsType" : {
+            "properties" : {
+               "actions" : {
+                  "items" : {
+                     "properties" : {
+                        "hintType" : {
+                           "description" : "DescriÃ§Ã£o da aÃ§Ã£o",
+                           "maxLength" : 100,
+                           "type" : "string"
+                        },
+                        "type" : {
+                           "description" : "Tipo da aÃ§Ã£o a ser realizada",
+                           "maxLength" : 200,
+                           "type" : "string"
+                        }
+                     },
+                     "type" : "object"
+                  },
+                  "type" : "array"
+               }
+            },
+            "type" : "object"
+         },
+         "lanType" : {
+            "items" : {
+               "properties" : {
+                  "devices" : {
+                     "items" : {
+                        "properties" : {
+                           "active" : {
+                              "description" : "Status atual do equipamento",
+                              "type" : "boolean"
+                           },
+                           "addressingType" : {
+                              "description" : "Tipo de enderecamento",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "hostName" : {
+                              "description" : "Nome do Host do equipamento conectado na LAN",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "interfaceType" : {
+                              "description" : "Tipo da interface de conexÃ£o - Ethernet/wifi",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "ipAddress" : {
+                              "description" : "IP do equipamento conectado na LAN",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "macAddress" : {
+                              "description" : "MAC do equipamento conectado na LAN",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "type" : {
+                              "description" : "Tipo do equipamento",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "vendor" : {
+                              "description" : "Fabricante do equipamento",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : "array"
+                  },
+                  "gates" : {
+                     "items" : {
+                        "properties" : {
+                           "active" : {
+                              "description" : "Estado administrativo da porta LAN do equipamento ONT - true/false",
+                              "type" : "boolean"
+                           },
+                           "port" : {
+                              "description" : "IdentificaÃ§Ã£o da porta LAN do equipamento ONT",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "receivedBytes" : {
+                              "description" : "Quantidade de Bytes recebidos",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "sendBytes" : {
+                              "description" : "Quantidade de Bytes enviados",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "status" : {
+                              "description" : "Estado de uso/operacional da porta LAN do equipamento ONT - up/down",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : "array"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "massiveIncidentsType" : {
+            "items" : {
+               "properties" : {
+                  "communicationId" : {
+                     "description" : "Id do comunicado",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "id" : {
+                     "description" : "Id do incidente",
+                     "maxLength" : 20,
+                     "type" : "string"
+                  },
+                  "promiseDate" : {
+                     "description" : "Data promessa",
+                     "maxLength" : 30,
+                     "type" : "string"
+                  },
+                  "type" : {
+                     "description" : "Tipo do incidente",
+                     "maxLength" : 200,
+                     "type" : "string"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "messagesType" : {
+            "items" : {
+               "properties" : {
+                  "criticity" : {
+                     "description" : "Criticidade do diagnÃ³stico (0 - informativo, 1 - Alerta e 2 - crÃ­tico).",
+                     "enum" : [
+                        0,
+                        1,
+                        2
+                     ],
+                     "maxLength" : 1,
+                     "type" : "number"
+                  },
+                  "description" : {
+                     "description" : "DescriÃ§Ã£o do diagnÃ³stico.",
+                     "maxLength" : 200,
+                     "type" : "string"
+                  },
+                  "errorCode" : {
+                     "description" : "CÃ³digo do diagnÃ³stico.",
+                     "maxLength" : 50,
+                     "type" : "string"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "nassType" : {
+            "properties" : {
+               "hsiLineId" : {
+                  "description" : "Identificador do LineID do HSI(banda larga)",
+                  "maxLength" : 255,
+                  "type" : "string"
+               },
+               "voipLineId" : {
+                  "description" : "Identificador do LineID do VOIP",
+                  "maxLength" : 255,
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "notificationEvent" : {
+            "$ref" : "#/components/schemas/notificationType"
+         },
+         "notificationType" : {
+            "properties" : {
+               "notification" : {
+                  "properties" : {
+                     "customer" : {
+                        "properties" : {
+                           "subscriberId" : {
+                              "description" : "NÃºmero identificador do cliente",
+                              "maxLength" : 15,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "serviceTest" : {
+                        "$ref" : "#/components/schemas/serviceTestType"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "ordersType" : {
+            "items" : {
+               "properties" : {
+                  "associatedDocument" : {
+                     "description" : "NÃºmero do documento associado",
+                     "maxLength" : 30,
+                     "type" : "string"
+                  },
+                  "id" : {
+                     "description" : "Id da ordem",
+                     "maxLength" : 20,
+                     "type" : "string"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "resultType" : {
+            "properties" : {
+               "bng" : {
+                  "$ref" : "#/components/schemas/bngType"
+               },
+               "devices" : {
+                  "$ref" : "#/components/schemas/devicesType"
+               },
+               "lan" : {
+                  "$ref" : "#/components/schemas/lanType"
+               },
+               "massiveIncidents" : {
+                  "$ref" : "#/components/schemas/massiveIncidentsType"
+               },
+               "nass" : {
+                  "$ref" : "#/components/schemas/nassType"
+               },
+               "orders" : {
+                  "$ref" : "#/components/schemas/ordersType"
+               },
+               "services" : {
+                  "$ref" : "#/components/schemas/servicesType"
+               },
+               "wan" : {
+                  "$ref" : "#/components/schemas/wanType"
+               },
+               "wifi" : {
+                  "$ref" : "#/components/schemas/wifiType"
+               }
+            },
+            "type" : "object"
+         },
+         "serviceTestRequest" : {
+            "properties" : {
+               "serviceTest" : {
+                  "properties" : {
+                     "customer" : {
+                        "$ref" : "#/components/schemas/customerType"
+                     },
+                     "type" : {
+                        "description" : "Tipo do teste",
+                        "enum" : [
+                           "diagnostic"
+                        ],
+                        "maxLength" : 50,
+                        "type" : "string"
+                     }
+                  },
+                  "required" : [
+                     "type"
+                  ],
+                  "type" : "object"
+               }
+            },
+            "type" : "object"
+         },
+         "serviceTestResponse" : {
+            "properties" : {
+               "control" : {
+                  "$ref" : "#/components/schemas/control"
+               },
+               "serviceTest" : {
+                  "properties" : {
+                     "id" : {
+                        "description" : "Identificador da operaÃ§Ã£o de Service Test",
+                        "maxLength" : 40,
+                        "type" : "string"
+                     }
+                  }
+               }
+            },
+            "type" : "object"
+         },
+         "serviceTestType" : {
+            "properties" : {
+               "diagnostic" : {
+                  "$ref" : "#/components/schemas/diagnosticType"
+               },
+               "endDate" : {
+                  "description" : "Data de tÃ©rmino do processamento da operaÃ§Ã£o",
+                  "maxLength" : 25,
+                  "type" : "string"
+               },
+               "hintOperations" : {
+                  "$ref" : "#/components/schemas/hintOperationsType"
+               },
+               "id" : {
+                  "description" : "Identificador da operaÃ§Ã£o de Service Test",
+                  "maxLength" : 40,
+                  "type" : "string"
+               },
+               "result" : {
+                  "$ref" : "#/components/schemas/resultType"
+               },
+               "startDate" : {
+                  "description" : "Data de inÃ­cio do processamento da operaÃ§Ã£o",
+                  "maxLength" : 25,
+                  "type" : "string"
+               },
+               "state" : {
+                  "description" : "Estado da operaÃ§Ã£o.",
+                  "enum" : [
+                     "IN_PROGRESS",
+                     "FINISHED",
+                     "NOT_FOUND",
+                     "INTERNAL_FAULT",
+                     "REJECTED",
+                     "INVENTORY_FAULT"
+                  ],
+                  "maxLength" : 30,
+                  "type" : "string"
+               },
+               "type" : {
+                  "description" : "Tipo do teste",
+                  "enum" : [
+                     "diagnostic"
+                  ],
+                  "maxLength" : 50,
+                  "type" : "string"
+               }
+            },
+            "required" : [
+               "type"
+            ],
+            "type" : "object"
+         },
+         "servicesType" : {
+            "items" : {
+               "properties" : {
+                  "perfil" : {
+                     "description" : "Perfil do serviÃ§o",
+                     "maxLength" : 200,
+                     "type" : "string"
+                  },
+                  "type" : {
+                     "description" : "Tipo do serviÃ§o",
+                     "maxLength" : 200,
+                     "type" : "string"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "wanType" : {
+            "items" : {
+               "properties" : {
+                  "internalClient" : {
+                     "description" : "Identificador de Cliente Interno",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "physicalState" : {
+                     "description" : "Status atual da conexÃ£o wan",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "receivedBytes" : {
+                     "description" : "Quantidade de Bytes recebidos",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "sendBytes" : {
+                     "description" : "Quantidade de Bytes enviados",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "uptimeHGW" : {
+                     "description" : "Tempo, em segundos, de atividade desde a Ãºltima ativaÃ§Ã£o do equipamento",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         },
+         "wifiType" : {
+            "items" : {
+               "properties" : {
+                  "firmware" : {
+                     "description" : "Firmware da ONT (HDM)",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "hardware" : {
+                     "description" : "Identificador do hardware da ONT (HDM)",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "model" : {
+                     "description" : "Modelo da ONT (HDM)",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "serialNumber" : {
+                     "description" : "Numero serial da ONT (HDM)",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "vendor" : {
+                     "description" : "Fabricante da ONT (HDM)",
+                     "maxLength" : 255,
+                     "type" : "string"
+                  },
+                  "wlanConfiguration" : {
+                     "items" : {
+                        "properties" : {
+                           "authentication" : {
+                              "description" : "AutenticaÃ§Ã£o",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "basicAuthenticationMode" : {
+                              "description" : "Modos de autenticaÃ§Ã£o",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "basicEncryptionModes" : {
+                              "description" : "Modos de criptografia",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "beaconType" : {
+                              "description" : "Modo de criptografia da rede wifi",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "channel" : {
+                              "description" : "Canal do wifi",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "channelMode" : {
+                              "description" : "Modo do canal",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "devices" : {
+                              "items" : {
+                                 "properties" : {
+                                    "active" : {
+                                       "description" : "Status do equipamento conectado",
+                                       "type" : "boolean"
+                                    },
+                                    "addressSource" : {
+                                       "description" : "Origem do IP (fixo ou dinamico/DHCP)",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "frequencyBand" : {
+                                       "description" : "Frequencia da banda",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "hostName" : {
+                                       "description" : "Nome do Host do equipamento conectado",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "ipAddress" : {
+                                       "description" : "EndereÃ§o IP do equipamento conectado",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "macAddress" : {
+                                       "description" : "MAC do equipamento conectado",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "ssid" : {
+                                       "description" : "Identificador/nome da rede wifi",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "vendor" : {
+                                       "description" : "Fabricante do equipamento conectado",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    }
+                                 },
+                                 "type" : "object"
+                              },
+                              "type" : "array"
+                           },
+                           "enable" : {
+                              "description" : "Status do wifi",
+                              "maxLength" : 5,
+                              "type" : "boolean"
+                           },
+                           "encryption" : {
+                              "description" : "Criptografia",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "frequencyBand" : {
+                              "description" : "FrequÃªncia da rede wifi",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "macAddressControlEnabled" : {
+                              "description" : "Status do controle de MAC Address",
+                              "maxLength" : 5,
+                              "type" : "boolean"
+                           },
+                           "maxBitRate" : {
+                              "description" : "Limite de bitrate",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "packetsDropped" : {
+                              "description" : "Indicador de queda de pacotes de rede",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "packetsErrored" : {
+                              "description" : "Indicador de pacotes de rede com erro",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "radioEnabled" : {
+                              "description" : "Indicador do status do wifi",
+                              "maxLength" : 5,
+                              "type" : "boolean"
+                           },
+                           "ssid" : {
+                              "description" : "Identificador do wifi",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "ssidBCastEnabled" : {
+                              "description" : "Status de visibilidade do ssid",
+                              "maxLength" : 5,
+                              "type" : "boolean"
+                           },
+                           "status" : {
+                              "description" : "Status da rede",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "totalBytesReceived" : {
+                              "description" : "Total de bytes recebidos",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "totalBytesSent" : {
+                              "description" : "Total de bytes enviados",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "wifiIndex" : {
+                              "description" : "Indicador de index da rede wifi",
+                              "maxLength" : 25,
+                              "type" : "string"
+                           },
+                           "wpaAuthenticationMode" : {
+                              "description" : "Modos de autenticaÃ§Ã£o WPA",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "wpaEncryptionModes" : {
+                              "description" : "Modos de criptografia de WPA",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : "array"
+                  }
+               },
+               "type" : "object"
+            },
+            "type" : "array"
+         }
+      }
+   },
+   "info" : {
+      "title" : "Service Test Management",
+      "version" : "2.0.0"
+   },
+   "openapi" : "3.0.1",
+   "paths" : {
+      "/listener/serviceTestResultEvent" : {
+         "post" : {
+            "operationId" : "State Change Event",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Notification Diagnostic - state:FINISHED code:NOK" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "TesteFTTH002"
+                                 },
+                                 "serviceTest" : {
+                                    "diagnostic" : {
+                                       "code" : "NOK",
+                                       "messages" : []
+                                    },
+                                    "endDate" : "2023-05-25T19:18:05-03",
+                                    "hintOperations" : {
+                                       "actions" : [
+                                          {
+                                             "hintType'" : "MANUAL",
+                                             "type" : "Abrir Chamado Tecnico"
+                                          }
+                                       ]
+                                    },
+                                    "id" : "a84141b6-67c0-4103-b01b-f77e00e43b4e",
+                                    "result" : {
+                                       "bng" : {
+                                          "ipAddress" : "179.67.227.148",
+                                          "macAddress" : "78:17:35:f9:01:d1"
+                                       },
+                                       "devices" : [
+                                          {
+                                             "administrativeState" : "active",
+                                             "firmwareVersion" : "3FE48077HJIJ86",
+                                             "hardware" : "3FE48054BDAA01",
+                                             "idGPON" : "1-ONXK7",
+                                             "lastHour" : "04/11/2022 00:47",
+                                             "model" : "NOCLEICODEG1425GA",
+                                             "ontPowerRx" : "-21.366",
+                                             "ontPowerTx" : "2.162",
+                                             "operationalState" : "Up",
+                                             "serialNumber" : "ALCLFBD32300",
+                                             "temperature" : "37",
+                                             "vendor" : "ALCL"
+                                          }
+                                       ],
+                                       "lan" : {
+                                          "devices" : [
+                                             {
+                                                "active" : false,
+                                                "addressingType" : "",
+                                                "hostName" : "deco_M5",
+                                                "interfaceType" : "Ethernet",
+                                                "ipAddress" : "192.168.100.50",
+                                                "macAddress" : "24:76:7d:8a:50:49",
+                                                "type" : "",
+                                                "vendor" : "Cisco SPVTG"
+                                             }
+                                          ],
+                                          "gates" : [
+                                             {
+                                                "active" : true,
+                                                "port" : "1",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Up"
+                                             },
+                                             {
+                                                "active" : true,
+                                                "port" : "2",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Down"
+                                             }
+                                          ]
+                                       },
+                                       "nass" : {
+                                          "hsiLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210",
+                                          "voipLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"
+                                       },
+                                       "services" : [
+                                          {
+                                             "perfil" : "600 MBPS"
+                                          }
+                                       ],
+                                       "wan" : [
+                                          {
+                                             "internalClient" : "",
+                                             "physicalState" : "Up",
+                                             "receivedBytes" : "7413166343",
+                                             "sendBytes" : "496095715",
+                                             "uptimeHGW" : "276338"
+                                          }
+                                       ],
+                                       "wifi" : [
+                                          {
+                                             "firmware" : "V5R019C30S050",
+                                             "hardware" : "",
+                                             "model" : "HG8245W5-6T",
+                                             "serialNumber" : "48575443961E0C9F",
+                                             "vendor" : "Huawei Technologies Co., Ltd.",
+                                             "wlanConfiguration" : [
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "11i",
+                                                   "channel" : "4",
+                                                   "channelMode" : "Auto",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "S20-de-Jose",
+                                                         "ipAddress" : "192.168.100.4",
+                                                         "macAddress" : "8a:61:a5:58:ed:b5",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : "Samsung Electronics Co.,Ltd"
+                                                      },
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "G60-LMF",
+                                                         "ipAddress" : "192.168.100.9",
+                                                         "macAddress" : "5a:44:b4:32:gh:w3",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "2.4GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "DESCUBRA",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "1072",
+                                                   "totalBytesSent" : "2522",
+                                                   "wifiIndex" : "1",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "AESEncryption"
+                                                },
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "WPAand11i",
+                                                   "channel" : "2",
+                                                   "channelMode" : "Manual",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "5.0GHz",
+                                                         "hostName" : "TVLG-25578673",
+                                                         "ipAddress" : "192.168.100.10",
+                                                         "macAddress" : "3b:22:f5:21:wd:k9",
+                                                         "ssid" : "ALHN-8597-4",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "5.0GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "ALHN-8597-4",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "0",
+                                                   "totalBytesSent" : "0",
+                                                   "wifiIndex" : "10",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "TKIPandAESEncryption"
+                                                }
+                                             ]
+                                          }
+                                       ]
+                                    },
+                                    "startDate" : "2023-05-25T19:15:41-03",
+                                    "state" : "FINISHED",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:FINISHED code:OK (with OS)" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "diagnostic" : {
+                                       "code" : "OK",
+                                       "messages" : []
+                                    },
+                                    "endDate" : "2023-05-07T20:55:23-03",
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "result" : {
+                                       "bng" : {
+                                          "ipAddress" : "179.67.227.148",
+                                          "macAddress" : "78:17:35:f9:01:d1"
+                                       },
+                                       "devices" : [
+                                          {
+                                             "administrativeState" : "active",
+                                             "firmwareVersion" : "3FE48077HJIJ86",
+                                             "hardware" : "3FE48054BDAA01",
+                                             "idGPON" : "1-ONXK7",
+                                             "lastHour" : "04/11/2022 00:47",
+                                             "model" : "NOCLEICODEG1425GA",
+                                             "ontPowerRx" : "-21.366",
+                                             "ontPowerTx" : "2.162",
+                                             "operationalState" : "Up",
+                                             "serialNumber" : "ALCLFBD32300",
+                                             "temperature" : "37",
+                                             "vendor" : "ALCL"
+                                          }
+                                       ],
+                                       "lan" : {
+                                          "devices" : [
+                                             {
+                                                "active" : false,
+                                                "addressingType" : "",
+                                                "hostName" : "deco_M5",
+                                                "interfaceType" : "Ethernet",
+                                                "ipAddress" : "192.168.100.50",
+                                                "macAddress" : "24:76:7d:8a:50:49",
+                                                "type" : "",
+                                                "vendor" : "Cisco SPVTG"
+                                             }
+                                          ],
+                                          "gates" : [
+                                             {
+                                                "active" : true,
+                                                "port" : "1",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Up"
+                                             },
+                                             {
+                                                "active" : true,
+                                                "port" : "2",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Down"
+                                             }
+                                          ]
+                                       },
+                                       "nass" : {
+                                          "hsiLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210",
+                                          "voipLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"
+                                       },
+                                       "orders" : [
+                                          {
+                                             "associatedDocument" : "R-312839",
+                                             "id" : 22829
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312840",
+                                             "id" : 22833
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312855",
+                                             "id" : 23038
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312856",
+                                             "id" : 23042
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31302",
+                                             "id" : 23165
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31305",
+                                             "id" : 23185
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31310",
+                                             "id" : 23189
+                                          }
+                                       ],
+                                       "services" : [
+                                          {
+                                             "perfil" : "600 MBPS"
+                                          }
+                                       ],
+                                       "wan" : [
+                                          {
+                                             "internalClient" : "",
+                                             "physicalState" : "Up",
+                                             "receivedBytes" : "7413166343",
+                                             "sendBytes" : "496095715",
+                                             "uptimeHGW" : "276338"
+                                          }
+                                       ],
+                                       "wifi" : [
+                                          {
+                                             "firmware" : "V5R019C30S050",
+                                             "hardware" : "",
+                                             "model" : "HG8245W5-6T",
+                                             "serialNumber" : "48575443961E0C9F",
+                                             "vendor" : "Huawei Technologies Co., Ltd.",
+                                             "wlanConfiguration" : [
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "11i",
+                                                   "channel" : "4",
+                                                   "channelMode" : "Auto",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "S20-de-Jose",
+                                                         "ipAddress" : "192.168.100.4",
+                                                         "macAddress" : "8a:61:a5:58:ed:b5",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : "Samsung Electronics Co.,Ltd"
+                                                      },
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "G60-LMF",
+                                                         "ipAddress" : "192.168.100.9",
+                                                         "macAddress" : "5a:44:b4:32:gh:w3",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "2.4GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "DESCUBRA",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "1072",
+                                                   "totalBytesSent" : "2522",
+                                                   "wifiIndex" : "1",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "AESEncryption"
+                                                },
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "WPAand11i",
+                                                   "channel" : "2",
+                                                   "channelMode" : "Manual",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "5.0GHz",
+                                                         "hostName" : "TVLG-25578673",
+                                                         "ipAddress" : "192.168.100.10",
+                                                         "macAddress" : "3b:22:f5:21:wd:k9",
+                                                         "ssid" : "ALHN-8597-4",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "5.0GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "ALHN-8597-4",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "0",
+                                                   "totalBytesSent" : "0",
+                                                   "wifiIndex" : "10",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "TKIPandAESEncryption"
+                                                }
+                                             ]
+                                          }
+                                       ]
+                                    },
+                                    "startDate" : "2023-05-07T20:55:11-03",
+                                    "state" : "FINISHED",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:FINISHED code:OK (with messages)" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "diagnostic" : {
+                                       "code" : "OK",
+                                       "messages" : [
+                                          {
+                                             "criticity" : 0,
+                                             "description" : "[42] Interface Wifi inativa. NecessÃ¡rio verificar com o cliente se a interface wifi deve ser ativada e proceder a aÃ§Ã£o se confirmado.",
+                                             "errorCode" : "HGW_WIFI_02"
+                                          }
+                                       ]
+                                    },
+                                    "endDate" : "2023-05-07T20:55:23-03",
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "result" : {
+                                       "bng" : {
+                                          "ipAddress" : "179.67.227.148",
+                                          "macAddress" : "78:17:35:f9:01:d1"
+                                       },
+                                       "devices" : [
+                                          {
+                                             "administrativeState" : "active",
+                                             "firmwareVersion" : "3FE48077HJIJ86",
+                                             "hardware" : "3FE48054BDAA01",
+                                             "idGPON" : "1-ONXK7",
+                                             "lastHour" : "04/11/2022 00:47",
+                                             "model" : "NOCLEICODEG1425GA",
+                                             "ontPowerRx" : "-21.366",
+                                             "ontPowerTx" : "2.162",
+                                             "operationalState" : "Up",
+                                             "serialNumber" : "ALCLFBD32300",
+                                             "temperature" : "37",
+                                             "vendor" : "ALCL"
+                                          }
+                                       ],
+                                       "lan" : {
+                                          "devices" : [
+                                             {
+                                                "active" : false,
+                                                "addressingType" : "",
+                                                "hostName" : "deco_M5",
+                                                "interfaceType" : "Ethernet",
+                                                "ipAddress" : "192.168.100.50",
+                                                "macAddress" : "24:76:7d:8a:50:49",
+                                                "type" : "",
+                                                "vendor" : "Cisco SPVTG"
+                                             }
+                                          ],
+                                          "gates" : [
+                                             {
+                                                "active" : true,
+                                                "port" : "1",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Up"
+                                             },
+                                             {
+                                                "active" : true,
+                                                "port" : "2",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Down"
+                                             }
+                                          ]
+                                       },
+                                       "nass" : {
+                                          "hsiLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210",
+                                          "voipLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"
+                                       },
+                                       "orders" : [
+                                          {
+                                             "associatedDocument" : "R-312839",
+                                             "id" : 22829
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312840",
+                                             "id" : 22833
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312855",
+                                             "id" : 23038
+                                          },
+                                          {
+                                             "associatedDocument" : "R-312856",
+                                             "id" : 23042
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31302",
+                                             "id" : 23165
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31305",
+                                             "id" : 23185
+                                          },
+                                          {
+                                             "associatedDocument" : "R-31310",
+                                             "id" : 23189
+                                          }
+                                       ],
+                                       "services" : [
+                                          {
+                                             "perfil" : "600 MBPS"
+                                          }
+                                       ],
+                                       "wan" : [
+                                          {
+                                             "internalClient" : "",
+                                             "physicalState" : "Up",
+                                             "receivedBytes" : "7413166343",
+                                             "sendBytes" : "496095715",
+                                             "uptimeHGW" : "276338"
+                                          }
+                                       ],
+                                       "wifi" : [
+                                          {
+                                             "firmware" : "V5R019C30S050",
+                                             "hardware" : "",
+                                             "model" : "HG8245W5-6T",
+                                             "serialNumber" : "48575443961E0C9F",
+                                             "vendor" : "Huawei Technologies Co., Ltd.",
+                                             "wlanConfiguration" : [
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "11i",
+                                                   "channel" : "4",
+                                                   "channelMode" : "Auto",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "S20-de-Jose",
+                                                         "ipAddress" : "192.168.100.4",
+                                                         "macAddress" : "8a:61:a5:58:ed:b5",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : "Samsung Electronics Co.,Ltd"
+                                                      },
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "G60-LMF",
+                                                         "ipAddress" : "192.168.100.9",
+                                                         "macAddress" : "5a:44:b4:32:gh:w3",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "2.4GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "DESCUBRA",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "1072",
+                                                   "totalBytesSent" : "2522",
+                                                   "wifiIndex" : "1",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "AESEncryption"
+                                                },
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "WPAand11i",
+                                                   "channel" : "2",
+                                                   "channelMode" : "Manual",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "5.0GHz",
+                                                         "hostName" : "TVLG-25578673",
+                                                         "ipAddress" : "192.168.100.10",
+                                                         "macAddress" : "3b:22:f5:21:wd:k9",
+                                                         "ssid" : "ALHN-8597-4",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "5.0GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "ALHN-8597-4",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "0",
+                                                   "totalBytesSent" : "0",
+                                                   "wifiIndex" : "10",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "TKIPandAESEncryption"
+                                                }
+                                             ]
+                                          }
+                                       ]
+                                    },
+                                    "startDate" : "2023-05-07T20:55:11-03",
+                                    "state" : "FINISHED",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:FINISHED code:OK (without messages)" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "diagnostic" : {
+                                       "code" : "OK",
+                                       "messages" : []
+                                    },
+                                    "endDate" : "2023-05-25T17:21:26-03",
+                                    "hintOperations" : {
+                                       "actions" : [
+                                          {
+                                             "hintType" : "MANUAL",
+                                             "type" : "Instruir o Cliente"
+                                          }
+                                       ]
+                                    },
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "result" : {
+                                       "bng" : {
+                                          "ipAddress" : "179.67.227.148",
+                                          "macAddress" : "78:17:35:f9:01:d1"
+                                       },
+                                       "devices" : [
+                                          {
+                                             "administrativeState" : "active",
+                                             "firmwareVersion" : "3FE48077HJIJ86",
+                                             "hardware" : "3FE48054BDAA01",
+                                             "idGPON" : "1-ONXK7",
+                                             "lastHour" : "04/11/2022 00:47",
+                                             "model" : "NOCLEICODEG1425GA",
+                                             "ontPowerRx" : "-21.366",
+                                             "ontPowerTx" : "2.162",
+                                             "operationalState" : "Up",
+                                             "serialNumber" : "ALCLFBD32300",
+                                             "temperature" : "37",
+                                             "vendor" : "ALCL"
+                                          }
+                                       ],
+                                       "lan" : {
+                                          "devices" : [
+                                             {
+                                                "active" : false,
+                                                "addressingType" : "",
+                                                "hostName" : "deco_M5",
+                                                "interfaceType" : "Ethernet",
+                                                "ipAddress" : "192.168.100.50",
+                                                "macAddress" : "24:76:7d:8a:50:49",
+                                                "type" : "",
+                                                "vendor" : "Cisco SPVTG"
+                                             }
+                                          ],
+                                          "gates" : [
+                                             {
+                                                "active" : true,
+                                                "port" : "1",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Up"
+                                             },
+                                             {
+                                                "active" : true,
+                                                "port" : "2",
+                                                "receivedBytes" : "0",
+                                                "sendBytes" : "0",
+                                                "status" : "Down"
+                                             }
+                                          ]
+                                       },
+                                       "nass" : {
+                                          "hsiLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210",
+                                          "voipLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"
+                                       },
+                                       "services" : [
+                                          {
+                                             "perfil" : "600 MBPS"
+                                          }
+                                       ],
+                                       "wan" : [
+                                          {
+                                             "internalClient" : "",
+                                             "physicalState" : "Up",
+                                             "receivedBytes" : "7413166343",
+                                             "sendBytes" : "496095715",
+                                             "uptimeHGW" : "276338"
+                                          }
+                                       ],
+                                       "wifi" : [
+                                          {
+                                             "firmware" : "V5R019C30S050",
+                                             "hardware" : "",
+                                             "model" : "HG8245W5-6T",
+                                             "serialNumber" : "48575443961E0C9F",
+                                             "vendor" : "Huawei Technologies Co., Ltd.",
+                                             "wlanConfiguration" : [
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "11i",
+                                                   "channel" : "4",
+                                                   "channelMode" : "Auto",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "S20-de-Jose",
+                                                         "ipAddress" : "192.168.100.4",
+                                                         "macAddress" : "8a:61:a5:58:ed:b5",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : "Samsung Electronics Co.,Ltd"
+                                                      },
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "G60-LMF",
+                                                         "ipAddress" : "192.168.100.9",
+                                                         "macAddress" : "5a:44:b4:32:gh:w3",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "2.4GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "DESCUBRA",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "1072",
+                                                   "totalBytesSent" : "2522",
+                                                   "wifiIndex" : "1",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "AESEncryption"
+                                                },
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "WPAand11i",
+                                                   "channel" : "2",
+                                                   "channelMode" : "Manual",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "5.0GHz",
+                                                         "hostName" : "TVLG-25578673",
+                                                         "ipAddress" : "192.168.100.10",
+                                                         "macAddress" : "3b:22:f5:21:wd:k9",
+                                                         "ssid" : "ALHN-8597-4",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "5.0GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "ALHN-8597-4",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "0",
+                                                   "totalBytesSent" : "0",
+                                                   "wifiIndex" : "10",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "TKIPandAESEncryption"
+                                                }
+                                             ]
+                                          }
+                                       ]
+                                    },
+                                    "startDate" : "2023-05-25T17:20:03-03",
+                                    "state" : "FINISHED",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:FINISHED without code (diagnostic)" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "endDate" : "2023-05-24T14:58:28-03",
+                                    "hintOperations" : {
+                                       "actions" : [
+                                          {
+                                             "hintType'" : "MANUAL",
+                                             "type" : "Abrir Chamado Tecnico"
+                                          }
+                                       ]
+                                    },
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "result" : {
+                                       "bng" : {
+                                          "ipAddress" : "179.67.227.148",
+                                          "macAddress" : "78:17:35:f9:01:d1"
+                                       },
+                                       "devices" : [
+                                          {
+                                             "administrativeState" : "active",
+                                             "firmwareVersion" : "3FE48077HJIJ86",
+                                             "hardware" : "3FE48054BDAA01",
+                                             "idGPON" : "1-ONXK7",
+                                             "lastHour" : "04/11/2022 00:47",
+                                             "model" : "NOCLEICODEG1425GA",
+                                             "ontPowerRx" : "-21.366",
+                                             "ontPowerTx" : "2.162",
+                                             "operationalState" : "Up",
+                                             "serialNumber" : "ALCLFBD32300",
+                                             "temperature" : "37",
+                                             "vendor" : "ALCL"
+                                          }
+                                       ],
+                                       "lan" : {
+                                          "devices" : [
+                                             {
+                                                "active" : false,
+                                                "addressingType" : "",
+                                                "hostName" : "deco_M5",
+                                                "interfaceType" : "Ethernet",
+                                                "ipAddress" : "192.168.100.50",
+                                                "macAddress" : "24:76:7d:8a:50:49",
+                                                "type" : "",
+                                                "vendor" : "Cisco SPVTG"
+                                             }
+                                          ],
+                                          "gates" : [
+                                             {
+                                                "active" : true,
+                                                "port" : "1",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Up"
+                                             },
+                                             {
+                                                "active" : true,
+                                                "port" : "2",
+                                                "receivedBytes" : "872342342",
+                                                "sendBytes" : "3123123",
+                                                "status" : "Down"
+                                             }
+                                          ]
+                                       },
+                                       "nass" : {
+                                          "hsiLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/210",
+                                          "voipLineId" : "RJ-LEB01-GALC GPON 1/1/01/03/1/1/1:1129/220"
+                                       },
+                                       "services" : [
+                                          {
+                                             "perfil" : "600 MBPS"
+                                          }
+                                       ],
+                                       "wan" : [
+                                          {
+                                             "internalClient" : "",
+                                             "physicalState" : "Up",
+                                             "receivedBytes" : "7413166343",
+                                             "sendBytes" : "496095715",
+                                             "uptimeHGW" : "276338"
+                                          }
+                                       ],
+                                       "wifi" : [
+                                          {
+                                             "firmware" : "V5R019C30S050",
+                                             "hardware" : "",
+                                             "model" : "HG8245W5-6T",
+                                             "serialNumber" : "48575443961E0C9F",
+                                             "vendor" : "Huawei Technologies Co., Ltd.",
+                                             "wlanConfiguration" : [
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "11i",
+                                                   "channel" : "4",
+                                                   "channelMode" : "Auto",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "S20-de-Jose",
+                                                         "ipAddress" : "192.168.100.4",
+                                                         "macAddress" : "8a:61:a5:58:ed:b5",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : "Samsung Electronics Co.,Ltd"
+                                                      },
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "2.4GHz",
+                                                         "hostName" : "G60-LMF",
+                                                         "ipAddress" : "192.168.100.9",
+                                                         "macAddress" : "5a:44:b4:32:gh:w3",
+                                                         "ssid" : "DESCUBRA",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "2.4GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "DESCUBRA",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "1072",
+                                                   "totalBytesSent" : "2522",
+                                                   "wifiIndex" : "1",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "AESEncryption"
+                                                },
+                                                {
+                                                   "authentication" : "",
+                                                   "basicAuthenticationMode" : "None",
+                                                   "basicEncryptionModes" : "None",
+                                                   "beaconType" : "WPAand11i",
+                                                   "channel" : "2",
+                                                   "channelMode" : "Manual",
+                                                   "devices" : [
+                                                      {
+                                                         "active" : true,
+                                                         "addressSource" : "DHCP",
+                                                         "frequencyBand" : "5.0GHz",
+                                                         "hostName" : "TVLG-25578673",
+                                                         "ipAddress" : "192.168.100.10",
+                                                         "macAddress" : "3b:22:f5:21:wd:k9",
+                                                         "ssid" : "ALHN-8597-4",
+                                                         "vendor" : ""
+                                                      }
+                                                   ],
+                                                   "enable" : true,
+                                                   "encryption" : "",
+                                                   "frequencyBand" : "5.0GHz",
+                                                   "macAddressControlEnabled" : false,
+                                                   "maxBitRate" : "Auto",
+                                                   "packetsDropped" : "",
+                                                   "packetsErrored" : "",
+                                                   "radioEnabled" : true,
+                                                   "ssid" : "ALHN-8597-4",
+                                                   "ssidBCastEnabled" : true,
+                                                   "status" : "Down",
+                                                   "totalBytesReceived" : "0",
+                                                   "totalBytesSent" : "0",
+                                                   "wifiIndex" : "10",
+                                                   "wpaAuthenticationMode" : "PSKAuthentication",
+                                                   "wpaEncryptionModes" : "TKIPandAESEncryption"
+                                                }
+                                             ]
+                                          }
+                                       ]
+                                    },
+                                    "startDate" : "2023-05-24T14:55:24-03",
+                                    "state" : "FINISHED",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:INVENTORY_FAULT" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "endDate" : "2023-05-24T11:50:15-03",
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "startDate" : "2023-05-24T11:50:15-03",
+                                    "state" : "INVENTORY_FAULT",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:IN_PROGRESS" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "diagnostic" : {
+                                       "code" : "NOK",
+                                       "messages" : [
+                                          {
+                                             "description" : "Foram identificados problemas e serÃ£o executadas aÃ§Ãµes de correÃ§Ã£o",
+                                             "errorCode" : 1
+                                          }
+                                       ]
+                                    },
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "startDate" : "2023-05-24T14:38:19-03",
+                                    "state" : "IN_PROGRESS",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        },
+                        "Notification Diagnostic - state:NOT_FOUND" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "serviceTest" : {
+                                    "endDate" : "2023-05-24T11:50:15-03",
+                                    "id" : "22119329-13de-41da-9255-eb3e1606b449",
+                                    "startDate" : "2023-05-24T11:50:15-03",
+                                    "state" : "NOT_FOUND",
+                                    "type" : "diagnostic"
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/notificationEvent"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "204" : {
+                  "description" : "No Content"
+               },
+               "400" : {
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "description" : "Unauthorized"
+               },
+               "500" : {
+                  "description" : "ServerError"
+               },
+               "503" : {
+                  "description" : "Unavailable"
+               },
+               "504" : {
+                  "description" : "Timeout"
+               }
+            },
+            "summary" : "State Change Event",
+            "tags" : [
+               "Notification"
+            ]
+         }
+      },
+      "/serviceTest" : {
+         "post" : {
+            "operationId" : "Request Opening Service Test",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Diagnostic" : {
+                           "value" : {
+                              "serviceTest" : {
+                                 "customer" : {
+                                    "subscriberId" : "SVTAL001"
+                                 },
+                                 "type" : "diagnostic"
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/serviceTestRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "example" : {
+                           "control" : {
+                              "code" : "200",
+                              "message" : "OK",
+                              "type" : "S"
+                           },
+                           "serviceTest" : {
+                              "id" : "22119329-13de-41da-9255-eb3e1606b449"
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/serviceTestResponse"
+                        }
+                     }
+                  },
+                  "description" : "Success"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "406" : {
+                  "$ref" : "#/components/responses/NotAcceptable"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "Request Opening Service Test",
+            "tags" : [
+               "ServiceTest"
+            ]
+         }
+      }
+   },
+   "tags" : [
+      {
+         "name" : "ServiceTest"
+      },
+      {
+         "name" : "Notification"
+      }
+   ]
+}
