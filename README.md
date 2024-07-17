@@ -1,5 +1,7 @@
 # APIsFulfillment
 
+Test URL: https://apitrg.vtal.com.br.
+
 Appointment API:
 - POST /searchTimeSlot - Search for available time slots for an appointment. Requires address details, subscriber info, order type, products etc. Returns available time slots.
 - POST /appointment - Create an appointment. Requires selected time slot ID from searchTimeSlot response. Returns created appointment details.
