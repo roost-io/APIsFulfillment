@@ -1,1 +1,839 @@
-{"openapi":"3.0.1","info":{"title":"ResourcePoolManagement","version":"2.1.0"},"tags":[{"name":"availabilityCheck","description":"Availability Check resource"}],"paths":{"/availabilityCheck":{"post":{"tags":["availabilityCheck"],"summary":"Create a Availability Check","operationId":"postAvailabilityCheck","requestBody":{"required":true,"content":{"application/json":{"schema":{"$ref":"#/components/schemas/availabilityRequest"},"examples":{"address with complements":{"value":{"customer":{"subscriberId":"SVTL001"},"address":{"id":14393,"complement":{"complements":[{"type":"ES","value":"ARC201"}]}}}},"address without complements":{"value":{"customer":{"subscriberId":"SVTL001"},"address":{"id":2449}}}}}}},"responses":{"200":{"description":"successful operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/availabilityResponse"},"examples":{"total availability - FTTP":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":1766156,"maxBandwidth":1000,"availabilityType":1,"availabilityCode":0,"availabilityDescription":"Viável - Viabilidade técnica confirmada","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_500MB","name":"VELOC_500MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_1000MB","name":"VELOC_1000MBPS","technology":"","best_offer":true}]}}}},"total availability - FTTH":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":1766156,"maxBandwidth":1000,"availabilityType":1,"availabilityCode":0,"availabilityDescription":"Viável - Viabilidade técnica confirmada","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_500MB","name":"VELOC_500MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_1000MB","name":"VELOC_1000MBPS","technology":"","best_offer":true}]}}}},"partial availability - FTTH":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":261313,"maxBandwidth":400,"availabilityType":3,"availabilityCode":144,"availabilityDescription":"Viável com obra - CDO(s) sem porta livre e em célula disponível","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":"","best_offer":true},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""}]}}}},"no availability - FTTP":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"availabilityType":2,"availabilityCode":15,"availabilityDescription":"Inviável - CDO(s) sem rota rota contínua até ao bastidor ICX"}}},"no availability - FTTH":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"availabilityType":2,"availabilityCode":15,"availabilityDescription":"Inviável - CDO(s) sem rota rota contínua até ao bastidor ICX"}}},"Comercial block with total availability - FTTH":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":1766156,"maxBandwidth":1000,"availabilityType":2,"availabilityCode":407,"availabilityDescription":"Inviável - Inviável comercialmente","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_500MB","name":"VELOC_500MBPS","technology":"","best_offer":true},{"type":"Banda Larga","catalogId":"BL_1000MB","name":"VELOC_1000MBPS","technology":""}]}}}},"Comercial block with total availability - FTTP":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":1766156,"maxBandwidth":1000,"availabilityType":2,"availabilityCode":407,"availabilityDescription":"Inviável - Inviável comercialmente","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":"","best_offer":true},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_500MB","name":"VELOC_500MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_1000MB","name":"VELOC_1000MBPS","technology":""}]}}}},"Comercial block with partial availability - FTTH":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":261313,"maxBandwidth":400,"availabilityType":2,"availabilityCode":408,"availabilityDescription":"Inviável - Inviável comercialmente","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":"","best_offer":true},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":""}]}}}},"Comercial block with partial availability - FTTP":{"value":{"control":{"type":"S","code":200,"message":"OK"},"resource":{"inventoryId":261313,"maxBandwidth":400,"availabilityType":2,"availabilityCode":408,"availabilityDescription":"Inviável - Inviável comercialmente","products":{"product":[{"type":"Banda Larga","catalogId":"BL_100MB","name":"VELOC_100MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_200MB","name":"VELOC_200MBPS","technology":""},{"type":"Banda Larga","catalogId":"BL_400MB","name":"VELOC_400MBPS","technology":"","best_offer":true}]}}}}}}}},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}}},"components":{"schemas":{"control":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da mensagem de retorno. (S - Sucesso, T - Erro Técnico, E - Erro)","enum":["S","T","E"],"maxLength":1},"message":{"type":"string","description":"Descrição da mensagem de retorno.","maxLength":250},"code":{"type":"string","description":"Código de Retorno.","maxLength":3}}},"availabilityRequest":{"type":"object","properties":{"customer":{"$ref":"#/components/schemas/customerType"},"address":{"$ref":"#/components/schemas/addressType"}}},"availabilityResponse":{"type":"object","properties":{"control":{"$ref":"#/components/schemas/control"},"resource":{"$ref":"#/components/schemas/resourceType"}}},"customerType":{"properties":{"customer":{"type":"object","properties":{"subscriberId":{"type":"string","description":"Número identificador do cliente","maxLength":15}}}}},"addressType":{"properties":{"address":{"type":"object","properties":{"id":{"type":"string","description":"Identificador único do endereço.","maxLength":255},"complement":{"$ref":"#/components/schemas/complementType"}}}}},"complementType":{"properties":{"complement":{"type":"object","properties":{"complements":{"type":"array","maxItems":3,"items":{"type":"object","properties":{"type":{"type":"string","description":"Abreviatura do tipo de complemento.","maxLength":5},"description":{"type":"string","description":"Descrição do tipo de complemento.","maxLength":50},"value":{"type":"string","description":"Valor relativo ao tipo de complemento.","maxLength":50}}}}}}}},"resourceType":{"properties":{"resource":{"type":"object","properties":{"inventoryId":{"type":"integer","format":"int64","description":"Identificador do endereço do cliente no sistema de inventário.","maxLength":50},"maxBandwidth":{"type":"integer","format":"int8","description":"Velocidade máxima para atendimento a um determinado endereço. (A unidade de medida é em megabits por segundo (Mbps))","enum":[100,200,400,500,1000]},"availabilityType":{"type":"integer","format":"int2","description":"Indica o tipo de viabilidade Técnica para um determinado endereço. (1 - Viabilidade Total, 2 - Sem Viabilidade, 3 - Viabilidade Parcial  )","enum":[1,2,3]},"availabilityCode":{"type":"integer","format":"int3","description":"Código da viabilidade técnica para um determinado endereço.","enum":[0]},"availabilityDescription":{"type":"string","description":"Descrição do código da viabilidade para um determinado endereço.","maxLength":4000},"products":{"$ref":"#/components/schemas/productsType"}}}}},"productsType":{"properties":{"products":{"type":"object","properties":{"product":{"type":"array","items":{"type":"object","required":["catalogId"],"properties":{"type":{"type":"string","description":"Tipo do produto","maxLength":50},"catalogId":{"type":"string","enum":["BL_100MB","BL_200MB","BL_300MB","BL_400MB","BL_500MB","BL_600MB","BL_700MB","BL_800MB","BL_900MB","BL_1000MB"],"description":"Identificador do produto no catálogo","maxLength":30},"name":{"type":"string","description":"Nome do produto","maxLength":50},"technology":{"type":"string","description":"Tipo de tecnologia","maxLength":30},"best_offer":{"type":"boolean","description":"Campo indicativo de melhor oferta"}}}}}}}}},"responses":{"BadRequest":{"description":"Bad Request","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Invalid Message":{"value":{"control":{"type":"E","code":400,"message":"OSB Validate action failed validation"}}},"Required complement for the address provided":{"value":{"control":{"type":"E","code":400,"message":"Complemento obrigatório para o endereço informado."}}}}}}},"Unauthorized":{"description":"Unauthorized","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":401,"message":"Unauthorized"}}}}},"Forbidden":{"description":"Forbidden - Scope Not Permitted","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Invalid or expired credentials":{"value":{"control":{"type":"E","code":403,"message":"Forbidden - Scope Not Permitted"}}},"Unauthorized credentials":{"value":{"control":{"type":"E","code":403,"message":"Aplicação não autorizada ou não informada!"}}}}}}},"NotFound":{"description":"Not Found","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":404,"message":"Not Found"}}}}},"TooManyRequests":{"description":"Too Many Requests - Exceeded Quota","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":429,"message":"Too Many Requests - Exceeded Quota"}}}}},"ServerError":{"description":"Internal Server Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":500,"message":"Internal Server Error"}}}}},"Unavailable":{"description":"Service Unavailable","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":503,"message":"Service Unavailable"}}}}},"Timeout":{"description":"Gateway Timeout","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":504,"message":"Gateway Timeout"}}}}}}}}
+{
+   "components" : {
+      "responses" : {
+         "BadRequest" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Invalid Message" : {
+                        "value" : {
+                           "control" : {
+                              "code" : 400,
+                              "message" : "OSB Validate action failed validation",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "Required complement for the address provided" : {
+                        "value" : {
+                           "control" : {
+                              "code" : 400,
+                              "message" : "Complemento obrigatÃ³rio para o endereÃ§o informado.",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Bad Request"
+         },
+         "Forbidden" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Invalid or expired credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : 403,
+                              "message" : "Forbidden - Scope Not Permitted",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "Unauthorized credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : 403,
+                              "message" : "AplicaÃ§Ã£o nÃ£o autorizada ou nÃ£o informada!",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Forbidden - Scope Not Permitted"
+         },
+         "NotFound" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 404,
+                        "message" : "Not Found",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Found"
+         },
+         "ServerError" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 500,
+                        "message" : "Internal Server Error",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Internal Server Error"
+         },
+         "Timeout" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 504,
+                        "message" : "Gateway Timeout",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Gateway Timeout"
+         },
+         "TooManyRequests" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 429,
+                        "message" : "Too Many Requests - Exceeded Quota",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Too Many Requests - Exceeded Quota"
+         },
+         "Unauthorized" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 401,
+                        "message" : "Unauthorized",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Unauthorized"
+         },
+         "Unavailable" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 503,
+                        "message" : "Service Unavailable",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Service Unavailable"
+         }
+      },
+      "schemas" : {
+         "addressType" : {
+            "properties" : {
+               "address" : {
+                  "properties" : {
+                     "complement" : {
+                        "$ref" : "#/components/schemas/complementType"
+                     },
+                     "id" : {
+                        "description" : "Identificador Ãºnico do endereÃ§o.",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "availabilityRequest" : {
+            "properties" : {
+               "address" : {
+                  "$ref" : "#/components/schemas/addressType"
+               },
+               "customer" : {
+                  "$ref" : "#/components/schemas/customerType"
+               }
+            },
+            "type" : "object"
+         },
+         "availabilityResponse" : {
+            "properties" : {
+               "control" : {
+                  "$ref" : "#/components/schemas/control"
+               },
+               "resource" : {
+                  "$ref" : "#/components/schemas/resourceType"
+               }
+            },
+            "type" : "object"
+         },
+         "complementType" : {
+            "properties" : {
+               "complement" : {
+                  "properties" : {
+                     "complements" : {
+                        "items" : {
+                           "properties" : {
+                              "description" : {
+                                 "description" : "DescriÃ§Ã£o do tipo de complemento.",
+                                 "maxLength" : 50,
+                                 "type" : "string"
+                              },
+                              "type" : {
+                                 "description" : "Abreviatura do tipo de complemento.",
+                                 "maxLength" : 5,
+                                 "type" : "string"
+                              },
+                              "value" : {
+                                 "description" : "Valor relativo ao tipo de complemento.",
+                                 "maxLength" : 50,
+                                 "type" : "string"
+                              }
+                           },
+                           "type" : "object"
+                        },
+                        "maxItems" : 3,
+                        "type" : "array"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "control" : {
+            "properties" : {
+               "code" : {
+                  "description" : "CÃ³digo de Retorno.",
+                  "maxLength" : 3,
+                  "type" : "string"
+               },
+               "message" : {
+                  "description" : "DescriÃ§Ã£o da mensagem de retorno.",
+                  "maxLength" : 250,
+                  "type" : "string"
+               },
+               "type" : {
+                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃ©cnico, E - Erro)",
+                  "enum" : [
+                     "S",
+                     "T",
+                     "E"
+                  ],
+                  "maxLength" : 1,
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "customerType" : {
+            "properties" : {
+               "customer" : {
+                  "properties" : {
+                     "subscriberId" : {
+                        "description" : "NÃºmero identificador do cliente",
+                        "maxLength" : 15,
+                        "type" : "string"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "productsType" : {
+            "properties" : {
+               "products" : {
+                  "properties" : {
+                     "product" : {
+                        "items" : {
+                           "properties" : {
+                              "best_offer" : {
+                                 "description" : "Campo indicativo de melhor oferta",
+                                 "type" : "boolean"
+                              },
+                              "catalogId" : {
+                                 "description" : "Identificador do produto no catÃ¡logo",
+                                 "enum" : [
+                                    "BL_100MB",
+                                    "BL_200MB",
+                                    "BL_300MB",
+                                    "BL_400MB",
+                                    "BL_500MB",
+                                    "BL_600MB",
+                                    "BL_700MB",
+                                    "BL_800MB",
+                                    "BL_900MB",
+                                    "BL_1000MB"
+                                 ],
+                                 "maxLength" : 30,
+                                 "type" : "string"
+                              },
+                              "name" : {
+                                 "description" : "Nome do produto",
+                                 "maxLength" : 50,
+                                 "type" : "string"
+                              },
+                              "technology" : {
+                                 "description" : "Tipo de tecnologia",
+                                 "maxLength" : 30,
+                                 "type" : "string"
+                              },
+                              "type" : {
+                                 "description" : "Tipo do produto",
+                                 "maxLength" : 50,
+                                 "type" : "string"
+                              }
+                           },
+                           "required" : [
+                              "catalogId"
+                           ],
+                           "type" : "object"
+                        },
+                        "type" : "array"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "resourceType" : {
+            "properties" : {
+               "resource" : {
+                  "properties" : {
+                     "availabilityCode" : {
+                        "description" : "CÃ³digo da viabilidade tÃ©cnica para um determinado endereÃ§o.",
+                        "enum" : [
+                           0
+                        ],
+                        "format" : "int3",
+                        "type" : "integer"
+                     },
+                     "availabilityDescription" : {
+                        "description" : "DescriÃ§Ã£o do cÃ³digo da viabilidade para um determinado endereÃ§o.",
+                        "maxLength" : 4000,
+                        "type" : "string"
+                     },
+                     "availabilityType" : {
+                        "description" : "Indica o tipo de viabilidade TÃ©cnica para um determinado endereÃ§o. (1 - Viabilidade Total, 2 - Sem Viabilidade, 3 - Viabilidade Parcial  )",
+                        "enum" : [
+                           1,
+                           2,
+                           3
+                        ],
+                        "format" : "int2",
+                        "type" : "integer"
+                     },
+                     "inventoryId" : {
+                        "description" : "Identificador do endereÃ§o do cliente no sistema de inventÃ¡rio.",
+                        "format" : "int64",
+                        "maxLength" : 50,
+                        "type" : "integer"
+                     },
+                     "maxBandwidth" : {
+                        "description" : "Velocidade mÃ¡xima para atendimento a um determinado endereÃ§o. (A unidade de medida Ã© em megabits por segundo (Mbps))",
+                        "enum" : [
+                           100,
+                           200,
+                           400,
+                           500,
+                           1000
+                        ],
+                        "format" : "int8",
+                        "type" : "integer"
+                     },
+                     "products" : {
+                        "$ref" : "#/components/schemas/productsType"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         }
+      }
+   },
+   "info" : {
+      "title" : "ResourcePoolManagement",
+      "version" : "2.1.0"
+   },
+   "openapi" : "3.0.1",
+   "paths" : {
+      "/availabilityCheck" : {
+         "post" : {
+            "operationId" : "postAvailabilityCheck",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "address with complements" : {
+                           "value" : {
+                              "address" : {
+                                 "complement" : {
+                                    "complements" : [
+                                       {
+                                          "type" : "ES",
+                                          "value" : "ARC201"
+                                       }
+                                    ]
+                                 },
+                                 "id" : 14393
+                              },
+                              "customer" : {
+                                 "subscriberId" : "SVTL001"
+                              }
+                           }
+                        },
+                        "address without complements" : {
+                           "value" : {
+                              "address" : {
+                                 "id" : 2449
+                              },
+                              "customer" : {
+                                 "subscriberId" : "SVTL001"
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/availabilityRequest"
+                     }
+                  }
+               },
+               "required" : true
+            },
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "examples" : {
+                           "Comercial block with partial availability - FTTH" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 408,
+                                    "availabilityDescription" : "InviÃ¡vel - InviÃ¡vel comercialmente",
+                                    "availabilityType" : 2,
+                                    "inventoryId" : 261313,
+                                    "maxBandwidth" : 400,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "Comercial block with partial availability - FTTP" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 408,
+                                    "availabilityDescription" : "InviÃ¡vel - InviÃ¡vel comercialmente",
+                                    "availabilityType" : 2,
+                                    "inventoryId" : 261313,
+                                    "maxBandwidth" : 400,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "Comercial block with total availability - FTTH" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 407,
+                                    "availabilityDescription" : "InviÃ¡vel - InviÃ¡vel comercialmente",
+                                    "availabilityType" : 2,
+                                    "inventoryId" : 1766156,
+                                    "maxBandwidth" : 1000,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_500MB",
+                                             "name" : "VELOC_500MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_1000MB",
+                                             "name" : "VELOC_1000MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "Comercial block with total availability - FTTP" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 407,
+                                    "availabilityDescription" : "InviÃ¡vel - InviÃ¡vel comercialmente",
+                                    "availabilityType" : 2,
+                                    "inventoryId" : 1766156,
+                                    "maxBandwidth" : 1000,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_500MB",
+                                             "name" : "VELOC_500MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_1000MB",
+                                             "name" : "VELOC_1000MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "no availability - FTTH" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 15,
+                                    "availabilityDescription" : "InviÃ¡vel - CDO(s) sem rota rota contÃ­nua atÃ© ao bastidor ICX",
+                                    "availabilityType" : 2
+                                 }
+                              }
+                           },
+                           "no availability - FTTP" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 15,
+                                    "availabilityDescription" : "InviÃ¡vel - CDO(s) sem rota rota contÃ­nua atÃ© ao bastidor ICX",
+                                    "availabilityType" : 2
+                                 }
+                              }
+                           },
+                           "partial availability - FTTH" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 144,
+                                    "availabilityDescription" : "ViÃ¡vel com obra - CDO(s) sem porta livre e em cÃ©lula disponÃ­vel",
+                                    "availabilityType" : 3,
+                                    "inventoryId" : 261313,
+                                    "maxBandwidth" : 400,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "total availability - FTTH" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 0,
+                                    "availabilityDescription" : "ViÃ¡vel - Viabilidade tÃ©cnica confirmada",
+                                    "availabilityType" : 1,
+                                    "inventoryId" : 1766156,
+                                    "maxBandwidth" : 1000,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_500MB",
+                                             "name" : "VELOC_500MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_1000MB",
+                                             "name" : "VELOC_1000MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           },
+                           "total availability - FTTP" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : 200,
+                                    "message" : "OK",
+                                    "type" : "S"
+                                 },
+                                 "resource" : {
+                                    "availabilityCode" : 0,
+                                    "availabilityDescription" : "ViÃ¡vel - Viabilidade tÃ©cnica confirmada",
+                                    "availabilityType" : 1,
+                                    "inventoryId" : 1766156,
+                                    "maxBandwidth" : 1000,
+                                    "products" : {
+                                       "product" : [
+                                          {
+                                             "catalogId" : "BL_100MB",
+                                             "name" : "VELOC_100MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_200MB",
+                                             "name" : "VELOC_200MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_400MB",
+                                             "name" : "VELOC_400MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "catalogId" : "BL_500MB",
+                                             "name" : "VELOC_500MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          },
+                                          {
+                                             "best_offer" : true,
+                                             "catalogId" : "BL_1000MB",
+                                             "name" : "VELOC_1000MBPS",
+                                             "technology" : "",
+                                             "type" : "Banda Larga"
+                                          }
+                                       ]
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/availabilityResponse"
+                        }
+                     }
+                  },
+                  "description" : "successful operation"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "Create a Availability Check",
+            "tags" : [
+               "availabilityCheck"
+            ]
+         }
+      }
+   },
+   "tags" : [
+      {
+         "description" : "Availability Check resource",
+         "name" : "availabilityCheck"
+      }
+   ]
+}

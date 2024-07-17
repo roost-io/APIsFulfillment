@@ -1,1 +1,1137 @@
-{"openapi":"3.0.1","info":{"title":"WorkOrderManagement","version":"1.2.6"},"tags":[{"name":"workOrderStateChangeEvent"},{"name":"workOrderAttributeValueChangeEvent"}],"paths":{"/listener/workOrderStateChangeEvent":{"post":{"tags":["workOrderStateChangeEvent"],"summary":"Alteração do status da atividade de campo.","operationId":"workOrderStateChangeEvent","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/workOrderChangeEventRequest"},"examples":{"ACTIVITY_CANCELED":{"value":{"notification":{"event":{"id":"23","name":"ACTIVITY_CANCELED","timeOccurred":"2022-07-07 17:37:36","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Cancelado","associatedDocument":"VTT001","businessUnit":"varejo","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 08:00:00","appointmentFinish":"2022-07-08 12:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_RECEIVED_WITHOUT_BOOKING":{"value":{"notification":{"event":{"id":"20","name":"ACTIVITY_RECEIVED_WITHOUT_BOOKING","timeOccurred":"2022-07-08 07:08:48","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Recebido","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"","appointmentFinish":"","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"EN_ROUTE":{"value":{"notification":{"event":{"id":"15","name":"EN_ROUTE","timeOccurred":"2022-07-08 14:00:57","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Em deslocamento","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"IN_EXECUTION":{"value":{"notification":{"event":{"id":"14","name":"IN_EXECUTION","timeOccurred":"2022-07-08 14:20:13","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Em execução","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CONCLUDED_SUCESSFULLY":{"value":{"notification":{"event":{"id":"21","name":"ACTIVITY_CONCLUDED_SUCESSFULLY","timeOccurred":"2022-07-08 14:16:49","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Concluído com sucesso","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CONCLUDED_UNSUCESSFULLY":{"value":{"notification":{"event":{"id":"22","name":"ACTIVITY_CONCLUDED_UNSUCESSFULLY","timeOccurred":"2022-07-08 14:22:27","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Concluído sem sucesso","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CANCELED_PURGE":{"value":{"notification":{"event":{"id":"24","name":"ACTIVITY_CANCELED_PURGE","timeOccurred":"2022-07-08 14:22:27","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Cancelado","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CANCELED_ORDER_IN_PROVISION_TENANT":{"value":{"notification":{"event":{"id":"25","name":"ACTIVITY_CANCELED_ORDER_IN_PROVISION_TENANT","timeOccurred":"2022-07-08 14:22:27","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Cancelado","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CANCELED_ORDER_IN_PROVISION_VTAL":{"value":{"notification":{"event":{"id":"26","name":"ACTIVITY_CANCELED_ORDER_IN_PROVISION_VTAL","timeOccurred":"2022-07-08 14:22:27","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Cancelado","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"ACTIVITY_CANCELED_PENDING_NEW_APPOINTMENT":{"value":{"notification":{"event":{"id":"27","name":"ACTIVITY_CANCELED_PENDING_NEW_APPOINTMENT","timeOccurred":"2022-07-08 14:22:27","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Cancelado","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-08 13:00:00","appointmentFinish":"2022-07-08 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}}}}}},"responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/workOrderSuccessResponse"},"example":{"control":{"type":"S","code":200,"message":"Ok"}}}}},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}},"/listener/workOrderAttributeValueChangeEvent":{"post":{"tags":["workOrderAttributeValueChangeEvent"],"summary":"Alteração de atributos do agendamento.","operationId":"workOrderAttributeValueChangeEvent","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/workOrderChangeEventRequest"},"examples":{"BOOKING_COMPLETED":{"value":{"notification":{"event":{"id":"19","name":"BOOKING_COMPLETED","timeOccurred":"2022-07-08 13:59:40","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Atribuído","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-12 13:00:00","appointmentFinish":"2022-07-12 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"BOOKING_RESCHEDULE":{"value":{"notification":{"event":{"id":"17","name":"BOOKING_RESCHEDULE","timeOccurred":"2022-07-08 12:08:35","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-562403","lifeCycleStatus":"Não atribuído","associatedDocument":"VTT001","businessUnit":"","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"2022-07-11 13:00:00","appointmentFinish":"2022-07-11 18:00:00","bookingConfirmed":false},"technician":{"name":"LEANDRO LANES SIQUEIRA - TR123456"},"address":{"id":"6866098","stateAbbreviation":"RJ","city":"Rio De Janeiro","description":"Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)"},"customer":{"name":"RAMON CORREA RODRIGUES FREITAS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}},"BOOKING_CANCELED":{"value":{"notification":{"event":{"id":"18","name":"BOOKING_CANCELED","timeOccurred":"2022-06-03 17:17:48","timeZoneOccurred":"America/Sao_Paulo"},"workOrder":{"id":"SA-269447","lifeCycleStatus":"Não atribuído","associatedDocument":"00056911|0000","businessUnit":"null","operationalPriority":"Sem Prioridade","readyForTechnicalDispatch":true,"task":{"activityType":"INSTALAÇÃO BL FIBRA","category":"INST"},"appointment":{"appointmentStart":"null","appointmentFinish":"null","bookingConfirmed":false},"technician":{"name":"null"},"address":{"id":"153180","stateAbbreviation":"CE","city":"Fortaleza","description":"Rua Vicente Linhares, 730\nCEP: 60135270\nAldeota, Fortaleza - CE\nComplementos: "},"customer":{"name":"NOELITO BARBOSA DE JESUS","subscriberId":"SVTL001","phoneNumber":{"phoneNumbers":["00000000000","",""]}}}}}}}}}},"responses":{"200":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/workOrderSuccessResponse"},"example":{"control":{"type":"S","code":200,"message":"Ok"}}}}},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}}},"components":{"schemas":{"control":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da mensagem de retorno. (S - Sucesso, T - Erro Técnico, E - Erro)","enum":["S","T","E"]},"message":{"type":"string","description":"Descrição da mensagem de retorno."},"code":{"type":"string","description":"Codigo de Retorno."}}},"workOrderChangeEventRequest":{"type":"object","properties":{"notification":{"type":"object","properties":{"event":{"type":"object","required":["id","name"],"properties":{"id":{"type":"string","description":"Identificador do evento","maxLength":255},"name":{"type":"string","description":"Descrição do evento","maxLength":255},"timeOccurred":{"type":"string","description":"Data hora do envio do evento","maxLength":40},"timeZoneOccurred":{"type":"string","description":"Time Zone da ocorrência do evento","maxLength":64}}},"workOrder":{"type":"object","required":["id"],"properties":{"id":{"type":"string","description":"Numero do BA","maxLength":255},"lifeCycleStatus":{"type":"string","description":"Status do BA","maxLength":255},"associatedDocument":{"type":"string","description":"Número do documento associado ao BA","maxLength":30},"businessUnit":{"type":"string","description":"Unidade de negócio","maxLength":255},"operationalPriority":{"type":"string","description":"Prioridade da operação do BA","maxLength":64},"readyForTechnicalDispatch":{"type":"boolean","description":"Flag indicativa se o BA está pronto para ser entregue ao tecnico","maxLength":1},"task":{"type":"object","properties":{"activityType":{"type":"string","description":"Código da atividade do BA","enum":["INSTALAÇÃO BL FIBRA","REPARO FIBRA","RETIRADA BL FIBRA"],"maxLength":255},"category":{"type":"string","description":"Categoria da atividade do BA","enum":["INST","REP","RET"],"maxLength":255}}},"appointment":{"type":"object","properties":{"appointmentStart":{"type":"string","description":"Data início do agendamento do BA","maxLength":40},"appointmentFinish":{"type":"string","description":"Data fim do agendamento do BA","maxLength":40},"bookingConfirmed":{"type":"boolean","description":"Flag indicativa se o agendamento está confirmado com o cliente","maxLength":1}}},"technician":{"type":"object","properties":{"name":{"type":"string","description":"Nome do técnico que irá atender o BA","maxLength":255}}},"address":{"type":"object","properties":{"id":{"type":"string","description":"Identificador do endereço","maxLength":255},"stateAbbreviation":{"type":"string","description":"UF do estado","maxLength":255},"city":{"type":"string","description":"Nome da cidade","maxLength":40},"description":{"type":"string","description":"Descrição completa do endereço","maxLength":255}}},"customer":{"type":"object","properties":{"name":{"type":"string","description":"Nome do cliente","maxLength":255},"subscriberId":{"type":"string","description":"Identificador do cliente","maxLength":64},"phonenumber":{"type":"object","properties":{"phoneNumbers":{"type":"array","items":{"type":"string","description":"Número de telefone de contato do cliente","maxLength":255}}}}}}}}}}}},"workOrderSuccessResponse":{"type":"object","properties":{"control":{"$ref":"#/components/schemas/control"}}}},"responses":{"BadRequest":{"description":"Bad Request","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":400,"message":"Bad Request"}}}}},"Unauthorized":{"description":"Unauthorized","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":401,"message":"Unauthorized"}}}}},"Forbidden":{"description":"Forbidden - Scope Not Permitted","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":403,"message":"Forbidden - Scope Not Permitted"}}}}},"NotFound":{"description":"Not Found","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":404,"message":"Not Found"}}}}},"TooManyRequests":{"description":"Too Many Requests - Exceeded Quota","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":429,"message":"Too Many Requests - Exceeded Quota"}}}}},"ServerError":{"description":"Internal Server Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":500,"message":"Internal Server Error"}}}}},"Unavailable":{"description":"Service Unavailable","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":503,"message":"Service Unavailable"}}}}},"Timeout":{"description":"Gateway Timeout","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":504,"message":"Gateway Timeout"}}}}}}}}
+{
+   "components" : {
+      "responses" : {
+         "BadRequest" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 400,
+                        "message" : "Bad Request",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Bad Request"
+         },
+         "Forbidden" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 403,
+                        "message" : "Forbidden - Scope Not Permitted",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Forbidden - Scope Not Permitted"
+         },
+         "NotFound" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 404,
+                        "message" : "Not Found",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Found"
+         },
+         "ServerError" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 500,
+                        "message" : "Internal Server Error",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Internal Server Error"
+         },
+         "Timeout" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 504,
+                        "message" : "Gateway Timeout",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Gateway Timeout"
+         },
+         "TooManyRequests" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 429,
+                        "message" : "Too Many Requests - Exceeded Quota",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Too Many Requests - Exceeded Quota"
+         },
+         "Unauthorized" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 401,
+                        "message" : "Unauthorized",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Unauthorized"
+         },
+         "Unavailable" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : 503,
+                        "message" : "Service Unavailable",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Service Unavailable"
+         }
+      },
+      "schemas" : {
+         "control" : {
+            "properties" : {
+               "code" : {
+                  "description" : "Codigo de Retorno.",
+                  "type" : "string"
+               },
+               "message" : {
+                  "description" : "DescriÃ§Ã£o da mensagem de retorno.",
+                  "type" : "string"
+               },
+               "type" : {
+                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃ©cnico, E - Erro)",
+                  "enum" : [
+                     "S",
+                     "T",
+                     "E"
+                  ],
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "workOrderChangeEventRequest" : {
+            "properties" : {
+               "notification" : {
+                  "properties" : {
+                     "event" : {
+                        "properties" : {
+                           "id" : {
+                              "description" : "Identificador do evento",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "name" : {
+                              "description" : "DescriÃ§Ã£o do evento",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "timeOccurred" : {
+                              "description" : "Data hora do envio do evento",
+                              "maxLength" : 40,
+                              "type" : "string"
+                           },
+                           "timeZoneOccurred" : {
+                              "description" : "Time Zone da ocorrÃªncia do evento",
+                              "maxLength" : 64,
+                              "type" : "string"
+                           }
+                        },
+                        "required" : [
+                           "id",
+                           "name"
+                        ],
+                        "type" : "object"
+                     },
+                     "workOrder" : {
+                        "properties" : {
+                           "address" : {
+                              "properties" : {
+                                 "city" : {
+                                    "description" : "Nome da cidade",
+                                    "maxLength" : 40,
+                                    "type" : "string"
+                                 },
+                                 "description" : {
+                                    "description" : "DescriÃ§Ã£o completa do endereÃ§o",
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 },
+                                 "id" : {
+                                    "description" : "Identificador do endereÃ§o",
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 },
+                                 "stateAbbreviation" : {
+                                    "description" : "UF do estado",
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 }
+                              },
+                              "type" : "object"
+                           },
+                           "appointment" : {
+                              "properties" : {
+                                 "appointmentFinish" : {
+                                    "description" : "Data fim do agendamento do BA",
+                                    "maxLength" : 40,
+                                    "type" : "string"
+                                 },
+                                 "appointmentStart" : {
+                                    "description" : "Data inÃ­cio do agendamento do BA",
+                                    "maxLength" : 40,
+                                    "type" : "string"
+                                 },
+                                 "bookingConfirmed" : {
+                                    "description" : "Flag indicativa se o agendamento estÃ¡ confirmado com o cliente",
+                                    "maxLength" : 1,
+                                    "type" : "boolean"
+                                 }
+                              },
+                              "type" : "object"
+                           },
+                           "associatedDocument" : {
+                              "description" : "NÃºmero do documento associado ao BA",
+                              "maxLength" : 30,
+                              "type" : "string"
+                           },
+                           "businessUnit" : {
+                              "description" : "Unidade de negÃ³cio",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "customer" : {
+                              "properties" : {
+                                 "name" : {
+                                    "description" : "Nome do cliente",
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 },
+                                 "phonenumber" : {
+                                    "properties" : {
+                                       "phoneNumbers" : {
+                                          "items" : {
+                                             "description" : "NÃºmero de telefone de contato do cliente",
+                                             "maxLength" : 255,
+                                             "type" : "string"
+                                          },
+                                          "type" : "array"
+                                       }
+                                    },
+                                    "type" : "object"
+                                 },
+                                 "subscriberId" : {
+                                    "description" : "Identificador do cliente",
+                                    "maxLength" : 64,
+                                    "type" : "string"
+                                 }
+                              },
+                              "type" : "object"
+                           },
+                           "id" : {
+                              "description" : "Numero do BA",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "lifeCycleStatus" : {
+                              "description" : "Status do BA",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "operationalPriority" : {
+                              "description" : "Prioridade da operaÃ§Ã£o do BA",
+                              "maxLength" : 64,
+                              "type" : "string"
+                           },
+                           "readyForTechnicalDispatch" : {
+                              "description" : "Flag indicativa se o BA estÃ¡ pronto para ser entregue ao tecnico",
+                              "maxLength" : 1,
+                              "type" : "boolean"
+                           },
+                           "task" : {
+                              "properties" : {
+                                 "activityType" : {
+                                    "description" : "CÃ³digo da atividade do BA",
+                                    "enum" : [
+                                       "INSTALAÃÃO BL FIBRA",
+                                       "REPARO FIBRA",
+                                       "RETIRADA BL FIBRA"
+                                    ],
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 },
+                                 "category" : {
+                                    "description" : "Categoria da atividade do BA",
+                                    "enum" : [
+                                       "INST",
+                                       "REP",
+                                       "RET"
+                                    ],
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 }
+                              },
+                              "type" : "object"
+                           },
+                           "technician" : {
+                              "properties" : {
+                                 "name" : {
+                                    "description" : "Nome do tÃ©cnico que irÃ¡ atender o BA",
+                                    "maxLength" : 255,
+                                    "type" : "string"
+                                 }
+                              },
+                              "type" : "object"
+                           }
+                        },
+                        "required" : [
+                           "id"
+                        ],
+                        "type" : "object"
+                     }
+                  },
+                  "type" : "object"
+               }
+            },
+            "type" : "object"
+         },
+         "workOrderSuccessResponse" : {
+            "properties" : {
+               "control" : {
+                  "$ref" : "#/components/schemas/control"
+               }
+            },
+            "type" : "object"
+         }
+      }
+   },
+   "info" : {
+      "title" : "WorkOrderManagement",
+      "version" : "1.2.6"
+   },
+   "openapi" : "3.0.1",
+   "paths" : {
+      "/listener/workOrderAttributeValueChangeEvent" : {
+         "post" : {
+            "operationId" : "workOrderAttributeValueChangeEvent",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "BOOKING_CANCELED" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "18",
+                                    "name" : "BOOKING_CANCELED",
+                                    "timeOccurred" : "2022-06-03 17:17:48",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Fortaleza",
+                                       "description" : "Rua Vicente Linhares, 730\nCEP: 60135270\nAldeota, Fortaleza - CE\nComplementos: ",
+                                       "id" : "153180",
+                                       "stateAbbreviation" : "CE"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "null",
+                                       "appointmentStart" : "null",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "00056911|0000",
+                                    "businessUnit" : "null",
+                                    "customer" : {
+                                       "name" : "NOELITO BARBOSA DE JESUS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-269447",
+                                    "lifeCycleStatus" : "NÃ£o atribuÃ­do",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "null"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "BOOKING_COMPLETED" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "19",
+                                    "name" : "BOOKING_COMPLETED",
+                                    "timeOccurred" : "2022-07-08 13:59:40",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-12 18:00:00",
+                                       "appointmentStart" : "2022-07-12 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "AtribuÃ­do",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "BOOKING_RESCHEDULE" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "17",
+                                    "name" : "BOOKING_RESCHEDULE",
+                                    "timeOccurred" : "2022-07-08 12:08:35",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-11 18:00:00",
+                                       "appointmentStart" : "2022-07-11 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "NÃ£o atribuÃ­do",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/workOrderChangeEventRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "example" : {
+                           "control" : {
+                              "code" : 200,
+                              "message" : "Ok",
+                              "type" : "S"
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/workOrderSuccessResponse"
+                        }
+                     }
+                  },
+                  "description" : "Success"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "AlteraÃ§Ã£o de atributos do agendamento.",
+            "tags" : [
+               "workOrderAttributeValueChangeEvent"
+            ]
+         }
+      },
+      "/listener/workOrderStateChangeEvent" : {
+         "post" : {
+            "operationId" : "workOrderStateChangeEvent",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "ACTIVITY_CANCELED" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "23",
+                                    "name" : "ACTIVITY_CANCELED",
+                                    "timeOccurred" : "2022-07-07 17:37:36",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 12:00:00",
+                                       "appointmentStart" : "2022-07-08 08:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "varejo",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Cancelado",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CANCELED_ORDER_IN_PROVISION_TENANT" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "25",
+                                    "name" : "ACTIVITY_CANCELED_ORDER_IN_PROVISION_TENANT",
+                                    "timeOccurred" : "2022-07-08 14:22:27",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Cancelado",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CANCELED_ORDER_IN_PROVISION_VTAL" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "26",
+                                    "name" : "ACTIVITY_CANCELED_ORDER_IN_PROVISION_VTAL",
+                                    "timeOccurred" : "2022-07-08 14:22:27",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Cancelado",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CANCELED_PENDING_NEW_APPOINTMENT" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "27",
+                                    "name" : "ACTIVITY_CANCELED_PENDING_NEW_APPOINTMENT",
+                                    "timeOccurred" : "2022-07-08 14:22:27",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Cancelado",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CANCELED_PURGE" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "24",
+                                    "name" : "ACTIVITY_CANCELED_PURGE",
+                                    "timeOccurred" : "2022-07-08 14:22:27",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Cancelado",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CONCLUDED_SUCESSFULLY" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "21",
+                                    "name" : "ACTIVITY_CONCLUDED_SUCESSFULLY",
+                                    "timeOccurred" : "2022-07-08 14:16:49",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "ConcluÃ­do com sucesso",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_CONCLUDED_UNSUCESSFULLY" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "22",
+                                    "name" : "ACTIVITY_CONCLUDED_UNSUCESSFULLY",
+                                    "timeOccurred" : "2022-07-08 14:22:27",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "ConcluÃ­do sem sucesso",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "ACTIVITY_RECEIVED_WITHOUT_BOOKING" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "20",
+                                    "name" : "ACTIVITY_RECEIVED_WITHOUT_BOOKING",
+                                    "timeOccurred" : "2022-07-08 07:08:48",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "",
+                                       "appointmentStart" : "",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Recebido",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "EN_ROUTE" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "15",
+                                    "name" : "EN_ROUTE",
+                                    "timeOccurred" : "2022-07-08 14:00:57",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Em deslocamento",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "IN_EXECUTION" : {
+                           "value" : {
+                              "notification" : {
+                                 "event" : {
+                                    "id" : "14",
+                                    "name" : "IN_EXECUTION",
+                                    "timeOccurred" : "2022-07-08 14:20:13",
+                                    "timeZoneOccurred" : "America/Sao_Paulo"
+                                 },
+                                 "workOrder" : {
+                                    "address" : {
+                                       "city" : "Rio De Janeiro",
+                                       "description" : "Praia Botafogo 166, Botafogo - Rio De Janeiro, RJ (22250-145)",
+                                       "id" : "6866098",
+                                       "stateAbbreviation" : "RJ"
+                                    },
+                                    "appointment" : {
+                                       "appointmentFinish" : "2022-07-08 18:00:00",
+                                       "appointmentStart" : "2022-07-08 13:00:00",
+                                       "bookingConfirmed" : false
+                                    },
+                                    "associatedDocument" : "VTT001",
+                                    "businessUnit" : "",
+                                    "customer" : {
+                                       "name" : "RAMON CORREA RODRIGUES FREITAS",
+                                       "phoneNumber" : {
+                                          "phoneNumbers" : [
+                                             "00000000000",
+                                             "",
+                                             ""
+                                          ]
+                                       },
+                                       "subscriberId" : "SVTL001"
+                                    },
+                                    "id" : "SA-562403",
+                                    "lifeCycleStatus" : "Em execuÃ§Ã£o",
+                                    "operationalPriority" : "Sem Prioridade",
+                                    "readyForTechnicalDispatch" : true,
+                                    "task" : {
+                                       "activityType" : "INSTALAÃÃO BL FIBRA",
+                                       "category" : "INST"
+                                    },
+                                    "technician" : {
+                                       "name" : "LEANDRO LANES SIQUEIRA - TR123456"
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/workOrderChangeEventRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "200" : {
+                  "content" : {
+                     "application/json" : {
+                        "example" : {
+                           "control" : {
+                              "code" : 200,
+                              "message" : "Ok",
+                              "type" : "S"
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/workOrderSuccessResponse"
+                        }
+                     }
+                  },
+                  "description" : "Success"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "AlteraÃ§Ã£o do status da atividade de campo.",
+            "tags" : [
+               "workOrderStateChangeEvent"
+            ]
+         }
+      }
+   },
+   "tags" : [
+      {
+         "name" : "workOrderStateChangeEvent"
+      },
+      {
+         "name" : "workOrderAttributeValueChangeEvent"
+      }
+   ]
+}

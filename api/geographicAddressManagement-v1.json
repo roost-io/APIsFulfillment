@@ -48,7 +48,7 @@
                         "value" : {
                            "control" : {
                               "code" : 403,
-                              "message" : "AplicaÃ§Ã£o nÃ£o autorizada ou nÃ£o informada!",
+                              "message" : "AplicaÃÂ§ÃÂ£o nÃÂ£o autorizada ou nÃÂ£o informada!",
                               "type" : "E"
                            }
                         }
@@ -171,7 +171,7 @@
                         "value" : {
                            "control" : {
                               "code" : 422,
-                              "message" : "Quantidade de endereÃ§os selecionada maior que o suportado. Reduza o tamanho do raio.",
+                              "message" : "Quantidade de endereÃÂ§os selecionada maior que o suportado. Reduza o tamanho do raio.",
                               "type" : "E"
                            }
                         }
@@ -201,7 +201,7 @@
                         "value" : {
                            "control" : {
                               "code" : 400,
-                              "message" : "Raio informado maior que o permitido. O limite do raio Ã© ${limiteDoRaio}",
+                              "message" : "Raio informado maior que o permitido. O limite do raio ÃÂ© ${limiteDoRaio}",
                               "type" : "E"
                            }
                         }
@@ -230,22 +230,22 @@
                "address" : {
                   "properties" : {
                      "cellCode" : {
-                        "description" : "CÃ³digo da celula onde o endereÃ§o estÃ¡ contido",
+                        "description" : "CÃÂ³digo da celula onde o endereÃÂ§o estÃÂ¡ contido",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "censusSection" : {
-                        "description" : "Setor censitÃ¡rio do endereÃ§o.",
+                        "description" : "Setor censitÃÂ¡rio do endereÃÂ§o.",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "city" : {
-                        "description" : "Nome da Cidade onde o serviÃ§o serÃ¡ executado.",
+                        "description" : "Nome da Cidade onde o serviÃÂ§o serÃÂ¡ executado.",
                         "maxLength" : 40,
                         "type" : "string"
                      },
                      "description" : {
-                        "description" : "EndereÃ§o completo",
+                        "description" : "EndereÃÂ§o completo",
                         "maxLength" : 4000,
                         "type" : "string"
                      },
@@ -253,66 +253,66 @@
                         "$ref" : "#/components/schemas/geolocationType"
                      },
                      "hasNumber" : {
-                        "description" : "Indicador de nÃºmero de fachada",
+                        "description" : "Indicador de nÃÂºmero de fachada",
                         "type" : "boolean"
                      },
                      "id" : {
-                        "description" : "Identificador Ãºnico do endereÃ§o.",
+                        "description" : "Identificador ÃÂºnico do endereÃÂ§o.",
                         "maxLength" : 255,
                         "type" : "number"
                      },
                      "location" : {
-                        "description" : "Localidade onde o serviÃ§o serÃ¡ executado",
+                        "description" : "Localidade onde o serviÃÂ§o serÃÂ¡ executado",
                         "maxLength" : 100,
                         "type" : "string"
                      },
                      "locationAbbreviation" : {
-                        "description" : "Sigla da Localidade onde o serviÃ§o serÃ¡ executado.",
+                        "description" : "Sigla da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                         "maxLength" : 5,
                         "type" : "string"
                      },
                      "locationCode" : {
-                        "description" : "CÃ³digo NumÃ©rico da Localidade onde o serviÃ§o serÃ¡ executado.",
+                        "description" : "CÃÂ³digo NumÃÂ©rico da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                         "maxLength" : 10,
                         "type" : "string"
                      },
                      "neighborhood" : {
-                        "description" : "Nome do Bairro na Base de EndereÃ§os.",
+                        "description" : "Nome do Bairro na Base de EndereÃÂ§os.",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "number" : {
-                        "description" : "NÃºmero da Porta do Logradouro na Base de EndereÃ§os.",
+                        "description" : "NÃÂºmero da Porta do Logradouro na Base de EndereÃÂ§os.",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "state" : {
-                        "description" : "Estado onde o serviÃ§o serÃ¡ executado.",
+                        "description" : "Estado onde o serviÃÂ§o serÃÂ¡ executado.",
                         "maxLength" : 40,
                         "type" : "string"
                      },
                      "stateAbbreviation" : {
-                        "description" : "AbreviaÃ§Ã£o do estado",
+                        "description" : "AbreviaÃÂ§ÃÂ£o do estado",
                         "maxLength" : 2,
                         "type" : "string"
                      },
                      "streetName" : {
-                        "description" : "Nome do Logradouro na Base de EndereÃ§os.",
+                        "description" : "Nome do Logradouro na Base de EndereÃÂ§os.",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "streetTitle" : {
-                        "description" : "CÃ³digo do logradouro que serÃ¡ executado o serviÃ§o na base de endereÃ§os nacional.",
+                        "description" : "CÃÂ³digo do logradouro que serÃÂ¡ executado o serviÃÂ§o na base de endereÃÂ§os nacional.",
                         "maxLength" : 255,
                         "type" : "string"
                      },
                      "streetType" : {
-                        "description" : "Tipo do logradouro na base de endereÃ§os.",
+                        "description" : "Tipo do logradouro na base de endereÃÂ§os.",
                         "maxLength" : 40,
                         "type" : "string"
                      },
                      "zipCode" : {
-                        "description" : "NÃºmero do CEP onde o serviÃ§o serÃ¡ executado.",
+                        "description" : "NÃÂºmero do CEP onde o serviÃÂ§o serÃÂ¡ executado.",
                         "maxLength" : 40,
                         "type" : "string"
                      }
@@ -329,12 +329,12 @@
                         "items" : {
                            "properties" : {
                               "city" : {
-                                 "description" : "Nome da Cidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Nome da Cidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "description" : {
-                                 "description" : "EndereÃ§o completo",
+                                 "description" : "EndereÃÂ§o completo",
                                  "maxLength" : 4000,
                                  "type" : "string"
                               },
@@ -356,12 +356,12 @@
                                        "type" : "number"
                                     },
                                     "returnTypeDescription" : {
-                                       "description" : "DescriÃ§Ã£o do mÃ©todo utilizado na geolocalizaÃ§Ã£o",
+                                       "description" : "DescriÃÂ§ÃÂ£o do mÃÂ©todo utilizado na geolocalizaÃÂ§ÃÂ£o",
                                        "maxLength" : 200,
                                        "type" : "string"
                                     },
                                     "returnTypeId" : {
-                                       "description" : "Id do mÃ©todo utilizado na geolocalizaÃ§Ã£o",
+                                       "description" : "Id do mÃÂ©todo utilizado na geolocalizaÃÂ§ÃÂ£o",
                                        "format" : "int64",
                                        "type" : "integer"
                                     }
@@ -369,70 +369,70 @@
                                  "type" : "object"
                               },
                               "hasNumber" : {
-                                 "description" : "Indicador de nÃºmero de fachada",
+                                 "description" : "Indicador de nÃÂºmero de fachada",
                                  "type" : "boolean"
                               },
                               "id" : {
-                                 "description" : "Identificador Ãºnico do endereÃ§o.",
+                                 "description" : "Identificador ÃÂºnico do endereÃÂ§o.",
                                  "maxLength" : 255,
                                  "type" : "number"
                               },
                               "location" : {
-                                 "description" : "Localidade onde o serviÃ§o serÃ¡ executado",
+                                 "description" : "Localidade onde o serviÃÂ§o serÃÂ¡ executado",
                                  "maxLength" : 100,
                                  "type" : "string"
                               },
                               "locationAbbreviation" : {
-                                 "description" : "Sigla da Localidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Sigla da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 5,
                                  "type" : "string"
                               },
                               "locationCode" : {
-                                 "description" : "CÃ³digo NumÃ©rico da Localidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "CÃÂ³digo NumÃÂ©rico da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 10,
                                  "type" : "string"
                               },
                               "locationUniqueZipCode" : {
-                                 "description" : "localizaÃ§Ã£o CEP unico",
+                                 "description" : "localizaÃÂ§ÃÂ£o CEP unico",
                                  "type" : "boolean"
                               },
                               "neighborhood" : {
-                                 "description" : "Nome do Bairro na Base de EndereÃ§os.",
+                                 "description" : "Nome do Bairro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "number" : {
-                                 "description" : "NÃºmero da Porta do Logradouro na Base de EndereÃ§os.",
+                                 "description" : "NÃÂºmero da Porta do Logradouro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "state" : {
-                                 "description" : "Estado onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Estado onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "stateAbbreviation" : {
-                                 "description" : "AbreviaÃ§Ã£o do estado",
+                                 "description" : "AbreviaÃÂ§ÃÂ£o do estado",
                                  "maxLength" : 2,
                                  "type" : "string"
                               },
                               "streetName" : {
-                                 "description" : "Nome do Logradouro na Base de EndereÃ§os.",
+                                 "description" : "Nome do Logradouro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "streetTitle" : {
-                                 "description" : "CÃ³digo do logradouro que serÃ¡ executado o serviÃ§o na base de endereÃ§os nacional.",
+                                 "description" : "CÃÂ³digo do logradouro que serÃÂ¡ executado o serviÃÂ§o na base de endereÃÂ§os nacional.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "streetType" : {
-                                 "description" : "Tipo do logradouro na base de endereÃ§os.",
+                                 "description" : "Tipo do logradouro na base de endereÃÂ§os.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "zipCode" : {
-                                 "description" : "NÃºmero do CEP onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "NÃÂºmero do CEP onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               }
@@ -454,76 +454,76 @@
                         "items" : {
                            "properties" : {
                               "city" : {
-                                 "description" : "Nome da Cidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Nome da Cidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "description" : {
-                                 "description" : "EndereÃ§o completo",
+                                 "description" : "EndereÃÂ§o completo",
                                  "maxLength" : 4000,
                                  "type" : "string"
                               },
                               "hasNumber" : {
-                                 "description" : "Indicador de nÃºmero de fachada",
+                                 "description" : "Indicador de nÃÂºmero de fachada",
                                  "type" : "boolean"
                               },
                               "id" : {
-                                 "description" : "Identificador Ãºnico do endereÃ§o.",
+                                 "description" : "Identificador ÃÂºnico do endereÃÂ§o.",
                                  "maxLength" : 255,
                                  "type" : "number"
                               },
                               "location" : {
-                                 "description" : "Localidade onde o serviÃ§o serÃ¡ executado",
+                                 "description" : "Localidade onde o serviÃÂ§o serÃÂ¡ executado",
                                  "maxLength" : 100,
                                  "type" : "string"
                               },
                               "locationAbbreviation" : {
-                                 "description" : "Sigla da Localidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Sigla da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 5,
                                  "type" : "string"
                               },
                               "locationCode" : {
-                                 "description" : "CÃ³digo NumÃ©rico da Localidade onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "CÃÂ³digo NumÃÂ©rico da Localidade onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 10,
                                  "type" : "string"
                               },
                               "neighborhood" : {
-                                 "description" : "Nome do Bairro na Base de EndereÃ§os.",
+                                 "description" : "Nome do Bairro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "number" : {
-                                 "description" : "NÃºmero da Porta do Logradouro na Base de EndereÃ§os.",
+                                 "description" : "NÃÂºmero da Porta do Logradouro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "state" : {
-                                 "description" : "Estado onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "Estado onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "stateAbbreviation" : {
-                                 "description" : "AbreviaÃ§Ã£o do estado",
+                                 "description" : "AbreviaÃÂ§ÃÂ£o do estado",
                                  "maxLength" : 2,
                                  "type" : "string"
                               },
                               "streetName" : {
-                                 "description" : "Nome do Logradouro na Base de EndereÃ§os.",
+                                 "description" : "Nome do Logradouro na Base de EndereÃÂ§os.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "streetTitle" : {
-                                 "description" : "CÃ³digo do logradouro que serÃ¡ executado o serviÃ§o na base de endereÃ§os nacional.",
+                                 "description" : "CÃÂ³digo do logradouro que serÃÂ¡ executado o serviÃÂ§o na base de endereÃÂ§os nacional.",
                                  "maxLength" : 255,
                                  "type" : "string"
                               },
                               "streetType" : {
-                                 "description" : "Tipo do logradouro na base de endereÃ§os.",
+                                 "description" : "Tipo do logradouro na base de endereÃÂ§os.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               },
                               "zipCode" : {
-                                 "description" : "NÃºmero do CEP onde o serviÃ§o serÃ¡ executado.",
+                                 "description" : "NÃÂºmero do CEP onde o serviÃÂ§o serÃÂ¡ executado.",
                                  "maxLength" : 40,
                                  "type" : "string"
                               }
@@ -585,7 +585,7 @@
                                  "items" : {
                                     "properties" : {
                                        "description" : {
-                                          "description" : "DescriÃ§Ã£o do complemento.",
+                                          "description" : "DescriÃÂ§ÃÂ£o do complemento.",
                                           "maxLength" : 50,
                                           "type" : "string"
                                        },
@@ -595,7 +595,7 @@
                                           "type" : "string"
                                        },
                                        "value" : {
-                                          "description" : "DescriÃ§Ã£o do Complemento informando pelo cliente na abertura do Pedido.",
+                                          "description" : "DescriÃÂ§ÃÂ£o do Complemento informando pelo cliente na abertura do Pedido.",
                                           "maxLength" : 255,
                                           "type" : "string"
                                        }
@@ -609,7 +609,7 @@
                            "type" : "object"
                         },
                         "id" : {
-                           "description" : "NÃºmero identificador do Complemento.",
+                           "description" : "NÃÂºmero identificador do Complemento.",
                            "maxLength" : 20,
                            "type" : "number"
                         }
@@ -626,7 +626,7 @@
                   "items" : {
                      "properties" : {
                         "description" : {
-                           "description" : "DescriÃ§Ã£o do complemento.",
+                           "description" : "DescriÃÂ§ÃÂ£o do complemento.",
                            "maxLength" : 50,
                            "type" : "string"
                         },
@@ -649,17 +649,17 @@
          "control" : {
             "properties" : {
                "code" : {
-                  "description" : "CÃ³digo de Retorno.",
+                  "description" : "CÃÂ³digo de Retorno.",
                   "maxLength" : 3,
                   "type" : "string"
                },
                "message" : {
-                  "description" : "DescriÃ§Ã£o da mensagem de retorno.",
+                  "description" : "DescriÃÂ§ÃÂ£o da mensagem de retorno.",
                   "maxLength" : 250,
                   "type" : "string"
                },
                "type" : {
-                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃ©cnico, E - Erro)",
+                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃÂ©cnico, E - Erro)",
                   "enum" : [
                      "S",
                      "T",
@@ -737,12 +737,12 @@
                         "type" : "string"
                      },
                      "returnTypeDescription" : {
-                        "description" : "DescriÃ§Ã£o do mÃ©todo utilizado na geolocalizaÃ§Ã£o",
+                        "description" : "DescriÃÂ§ÃÂ£o do mÃÂ©todo utilizado na geolocalizaÃÂ§ÃÂ£o",
                         "maxLength" : 200,
                         "type" : "string"
                      },
                      "returnTypeId" : {
-                        "description" : "Id do mÃ©todo utilizado na geolocalizaÃ§Ã£o",
+                        "description" : "Id do mÃÂ©todo utilizado na geolocalizaÃÂ§ÃÂ£o",
                         "maxLength" : 10,
                         "type" : "integer"
                      }
@@ -806,7 +806,7 @@
             "operationId" : "getAddressComplements",
             "parameters" : [
                {
-                  "description" : "Id do endereÃ§o",
+                  "description" : "Id do endereÃÂ§o",
                   "examples" : {
                      "with complements" : {
                         "value" : 14393
@@ -4161,7 +4161,7 @@
             "operationId" : "getCity",
             "parameters" : [
                {
-                  "description" : "AbreviÃ§Ã£o do estado",
+                  "description" : "AbreviÃÂ§ÃÂ£o do estado",
                   "example" : "RJ",
                   "in" : "path",
                   "name" : "stateAbreviation",
@@ -4187,7 +4187,7 @@
                                  },
                                  {
                                     "fid" : 3300159,
-                                    "name" : "AperibÃ©",
+                                    "name" : "AperibÃÂ©",
                                     "stateAbreviation" : "RJ"
                                  },
                                  {
@@ -4792,7 +4792,7 @@
                   }
                },
                {
-                  "description" : "NÃºmero do logradouro",
+                  "description" : "NÃÂºmero do logradouro",
                   "example" : 71,
                   "in" : "query",
                   "name" : "number",
@@ -4812,10 +4812,10 @@
                                     "address" : [
                                        {
                                           "city" : null,
-                                          "description" : "Rua Do Lavradio, Parque Residencial Aeroporto - MaringÃ¡, PR",
+                                          "description" : "Rua Do Lavradio, Parque Residencial Aeroporto - MaringÃÂ¡, PR",
                                           "hasNumber" : true,
                                           "id" : null,
-                                          "location" : "MaringÃ¡",
+                                          "location" : "MaringÃÂ¡",
                                           "locationAbbreviation" : null,
                                           "locationCode" : null,
                                           "locationUniqueZipCode" : false,
@@ -4945,7 +4945,7 @@
             "operationId" : "getAddress",
             "parameters" : [
                {
-                  "description" : "Id do endereÃ§o",
+                  "description" : "Id do endereÃÂ§o",
                   "examples" : {
                      "address with id" : {
                         "value" : 14393
@@ -4966,7 +4966,7 @@
                      "application/json" : {
                         "example" : {
                            "address" : {
-                              "cellCode" : "4504-RJ-DQX-DQX-608 (DQX) SecundÃ¡ria",
+                              "cellCode" : "4504-RJ-DQX-DQX-608 (DQX) SecundÃÂ¡ria",
                               "censusSection" : "330330205000830",
                               "city" : "Rio De Janeiro",
                               "description" : "Rua do Lavradio, 71, Centro - Rio De Janeiro, RJ (20230-070)",
@@ -5082,7 +5082,7 @@
                                     "address" : [
                                        {
                                           "city" : "Rio De Janeiro",
-                                          "description" : "Avenida Prefeito DulcÃ­dio Cardoso, 2920, Barra Da Tijuca - Rio De Janeiro, RJ (22631-052)",
+                                          "description" : "Avenida Prefeito DulcÃÂ­dio Cardoso, 2920, Barra Da Tijuca - Rio De Janeiro, RJ (22631-052)",
                                           "geoLocation" : {
                                              "geometry" : "POINT (-23.004346, -43.349478)",
                                              "latitude" : -23.004346,
@@ -5100,14 +5100,14 @@
                                           "number" : "2920",
                                           "state" : "Rio De Janeiro",
                                           "stateAbbreviation" : "RJ",
-                                          "streetName" : "DulcÃ­dio Cardoso",
+                                          "streetName" : "DulcÃÂ­dio Cardoso",
                                           "streetTitle" : "Prefeito",
                                           "streetType" : "Avenida",
                                           "zipCode" : "22631052"
                                        },
                                        {
                                           "city" : "Rio De Janeiro",
-                                          "description" : "Avenida Prefeito DulcÃ­dio Cardoso, 2900, Barra Da Tijuca - Rio De Janeiro, RJ (22620-311)",
+                                          "description" : "Avenida Prefeito DulcÃÂ­dio Cardoso, 2900, Barra Da Tijuca - Rio De Janeiro, RJ (22620-311)",
                                           "geoLocation" : {
                                              "geometry" : "POINT (-23.004346, -43.349478)",
                                              "latitude" : -23.004346,
@@ -5123,7 +5123,7 @@
                                           "number" : "2900",
                                           "state" : "Rio De Janeiro",
                                           "stateAbbreviation" : "RJ",
-                                          "streetName" : "DulcÃ­dio Cardoso",
+                                          "streetName" : "DulcÃÂ­dio Cardoso",
                                           "streetTitle" : "Prefeito",
                                           "streetType" : "Avenida",
                                           "zipCode" : "22620311"
@@ -5181,7 +5181,7 @@
             "operationId" : "getNeighborhood",
             "parameters" : [
                {
-                  "description" : "AbreviaÃ§Ã£o do estado",
+                  "description" : "AbreviaÃÂ§ÃÂ£o do estado",
                   "example" : "RJ",
                   "in" : "path",
                   "name" : "stateAbreviation",
@@ -5192,7 +5192,7 @@
                },
                {
                   "description" : "Cidade",
-                  "example" : "NilÃ³polis",
+                  "example" : "NilÃÂ³polis",
                   "in" : "path",
                   "name" : "city",
                   "required" : true,
@@ -5234,9 +5234,9 @@
                                        "stateAbreviation" : "RJ"
                                     },
                                     {
-                                       "city" : "N Sra FÃ¡tima",
+                                       "city" : "N Sra FÃÂ¡tima",
                                        "fid" : 23317,
-                                       "name" : "Nossa Senhora de FÃ¡tima",
+                                       "name" : "Nossa Senhora de FÃÂ¡tima",
                                        "stateAbreviation" : "RJ"
                                     },
                                     {
@@ -5252,15 +5252,15 @@
                                        "stateAbreviation" : "RJ"
                                     },
                                     {
-                                       "city" : "P PÃ³lvora",
+                                       "city" : "P PÃÂ³lvora",
                                        "fid" : 23320,
-                                       "name" : "Paiol de PÃ³lvora",
+                                       "name" : "Paiol de PÃÂ³lvora",
                                        "stateAbreviation" : "RJ"
                                     },
                                     {
-                                       "city" : "A R NilÃ³polis",
+                                       "city" : "A R NilÃÂ³polis",
                                        "fid" : 23313,
-                                       "name" : "Ãrea Rural de NilÃ³polis",
+                                       "name" : "ÃÂrea Rural de NilÃÂ³polis",
                                        "stateAbreviation" : "RJ"
                                     }
                                  ]

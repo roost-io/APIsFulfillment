@@ -1,1 +1,3014 @@
-{"openapi":"3.0.1","info":{"title":"ProductOrdering","version":"2.8.2"},"tags":[{"name":"Create Order"},{"name":"Update Order"},{"name":"Cancel Order"},{"name":"Notification"}],"paths":{"/productOrder":{"post":{"tags":["Create Order"],"summary":"Request Opening Order","operationId":"Request Opening Order","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/createOrderRequest"},"examples":{"Installation Order Type FTTH":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Instalacao","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":true,"date":"2021-05-05T08:00:00","mandatoryType":"Obrigatorio","workOrderId":"SA-562403"},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"adicionar"}]}}}},"Installation Order Type FTTP":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Instalacao","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["21999999999","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":false,"date":"","mandatoryType":"Permitido","workOrderId":""},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Proximo a padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"adicionar"}]}}}},"Installation Order Type FTTH with partial viability":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Instalacao","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["21999999999","11900000009",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":true,"date":"","mandatoryType":"Obrigatorio","workOrderId":""},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"adicionar"}]}}}},"Installation Order Type FTTH arising from a address change (flagged address change)":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Instalacao","infraType":"FTTH","addressChange":{"flag":true},"customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","subscriberIdOld":"SVTALOLD001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["21999999999","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":true,"date":"2021-05-05T08:00:00","mandatoryType":"Obrigatorio","workOrderId":"SA-562403"},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"adicionar"}]}}}},"Installation Order Type FTTP arising from a address change (flagged address change)":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Instalacao","infraType":"FTTP","addressChange":{"flag":true},"customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","subscriberIdOld":"SVTALOLD001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Proximo a padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"adicionar"}]}}}},"Removal Order Type FTTH arising from a address change (flagged address change)":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Retirada","infraType":"FTTH","addressChange":{"flag":true},"customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"remover"}]}}}},"Removal Order Type FTTP arising from a address change (flagged address change)":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Retirada","infraType":"FTTP","addressChange":{"flag":true},"customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"remover"}]}}}},"Removal Order Type FTTH":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Retirada","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":true,"date":"2020-11-13T16:20:00","mandatoryType":"Obrigatorio","workOrderId":"SA-562403"},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"remover"}]}}}},"Removal Order Type FTTP":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Retirada","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":false,"date":"","mandatoryType":"Permitido","workOrderId":""},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Do lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"remover"}]}}}},"Total Block Order Type FTTH":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Bloqueio","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"bloquear total"}]}}}},"Total Block Order Type FTTP":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Bloqueio","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"bloquear total"}]}}}},"Partial Block Order Type FTTH":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Bloqueio","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"bloquear parcial"}]}}}},"Partial Block Order Type FTTP":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Bloqueio","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"bloquear parcial"}]}}}},"Unblock Order Type FTTH":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Desbloqueio","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"desbloquear total"}]}}}},"Unblock Order Type FTTP":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Desbloqueio","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_200MB","action":"desbloquear total"}]}}}},"Associate CPE Order Type FTTP":{"value":{"order":{"correlationOrder":"2310","associatedDocument":"VTT001","associatedDocumentDate":"2020-10-22T14:00:00-03:00","type":"AssociarCPE","infraType":"FTTP","customer":{"name":"V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["21965400000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"equipments":{"equipment":[{"serialNumber":"ALCLF718RF05","type":"ONT","code":616551,"action":"adicionar"}]}}}},"Speed Modification Order Type FTTH":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Modificacao de Velocidade","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_1000MB","action":"adicionar"},{"catalogId":"BL_200MB","action":"remover"}]}}}},"Speed Modification Order Type FTTP":{"value":{"order":{"correlationOrder":"9","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"Modificacao de Velocidade","infraType":"FTTP","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"empresarial","fantasyName":"InterCorp Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}},"products":{"product":[{"catalogId":"BL_1000MB","action":"adicionar"},{"catalogId":"BL_200MB","action":"remover"}]}}}},"Point Relocation Order Type FTTH":{"value":{"order":{"correlationOrder":"923467432","associatedDocument":"VTT001","associatedDocumentDate":"2021-06-09T18:20:53-03:00","type":"RemanejamentoPonto","infraType":"FTTH","customer":{"name":"Sandbox V.tal","subscriberId":"SVTAL001","businessUnity":"varejo","fantasyName":"InterHome Internet","phoneNumber":{"phoneNumbers":["000000000","",""]},"workContact":{"name":"sindico Vtal","email":"sindicovtal@vtal.com","phone":"21999900000"}},"appointment":{"hasSlot":true,"date":"2021-06-14T08:00:00","mandatoryType":"Obrigatorio","workOrderId":"SA-521109"},"addresses":{"address":{"id":14393,"inventoryId":"1766156","reference":"Ao lado da padaria","complement":{"complements":[{"type":"ES","value":"ARC201"}]}}}}}}}}}},"responses":{"201":{"description":"Created","content":{"application/json":{"schema":{"$ref":"#/components/schemas/createOrderResponse"},"example":{"control":{"type":"S","code":"201","message":"Created"},"order":{"id":"20230315000001"}}}}},"400":{"description":"BadRequest","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"General Bad Request":{"value":{"control":{"type":"E","code":"400","message":"Bad Request"}}},"Not allowed to inform products":{"value":{"control":{"type":"E","code":"400","message":"Não é permitido informar produtos para esse tipo de ordem"}}},"Catalog ID with greater speed than allowed":{"value":{"control":{"type":"E","code":"400","message":"O campo Catalog ID está com velocidade superior a permitida"}}},"Catalog ID out of standard":{"value":{"control":{"type":"E","code":"400","message":"Campo Catalog ID fora do padrão esperado"}}}}}}},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"406":{"$ref":"#/components/responses/NotAcceptable"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}},"/productOrder/{order.Id}":{"patch":{"tags":["Update Order"],"summary":"Patch Product Order By Id","operationId":"Patch Product Order By Id","parameters":[{"name":"order.Id","in":"path","description":"identificador unico da ordem do serviço a ser atualizada","required":true,"style":"simple","example":"20230315000001","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/updateOrderRequest"},"examples":{"Schedule pendency resolution":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","appointment":{"hasSlot":true,"date":"2021-06-07T12:47:00","mandatoryType":"Permitido","workOrderId":""},"issue":{"code":"7029","observation":"Resolução de pendência de agendamento","updateDate":"2021-12-09T15:20:00","action":"fechar"}}}},"Closed house pendency resolution":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","appointment":{"hasSlot":true,"date":"2021-06-07T12:47:00","mandatoryType":"Permitido","workOrderId":""},"issue":{"code":"7016","observation":"Reagendamento por ausência","updateDate":"2021-12-09T15:20:00","action":"fechar"}}}},"Work Contact pendency resolution":{"value":{"order":{"correlationOrder":"10","associatedDocument":"VTT001","issue":{"code":"7100","observation":"Resolução de pendência de contato de obra","updateDate":"2021-12-09T15:20:00","action":"fechar"},"customer":{"workContact":{"name":"síndico Vtal","email":"sindicovtal@vtal.com","phone":21999900000}}}}}}}}},"responses":{"200":{"$ref":"#/components/responses/Success"},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"406":{"$ref":"#/components/responses/NotAcceptable"},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}},"/cancelProductOrder/{order.Id}":{"post":{"tags":["Cancel Order"],"summary":"Cancel Product Order By Id","operationId":"Cancel Product Order By Id","parameters":[{"name":"order.Id","in":"path","description":"identificador unico da ordem do serviço a ser cancelada","required":true,"example":"20230315000001","schema":{"type":"string"}}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/cancelOrderRequest"},"example":{"order":{"associatedDocument":"VTT001","customer":{"subscriberId":"SVTAL001"}}}}}},"responses":{"200":{"$ref":"#/components/responses/Success"},"400":{"$ref":"#/components/responses/BadRequest"},"401":{"$ref":"#/components/responses/Unauthorized"},"403":{"$ref":"#/components/responses/Forbidden"},"404":{"$ref":"#/components/responses/NotFound"},"406":{"$ref":"#/components/responses/NotAcceptable"},"423":{"description":"Locked","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"423","message":"Agendamento não pode ser alterado"}}}}},"429":{"$ref":"#/components/responses/TooManyRequests"},"500":{"$ref":"#/components/responses/ServerError"},"503":{"$ref":"#/components/responses/Unavailable"},"504":{"$ref":"#/components/responses/Timeout"}}}},"/listener/productOrderStateChangeEvent":{"post":{"tags":["Notification"],"summary":"State Change Event By Client","operationId":"State Change Event By Client","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/notificationEvent"},"examples":{"Closing Notification":{"value":{"notification":{"date":"2020-12-16T10:09:31-03:00","customer":{"subscriberId":"234567654"},"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","type":"Encerramento","code":"0","description":"Ordem encerrada com sucesso.","lostEquipment":"True","resource":{"gponAccess":"A000009QS","fiberPath":{"items":{"item":[{"name":"enderecoCDO","value":"RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913"},{"name":"producer_olt","value":"HUAWEI"},{"name":"CDO","value":"CDOI-4704-PTP.FO.O:45"},{"name":"CDO","value":"CDOI-4704-PTP.FO.I:S32_2_IN 1"},{"name":"estacao","value":"BEL"},{"name":"cnl","value":"CBF"},{"name":"olt","value":"MA-CTO04-GHUA"},{"name":"primaryCable","value":"MA.CTO.F-7.CEO-15/1"},{"name":"secondaryCable","value":"MA.CTO.F-7.CEOS-165"}]}}}}}}},"Cancel Notification":{"value":{"notification":{"date":"2021-09-29T18:42:24.641-03:00","customer":{"subscriberId":"234567654"},"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","type":"Cancelamento","code":"2","description":"Ordem cancelada"}}}},"ONT already in use":{"value":{"notification":{"date":"2021-10-26T17:53:25.497-03:00","customer":{"subscriberId":"234567654"},"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","type":"Encerramento","code":"-1","description":"O Equipamento já está em uso por outro cliente","lostEquipment":"True","resource":{"fiberPath":{"items":""}}}}}},"Closing Notification (ontOwner Vtal - Install)":{"value":{"notification":{"date":"2022-12-26T12:15:35.174-03:00","customer":{"subscriberId":"234567654"},"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","type":"Encerramento","code":"0","description":"BA de campo encerrado com sucesso","resource":{"gponAccess":"A000009QS","devices":{"device":[{"category":"ONT","type":"PhsysicalResource","description":"Equipment - ONT device","state":"completed","usageState":"active","startOperatingDate":"2022-12-26T12:15:35.174-03:00","resourceCharacteristic":[{"name":"serialNumber","value":"0251990119989"},{"name":"firmware","value":"FW-XPTO-123"},{"name":"manufacturer","value":"Sagemcom"},{"name":"model","value":"F@ST 5340 TFN"}]}]},"fiberPath":{"items":{"item":[{"name":"enderecoCDO","value":"RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913"},{"name":"producer_olt","value":"HUAWEI"},{"name":"CDO","value":"CDOI-4704-PTP.FO.O:45"},{"name":"CDO","value":"CDOI-4704-PTP.FO.I:S32_2_IN 1"},{"name":"estacao","value":"BEL"},{"name":"cnl","value":"CBF"},{"name":"olt","value":"MA-CTO04-GHUA"},{"name":"primaryCable","value":"MA.CTO.F-7.CEO-15/1"},{"name":"secondaryCable","value":"MA.CTO.F-7.CEOS-165"}]}}}}}}}}}}},"responses":{"204":{"description":"Operação realizada com sucesso"},"400":{"description":"BadRequest"},"401":{"description":"Unauthorized"},"500":{"description":"ServerError"},"503":{"description":"Unavailable"},"504":{"description":"Timeout"}}}},"/listener/productOrderCreateEvent":{"post":{"tags":["Notification"],"summary":"Product Order Create Event By Client","operationId":"Product Order Create Event By Client","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/notificationEvent"},"example":{"notification":{"date":"2021-06-05T20:23:29-03:00","order":{"id":"20230315000001","associatedDocument":"VTT001","correlationOrder":"10"}}}}}},"responses":{"204":{"description":"Operação realizada com sucesso"},"400":{"description":"BadRequest"},"401":{"description":"Unauthorized"},"500":{"description":"ServerError"},"503":{"description":"Unavailable"},"504":{"description":"Timeout"}}}},"/listener/productOrderInformationRequiredEvent":{"post":{"tags":["Notification"],"summary":"Product Order Information Required Event","operationId":"Product Order Information Required Event","requestBody":{"description":"","content":{"application/json":{"schema":{"$ref":"#/components/schemas/notificationEvent"},"examples":{"Notification client pendency":{"value":{"notification":{"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","issue":{"code":"7029","description":"Pendencia de agendamento","type":"CLIENTE","observation":"","updateDate":"2021-02-17T17:19:50-03:00","action":"abrir","task":"","fieldActivity":"true","reason":"PROJETO"}}}}},"Notification technical pendency":{"value":{"notification":{"order":{"id":"20230315000001","correlationOrder":"10","associatedDocument":"VTT001","issue":{"code":"7030","description":"Pendencia de agendamento","type":"TECNICA","observation":"","updateDate":"2022-02-25T11:50:50.566-03:00","action":"abrir","task":"","fieldActivity":"false","reason":"MANUNTENÇÃO"}}}}}}}}},"responses":{"204":{"description":"Success"},"400":{"description":"BadRequest"},"401":{"description":"Unauthorized"},"500":{"description":"ServerError"},"503":{"description":"Unavailable"},"504":{"description":"Timeout"}}}},"/listener/cancelProductOrderCreateEvent":{"post":{"tags":["Notification"],"summary":"Cancel Product Order Create Event By Client","operationId":"Cancel Product Order Create Event By Client","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/notificationEvent"},"example":{"notification":{"order":{"associatedDocument":"VTT001","id":"20230315000001"}}}}}},"responses":{"204":{"description":"Operação realizada com sucesso"},"400":{"description":"BadRequest"},"401":{"description":"Unauthorized"},"500":{"description":"ServerError"},"503":{"description":"Unavailable"},"504":{"description":"Timeout"}}}}},"components":{"schemas":{"control":{"type":"object","properties":{"type":{"type":"string","description":"Tipo da mensagem de retorno. (S - Sucesso, T - Erro Técnico, E - Erro)","enum":["S","T","E"],"maxLength":1},"message":{"type":"string","description":"Descrição da mensagem de retorno.","maxLength":250},"code":{"type":"string","description":"Código de Retorno.","maxLength":3}}},"createOrderRequest":{"type":"object","properties":{"order":{"$ref":"#/components/schemas/orderType"}}},"createOrderResponse":{"type":"object","properties":{"control":{"$ref":"#/components/schemas/control"},"order":{"type":"object","properties":{"id":{"type":"string","description":"Identificador único da ordem criada","maxLength":25}}}}},"updateOrderRequest":{"properties":{"order":{"type":"object","required":["correlationOrder","associatedDocument","associatedDocumentDate","type","infraType","addresses"],"properties":{"correlationOrder":{"type":"string","description":"Número identificador da ordem informado pelo cliente","maxLength":255},"associatedDocument":{"type":"string","description":"Número do documento associado à ordem informado pelo cliente. Os únicos caracteres especiais permitidos são o underline e o hífen.","maxLength":30},"associatedDocumentDate":{"type":"string","format":"date-time","description":"Data relacionada ao documento associado","maxLength":25},"type":{"type":"string","enum":["Instalacao","Retirada","Bloqueio","Desbloqueio","AssociarCPE","Modificacao de Velocidade","RemanejamentoPonto"],"description":"Tipo da Ordem de Serviço que será enviada.","maxLength":50},"infraType":{"type":"string","description":"Tipo do produto","enum":["FTTP","FTTH"],"maxLength":4},"customer":{"$ref":"#/components/schemas/customerType"},"appointment":{"$ref":"#/components/schemas/appointmentType"},"addresses":{"$ref":"#/components/schemas/addressesType"},"products":{"$ref":"#/components/schemas/productsType"},"equipments":{"$ref":"#/components/schemas/equipmentsType"},"issue":{"$ref":"#/components/schemas/issueType"},"orderItem":{"type":"array","maximum":2,"items":{"properties":{"resource":{"type":"object","properties":{"resourceSpecification":{"type":"array","maximum":1,"items":{"properties":{"name":{"type":"string","description":"Nome do recurso","maxLength":10},"value":{"type":"string","description":"Identificador do recurso","maxLength":50}}}}}}}}},"task":{"type":"object","properties":{"code":{"$ref":"#/components/schemas/codeType"},"description":{"type":"string","description":"Descrição da pendência","maxLength":100},"updateDate":{"type":"string","format":"date-time","description":"Data de atualização da pendência","maxLength":25},"action":{"type":"string","description":"Ação da pendência","maxLength":255}}}}}}},"cancelOrderRequest":{"properties":{"order":{"type":"object","properties":{"associatedDocument":{"type":"string","description":"Número do documento associado à ordem informado pelo cliente. Os únicos caracteres especiais permitidos são o underline e o hífen.","maxLength":30},"customer":{"type":"object","properties":{"subscriberId":{"type":"string","description":"Número identificador do cliente. Os únicos caracteres especiais permitidos são o underline e o hífen.","maxLength":30}}}}}}},"notificationEvent":{"$ref":"#/components/schemas/notificationType"},"orderType":{"properties":{"order":{"type":"object","required":["correlationOrder","associatedDocument","associatedDocumentDate","type","infraType","customer","appointment","addresses"],"properties":{"correlationOrder":{"type":"string","description":"Número identificador da ordem informado pelo cliente","maxLength":255},"associatedDocument":{"type":"string","description":"Número do documento associado à ordem informado pelo cliente. Os únicos caracteres especiais permitidos são o underline e o hífen.","maxLength":30},"associatedDocumentDate":{"type":"string","format":"date-time","description":"Data relacionada ao documento associado","maxLength":25},"type":{"type":"string","enum":["Instalacao","Retirada","Bloqueio","Desbloqueio","AssociarCPE","Modificacao de Velocidade","RemanejamentoPonto"],"description":"Tipo da Ordem de Serviço que será enviada.","maxLength":50},"infraType":{"type":"string","description":"Tipo do produto","enum":["FTTP","FTTH"],"maxLength":4},"addressChange":{"type":"object","properties":{"flag":{"type":"boolean","default":false,"description":"Flag indicadora de mudança de endereço em um pedido de Instalação e/ou Retirada, ou seja, ordem serviço de instalação ou retirada, oriundo de uma mudança de endereço. Preenchimento permitido apenas para ordens do tipo Instalação e Retirada (type=Instalacao ou type=Retirada). IMPORTANTE: Se addressChange/flag=true, obrigatoriamente será necessário informar o identificador antido da instalação do cliente, parametro 'order/customer/subscriberIdOld'"}}},"customer":{"$ref":"#/components/schemas/customerType"},"appointment":{"$ref":"#/components/schemas/appointmentType"},"addresses":{"$ref":"#/components/schemas/addressesType"},"products":{"$ref":"#/components/schemas/productsType"},"equipments":{"$ref":"#/components/schemas/equipmentsType"},"issue":{"$ref":"#/components/schemas/issueType"},"orderItem":{"type":"array","maximum":2,"items":{"properties":{"resource":{"type":"object","properties":{"resourceSpecification":{"type":"array","maximum":1,"items":{"properties":{"name":{"type":"string","description":"Nome do recurso","maxLength":10},"value":{"type":"string","description":"Identificador do recurso","maxLength":50}}}}}}}}},"task":{"type":"object","properties":{"code":{"$ref":"#/components/schemas/codeType"},"description":{"type":"string","description":"Descrição da pendência","maxLength":100},"updateDate":{"type":"string","format":"date-time","description":"Data de atualização da pendência","maxLength":25},"action":{"type":"string","description":"Ação da pendência","maxLength":255}}}}}}},"customerType":{"properties":{"customer":{"type":"object","required":["name","subscriberId","phoneNumber"],"properties":{"name":{"type":"string","description":"Nome do cliente","maxLength":255},"subscriberId":{"type":"string","description":"Número identificador da instalação do cliente. Os únicos caracteres especiais permitidos são o underline e o hífen.","maxLength":30},"subscriberIdOld":{"type":"string","description":"Número identificador ANTIGO da instalação do cliente. Os únicos caracteres especiais permitidos são o underline e o hífen. IMPORTANTE: Parametro de preenchimento obrigatório para ordens de instalação, oriundo de uma mudança de endereço (addressChange/Flag=true)","maxLength":30},"businessUnity":{"type":"string","enum":["varejo","empresarial"],"description":"Unidade de negócio","maxLength":15},"fantasyName":{"type":"string","description":"Nome fantasia","maxLength":255},"phoneNumber":{"type":"object","properties":{"phoneNumbers":{"type":"array","description":"Telefone de contato do cliente","maximum":3,"items":{"type":"string","maxLength":40}}}},"workContact":{"type":"object","properties":{"name":{"type":"string","description":"Nome do Contato para Obra","maxLength":255},"email":{"type":"string","description":"E-mail do Contato para Obra","maxLength":100},"phone":{"type":"string","description":"Telefone do Contato para Obra","maxLength":40}}}}}}},"appointmentType":{"properties":{"appointment":{"type":"object","required":["hasSlot","mandatoryType"],"properties":{"hasSlot":{"type":"boolean","description":"Indica se há ou não um agendamento realizado"},"date":{"type":"string","format":"date-time","description":"Data inicial do agendamento.","maxLength":25},"mandatoryType":{"type":"string","description":"Indica a obrigatoriedade do agendamento.","maxLength":15,"enum":["Obrigatorio","Permitido"]},"workOrderId":{"type":"string","description":"Número da ordem de agendamento","maxLength":15}}}}},"addressesType":{"properties":{"addresses":{"type":"object","properties":{"address":{"type":"object","required":["id","inventoryId"],"properties":{"id":{"type":"number","description":"Identificador único do endereço","maxLength":255},"inventoryId":{"type":"string","description":"Identificador do inventário de recursos.","maxLength":255},"reference":{"type":"string","description":"Ponto de referência","maxLength":255},"complement":{"$ref":"#/components/schemas/complementType"}}}}}}},"productsType":{"properties":{"products":{"type":"object","properties":{"product":{"type":"array","items":{"required":["catalogId","action"],"properties":{"catalogId":{"type":"string","enum":["BL_100MB","BL_200MB","BL_300MB","BL_400MB","BL_500MB","BL_600MB","BL_700MB","BL_800MB","BL_900MB","BL_1000MB"],"description":"Identificador do produto no catálogo","maxLength":30},"action":{"type":"string","enum":["adicionar","reparar","remover","bloquear total","bloquear parcial","desbloquear total","modificar"],"description":"Ação a ser executada para o produto","maxLength":25}}}}}}}},"equipmentsType":{"properties":{"equipments":{"type":"object","properties":{"equipment":{"type":"array","items":{"properties":{"serialNumber":{"type":"string","description":"Serial do equipamento","maxLength":16},"type":{"type":"string","description":"Tipo do equipamento","maxLength":20,"enum":["ONT"]},"code":{"type":"number","description":"Código de identificação do tipo de material","maxLength":50},"action":{"type":"string","description":"Ação a ser realizada","maxLength":30,"enum":["adicionar"]}}}}}}}},"issueType":{"properties":{"issue":{"type":"object","properties":{"code":{"$ref":"#/components/schemas/codeType"},"description":{"$ref":"#/components/schemas/descriptionType"},"type":{"type":"string","description":"Tipo de pendência","maxLength":10,"enum":["CLIENTE","TECNICA"]},"observation":{"type":"string","description":"Observação da pendência","maxLength":255},"updateDate":{"type":"string","format":"date-time","description":"Data de atualização da pendência","maxLength":25},"action":{"type":"string","description":"Ação da pendência","enum":["abrir","fechar","redirecionar"],"maxLength":15},"task":{"type":"string","description":"Tarefa onde a OS está em caso de pendência","maxLength":255},"fieldActivity":{"type":"string","description":"Flag indicativa da atividade de campo","enum":["True","False"],"maxLength":20},"reason":{"type":"string","description":"Motivo da pendência de uma OS","maxLength":1000}}}}},"codeType":{"properties":{"code":{"type":"string","description":"Código da pendência<br> 7001 - Pendência Cancelamento por Duplicidade<br> 7002 - Pendência Agendamento Futuro Obra 7 dias<br> 7004 - Pendência Agendamento Futuro Obra 7 dias<br> 7006 - Pendência de Aprovisionamento 5 dias<br> 7007 - Pendência de Aprovisionamento 5 dias<br> 7008 - Pendência Cancelamento por Inviabilidade Técnica<br> 7009 - Pendência Cancelamento e Reemissão<br> 7010 - Pendência Equipamento Cliente<br> 7013 - Pendência Cancelamento por Inviabilidade Técnica<br> 7014 - Pendência Rede Interna Cliente<br> 7015 - Pendência Cancelamento por Desistência do Serviço<br> 7016 - Pendência Cliente Ausente<br> 7017 - Pendência Cliente Solicita nova data de Agendamento<br> 7018 - Pendência de Rede 3 dias<br> 7020 - Pendência de Rede 3 dias<br> 7021 - Pendência Cliente Interrompe e Solicita nova data de Agendamento<br> 7022 - Pendência de Rede 3 dias<br> 7024 - Pendência de Rede 3 dias<br> 7029 - Pendência Agendamento<br> 7030 - Pendência de Rede 3 dias<br> 7031 - Pendência Agendamento<br> 7035 - Pendência área de Risco Momentânea<br> 7036 - Pendência Área de Risco Indeterminada 15 dias<br> 7037 - Pendência Impedimento de Atividade por Chuva<br> 7038 - Pendência de Rede 3 dias<br> 7041 - Pendência de Rede 3 dias<br> 7042 - Pendência Local Fechado<br> 7043 - Pendência de Rede 3 dias<br> 7047 - Pendência Acesso Impossibilitado<br> 7048 - Pendência de Rede 3 dias<br> 7049 - Pendência Endereço Não Localizado<br> 7051 - Pendência de Aprovisionamento 5 dias<br> 7052 - Pendência de Aprovisionamento 5 dias<br> 7053 - Pendência de Aprovisionamento 5 dias<br> 7054 - Pendência de Aprovisionamento 5 dias<br> 7059 - Pendência de Aprovisionamento 5 dias<br> 7061 - Pendência de Aprovisionamento 5 dias<br> 7062 - Pendência de Aprovisionamento 5 dias<br> 7065 - Pendência Local Fechado<br> 7066 - Pendência Cliente Não Solicitou Instalação<br> 7067 - Pendência Cancelamento por Área de Risco<br> 7069 - Pendência de Rede 3 dias<br> 7070 - Pendência de Rede 3 dias<br> 7071 - Pendência Área de Risco Indeterminada 15 dias<br> 7074 - Pendência de Rede 3 dias<br> 7075 - Pendência Cancelamento por Inviabilidade Técnica<br> 7076 - Pendência Cancelamento e Reemissão<br> 7077 - Pendência Rede Interna Cliente<br> 7078 - Pendência Cancelamento por Desistência do Serviço<br> 7079 - Pendência Acesso Impossibilitado<br> 7080 - Pendência Área de Risco Momentânea<br> 7081 - Pendência Cancelamento por Impossibilidade de Execução<br> 7082 - Pendência Endereço Não Localizado<br> 7083 - Pendência Cliente Não Solicitou Instalação<br> 7086 - Pendência de Rede 3 dias<br> 7087 - Pendência de Rede 3 dias<br> 7088 - Pendência de Rede 3 dias<br> 7089 - Pendência Sem Contato Obra<br> 7090 - Pendência de Rede 3 dias<br> 7092 - Pendência Cancelamento por Duplicidade<br> 7095 - Pendência agendamento não cumprido<br> 7096 - Pendência Segurança do Trabalho 15 dias<br> 7099 - Pendência Endereço correto Inviável<br> 7100 - Pendência Sem Contato Obra<br> 7106 - Pendência de Rede 3 dias<br> 7107 - Pendência de Rede 3 dias<br> 7108 - Pendência Impedimento de Atividade por Chuva","maxLength":5,"enum":[{"comment":"Pendência cliente"},7001,7008,7009,7010,7013,7014,7015,7016,7017,7021,7029,7031,7035,7037,7042,7047,7049,7065,7066,7067,7075,7076,7077,7078,7079,7080,7081,7082,7083,7092,7095,7099,7100,7108,7002,7004,7006,7007,7018,7020,7022,7024,7030,7036,7038,7041,7043,7048,7051,7052,7053,7054,7059,7061,7062,7069,7070,7071,7074,7086,7087,7088,7089,7090,7096,7106,7107]}}},"descriptionType":{"properties":{"description":{"type":"string","description":"Descrição da pendência","maxLength":100,"enum":["Pendência Cancelamento por Duplicidade","Pendência Agendamento Futuro Obra 7 dias","Pendência de Aprovisionamento 5 dias","Pendência Cancelamento por Inviabilidade Técnica","Pendência Cancelamento e Reemissão","Pendência Equipamento Cliente","Pendência Rede Interna Cliente","Pendência Cancelamento por Desistência do Serviço","Pendência Cliente Ausente","Pendência Cliente Solicita nova data de Agendamento","Pendência de Rede 3 dias","Pendência Cliente Interrompe e Solicita nova data de Agendamento","Pendência Agendamento","Pendência área de Risco Momentânea","Pendência Área de Risco Indeterminada 15 dias","Pendência Impedimento de Atividade por Chuva","Pendência Local Fechado","Pendência Acesso Impossibilitado","Pendência Endereço Não Localizado","Pendência Cliente Não Solicitou Instalação","Pendência Cancelamento por Área de Risco","Pendência Cancelamento por Impossibilidade de Execução","Pendência Sem Contato Obra","Pendência agendamento não cumprido","Pendência Segurança do Trabalho 15 dias","Pendência Endereço correto Inviável"]}}},"resourceType":{"properties":{"resource":{"type":"object","description":"Recursos da ordem","properties":{"gponAccess":{"type":"string","description":"Identificador do GPON","maxLength":20},"devices":{"type":"object","properties":{"device":{"type":"array","items":{"properties":{"category":{"type":"string","maxLength":4,"description":"Categoria do recurso"},"type":{"type":"string","maxLength":50,"description":"Tipo de recurso"},"description":{"type":"string","maxLength":255,"description":"Descrição do recurso"},"state":{"type":"string","maxLength":15,"description":"Status da ativação"},"usageState":{"type":"string","maxLength":10,"description":"Status de uso"},"startOperatingDate":{"type":"string","format":"date-time","maxLength":25,"description":"Data de inicio do uso"},"resourceCharacteristic":{"type":"array","items":{"properties":{"name":{"type":"string","description":"Descrição do item","maxLength":100},"value":{"type":"string","description":"Valor do item","maxLength":100}}}}}}}}},"fiberPath":{"type":"object","description":"Caminho da fibra","properties":{"items":{"type":"object","properties":{"item":{"type":"array","items":{"properties":{"name":{"type":"string","description":"Descrição do item","maxLength":100},"value":{"type":"string","description":"Valor do item","maxLength":100}}}}}}}}}}}},"notificationType":{"properties":{"notification":{"type":"object","properties":{"date":{"type":"string","format":"date-time","description":"Data da Notificação","maxLength":25},"customer":{"type":"object","properties":{"subscriberId":{"type":"string","description":"Número identificador do cliente","maxLength":30}}},"order":{"type":"object","properties":{"id":{"type":"string","description":"Identificador unico da ordem de servico criada","maxLength":25},"correlationOrder":{"type":"string","description":"Número identificador da ordem informado pelo cliente","maxLength":255},"associatedDocument":{"type":"string","description":"Número do documento associado à ordem informado pelo cliente. Os caracteres especiais permitidos são o underline e o hífen.","maxLength":30},"issue":{"$ref":"#/components/schemas/issueType"},"type":{"type":"string","description":"Tipo do processo","maxLength":12},"code":{"type":"string","description":"Código da notificação enviada.","enum":["-1","0","1","2","3","4"]},"description":{"type":"string","description":"Descrição do Código enviado na Notificação<br> -1 - O Equipamento já está em uso por outro cliente<br> 0 - Ordem encerrada com sucesso<br> 1  - Enviando Atualização de Ordem<br> 2  - Ordem cancelada<br> 3  - Início do Processo de Obra<br> 4  - Término do Processo de Obra","maxLength":50},"lostEquipment":{"type":"string","description":"Informa o extravio do equipamento verificado durante a visita técnica. Retorna apenas em notificações referentes a ordem do tipo FTTH.","enum":["True","False"],"maxLength":20},"resource":{"$ref":"#/components/schemas/resourceType"}}}}}}},"complementType":{"properties":{"complement":{"type":"object","properties":{"complements":{"type":"array","items":{"properties":{"type":{"type":"string","description":"Tipo de Complemento","maxLength":2},"value":{"type":"string","description":"Descrição do complemento","maxLength":30}}}}}}}}},"responses":{"Success":{"description":"Success","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"S","code":"200","message":"OK"}}}}},"BadRequest":{"description":"Bad Request","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"General Bad Request":{"value":{"control":{"type":"E","code":"400","message":"Bad Request"}}}}}}},"Unauthorized":{"description":"Unauthorized","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"401","message":"Unauthorized"}}}}},"Forbidden":{"description":"Forbidden - Scope Not Permitted","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Invalid or expired credentials":{"value":{"control":{"type":"E","code":"403","message":"Forbidden - Scope Not Permitted"}}},"Unauthorized credentials":{"value":{"control":{"type":"E","code":"403","message":"Aplicação não autorizada ou não informada!"}}}}}}},"NotFound":{"description":"Not Found","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"404","message":"Not Found"}}}}},"NotAcceptable":{"description":"Not Found","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"examples":{"Not Acceptable":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (AssociatedDocument já existente/utilizado)"}}},"subscriberId not exist":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] inativo ou inexistente)"}}},"subscriberId already exist":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] já existente/instalado))"}}},"subscriberId in provisioning":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Identificador da instalação [subscriberId] em aprovisionamento)"}}},"infraType parameter informed different from the contracted":{"value":{"control":{"type":"E","code":"406","message":"Not Acceptable (Tipo de infraestrutura [infraType] informado diferente do contratado/permitido para o endereço informado)"}}}}}}},"TooManyRequests":{"description":"Too Many Requests - Exceeded Quota","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"E","code":"429","message":"Too Many Requests - Exceeded Quota"}}}}},"ServerError":{"description":"Internal Server Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"500","message":"Internal Server Error"}}}}},"Unavailable":{"description":"Service Unavailable","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"503","message":"Service Unavailable"}}}}},"Timeout":{"description":"Gateway Timeout","content":{"application/json":{"schema":{"$ref":"#/components/schemas/control"},"example":{"control":{"type":"T","code":"504","message":"Gateway Timeout"}}}}}}}}
+{
+   "components" : {
+      "responses" : {
+         "BadRequest" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "General Bad Request" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "400",
+                              "message" : "Bad Request",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Bad Request"
+         },
+         "Forbidden" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Invalid or expired credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "403",
+                              "message" : "Forbidden - Scope Not Permitted",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "Unauthorized credentials" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "403",
+                              "message" : "AplicaÃ§Ã£o nÃ£o autorizada ou nÃ£o informada!",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Forbidden - Scope Not Permitted"
+         },
+         "NotAcceptable" : {
+            "content" : {
+               "application/json" : {
+                  "examples" : {
+                     "Not Acceptable" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (AssociatedDocument jÃ¡ existente/utilizado)",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "infraType parameter informed different from the contracted" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Tipo de infraestrutura [infraType] informado diferente do contratado/permitido para o endereÃ§o informado)",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId already exist" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] jÃ¡ existente/instalado))",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId in provisioning" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] em aprovisionamento)",
+                              "type" : "E"
+                           }
+                        }
+                     },
+                     "subscriberId not exist" : {
+                        "value" : {
+                           "control" : {
+                              "code" : "406",
+                              "message" : "Not Acceptable (Identificador da instalaÃ§Ã£o [subscriberId] inativo ou inexistente)",
+                              "type" : "E"
+                           }
+                        }
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Found"
+         },
+         "NotFound" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "404",
+                        "message" : "Not Found",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Not Found"
+         },
+         "ServerError" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "500",
+                        "message" : "Internal Server Error",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Internal Server Error"
+         },
+         "Success" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "200",
+                        "message" : "OK",
+                        "type" : "S"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Success"
+         },
+         "Timeout" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "504",
+                        "message" : "Gateway Timeout",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Gateway Timeout"
+         },
+         "TooManyRequests" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "429",
+                        "message" : "Too Many Requests - Exceeded Quota",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Too Many Requests - Exceeded Quota"
+         },
+         "Unauthorized" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "401",
+                        "message" : "Unauthorized",
+                        "type" : "E"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Unauthorized"
+         },
+         "Unavailable" : {
+            "content" : {
+               "application/json" : {
+                  "example" : {
+                     "control" : {
+                        "code" : "503",
+                        "message" : "Service Unavailable",
+                        "type" : "T"
+                     }
+                  },
+                  "schema" : {
+                     "$ref" : "#/components/schemas/control"
+                  }
+               }
+            },
+            "description" : "Service Unavailable"
+         }
+      },
+      "schemas" : {
+         "addressesType" : {
+            "properties" : {
+               "addresses" : {
+                  "properties" : {
+                     "address" : {
+                        "properties" : {
+                           "complement" : {
+                              "$ref" : "#/components/schemas/complementType"
+                           },
+                           "id" : {
+                              "description" : "Identificador Ãºnico do endereÃ§o",
+                              "maxLength" : 255,
+                              "type" : "number"
+                           },
+                           "inventoryId" : {
+                              "description" : "Identificador do inventÃ¡rio de recursos.",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "reference" : {
+                              "description" : "Ponto de referÃªncia",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           }
+                        },
+                        "required" : [
+                           "id",
+                           "inventoryId"
+                        ],
+                        "type" : "object"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "appointmentType" : {
+            "properties" : {
+               "appointment" : {
+                  "properties" : {
+                     "date" : {
+                        "description" : "Data inicial do agendamento.",
+                        "format" : "date-time",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     },
+                     "hasSlot" : {
+                        "description" : "Indica se hÃ¡ ou nÃ£o um agendamento realizado",
+                        "type" : "boolean"
+                     },
+                     "mandatoryType" : {
+                        "description" : "Indica a obrigatoriedade do agendamento.",
+                        "enum" : [
+                           "Obrigatorio",
+                           "Permitido"
+                        ],
+                        "maxLength" : 15,
+                        "type" : "string"
+                     },
+                     "workOrderId" : {
+                        "description" : "NÃºmero da ordem de agendamento",
+                        "maxLength" : 15,
+                        "type" : "string"
+                     }
+                  },
+                  "required" : [
+                     "hasSlot",
+                     "mandatoryType"
+                  ],
+                  "type" : "object"
+               }
+            }
+         },
+         "cancelOrderRequest" : {
+            "properties" : {
+               "order" : {
+                  "properties" : {
+                     "associatedDocument" : {
+                        "description" : "NÃºmero do documento associado Ã  ordem informado pelo cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                        "maxLength" : 30,
+                        "type" : "string"
+                     },
+                     "customer" : {
+                        "properties" : {
+                           "subscriberId" : {
+                              "description" : "NÃºmero identificador do cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                              "maxLength" : 30,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "codeType" : {
+            "properties" : {
+               "code" : {
+                  "description" : "CÃ³digo da pendÃªncia<br> 7001 - PendÃªncia Cancelamento por Duplicidade<br> 7002 - PendÃªncia Agendamento Futuro Obra 7 dias<br> 7004 - PendÃªncia Agendamento Futuro Obra 7 dias<br> 7006 - PendÃªncia de Aprovisionamento 5 dias<br> 7007 - PendÃªncia de Aprovisionamento 5 dias<br> 7008 - PendÃªncia Cancelamento por Inviabilidade TÃ©cnica<br> 7009 - PendÃªncia Cancelamento e ReemissÃ£o<br> 7010 - PendÃªncia Equipamento Cliente<br> 7013 - PendÃªncia Cancelamento por Inviabilidade TÃ©cnica<br> 7014 - PendÃªncia Rede Interna Cliente<br> 7015 - PendÃªncia Cancelamento por DesistÃªncia do ServiÃ§o<br> 7016 - PendÃªncia Cliente Ausente<br> 7017 - PendÃªncia Cliente Solicita nova data de Agendamento<br> 7018 - PendÃªncia de Rede 3 dias<br> 7020 - PendÃªncia de Rede 3 dias<br> 7021 - PendÃªncia Cliente Interrompe e Solicita nova data de Agendamento<br> 7022 - PendÃªncia de Rede 3 dias<br> 7024 - PendÃªncia de Rede 3 dias<br> 7029 - PendÃªncia Agendamento<br> 7030 - PendÃªncia de Rede 3 dias<br> 7031 - PendÃªncia Agendamento<br> 7035 - PendÃªncia Ã¡rea de Risco MomentÃ¢nea<br> 7036 - PendÃªncia Ãrea de Risco Indeterminada 15 dias<br> 7037 - PendÃªncia Impedimento de Atividade por Chuva<br> 7038 - PendÃªncia de Rede 3 dias<br> 7041 - PendÃªncia de Rede 3 dias<br> 7042 - PendÃªncia Local Fechado<br> 7043 - PendÃªncia de Rede 3 dias<br> 7047 - PendÃªncia Acesso Impossibilitado<br> 7048 - PendÃªncia de Rede 3 dias<br> 7049 - PendÃªncia EndereÃ§o NÃ£o Localizado<br> 7051 - PendÃªncia de Aprovisionamento 5 dias<br> 7052 - PendÃªncia de Aprovisionamento 5 dias<br> 7053 - PendÃªncia de Aprovisionamento 5 dias<br> 7054 - PendÃªncia de Aprovisionamento 5 dias<br> 7059 - PendÃªncia de Aprovisionamento 5 dias<br> 7061 - PendÃªncia de Aprovisionamento 5 dias<br> 7062 - PendÃªncia de Aprovisionamento 5 dias<br> 7065 - PendÃªncia Local Fechado<br> 7066 - PendÃªncia Cliente NÃ£o Solicitou InstalaÃ§Ã£o<br> 7067 - PendÃªncia Cancelamento por Ãrea de Risco<br> 7069 - PendÃªncia de Rede 3 dias<br> 7070 - PendÃªncia de Rede 3 dias<br> 7071 - PendÃªncia Ãrea de Risco Indeterminada 15 dias<br> 7074 - PendÃªncia de Rede 3 dias<br> 7075 - PendÃªncia Cancelamento por Inviabilidade TÃ©cnica<br> 7076 - PendÃªncia Cancelamento e ReemissÃ£o<br> 7077 - PendÃªncia Rede Interna Cliente<br> 7078 - PendÃªncia Cancelamento por DesistÃªncia do ServiÃ§o<br> 7079 - PendÃªncia Acesso Impossibilitado<br> 7080 - PendÃªncia Ãrea de Risco MomentÃ¢nea<br> 7081 - PendÃªncia Cancelamento por Impossibilidade de ExecuÃ§Ã£o<br> 7082 - PendÃªncia EndereÃ§o NÃ£o Localizado<br> 7083 - PendÃªncia Cliente NÃ£o Solicitou InstalaÃ§Ã£o<br> 7086 - PendÃªncia de Rede 3 dias<br> 7087 - PendÃªncia de Rede 3 dias<br> 7088 - PendÃªncia de Rede 3 dias<br> 7089 - PendÃªncia Sem Contato Obra<br> 7090 - PendÃªncia de Rede 3 dias<br> 7092 - PendÃªncia Cancelamento por Duplicidade<br> 7095 - PendÃªncia agendamento nÃ£o cumprido<br> 7096 - PendÃªncia SeguranÃ§a do Trabalho 15 dias<br> 7099 - PendÃªncia EndereÃ§o correto InviÃ¡vel<br> 7100 - PendÃªncia Sem Contato Obra<br> 7106 - PendÃªncia de Rede 3 dias<br> 7107 - PendÃªncia de Rede 3 dias<br> 7108 - PendÃªncia Impedimento de Atividade por Chuva",
+                  "enum" : [
+                     {
+                        "comment" : "PendÃªncia cliente"
+                     },
+                     7001,
+                     7008,
+                     7009,
+                     7010,
+                     7013,
+                     7014,
+                     7015,
+                     7016,
+                     7017,
+                     7021,
+                     7029,
+                     7031,
+                     7035,
+                     7037,
+                     7042,
+                     7047,
+                     7049,
+                     7065,
+                     7066,
+                     7067,
+                     7075,
+                     7076,
+                     7077,
+                     7078,
+                     7079,
+                     7080,
+                     7081,
+                     7082,
+                     7083,
+                     7092,
+                     7095,
+                     7099,
+                     7100,
+                     7108,
+                     7002,
+                     7004,
+                     7006,
+                     7007,
+                     7018,
+                     7020,
+                     7022,
+                     7024,
+                     7030,
+                     7036,
+                     7038,
+                     7041,
+                     7043,
+                     7048,
+                     7051,
+                     7052,
+                     7053,
+                     7054,
+                     7059,
+                     7061,
+                     7062,
+                     7069,
+                     7070,
+                     7071,
+                     7074,
+                     7086,
+                     7087,
+                     7088,
+                     7089,
+                     7090,
+                     7096,
+                     7106,
+                     7107
+                  ],
+                  "maxLength" : 5,
+                  "type" : "string"
+               }
+            }
+         },
+         "complementType" : {
+            "properties" : {
+               "complement" : {
+                  "properties" : {
+                     "complements" : {
+                        "items" : {
+                           "properties" : {
+                              "type" : {
+                                 "description" : "Tipo de Complemento",
+                                 "maxLength" : 2,
+                                 "type" : "string"
+                              },
+                              "value" : {
+                                 "description" : "DescriÃ§Ã£o do complemento",
+                                 "maxLength" : 30,
+                                 "type" : "string"
+                              }
+                           }
+                        },
+                        "type" : "array"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "control" : {
+            "properties" : {
+               "code" : {
+                  "description" : "CÃ³digo de Retorno.",
+                  "maxLength" : 3,
+                  "type" : "string"
+               },
+               "message" : {
+                  "description" : "DescriÃ§Ã£o da mensagem de retorno.",
+                  "maxLength" : 250,
+                  "type" : "string"
+               },
+               "type" : {
+                  "description" : "Tipo da mensagem de retorno. (S - Sucesso, T - Erro TÃ©cnico, E - Erro)",
+                  "enum" : [
+                     "S",
+                     "T",
+                     "E"
+                  ],
+                  "maxLength" : 1,
+                  "type" : "string"
+               }
+            },
+            "type" : "object"
+         },
+         "createOrderRequest" : {
+            "properties" : {
+               "order" : {
+                  "$ref" : "#/components/schemas/orderType"
+               }
+            },
+            "type" : "object"
+         },
+         "createOrderResponse" : {
+            "properties" : {
+               "control" : {
+                  "$ref" : "#/components/schemas/control"
+               },
+               "order" : {
+                  "properties" : {
+                     "id" : {
+                        "description" : "Identificador Ãºnico da ordem criada",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     }
+                  },
+                  "type" : "object"
+               }
+            },
+            "type" : "object"
+         },
+         "customerType" : {
+            "properties" : {
+               "customer" : {
+                  "properties" : {
+                     "businessUnity" : {
+                        "description" : "Unidade de negÃ³cio",
+                        "enum" : [
+                           "varejo",
+                           "empresarial"
+                        ],
+                        "maxLength" : 15,
+                        "type" : "string"
+                     },
+                     "fantasyName" : {
+                        "description" : "Nome fantasia",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "name" : {
+                        "description" : "Nome do cliente",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "phoneNumber" : {
+                        "properties" : {
+                           "phoneNumbers" : {
+                              "description" : "Telefone de contato do cliente",
+                              "items" : {
+                                 "maxLength" : 40,
+                                 "type" : "string"
+                              },
+                              "maximum" : 3,
+                              "type" : "array"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "subscriberId" : {
+                        "description" : "NÃºmero identificador da instalaÃ§Ã£o do cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                        "maxLength" : 30,
+                        "type" : "string"
+                     },
+                     "subscriberIdOld" : {
+                        "description" : "NÃºmero identificador ANTIGO da instalaÃ§Ã£o do cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen. IMPORTANTE: Parametro de preenchimento obrigatÃ³rio para ordens de instalaÃ§Ã£o, oriundo de uma mudanÃ§a de endereÃ§o (addressChange/Flag=true)",
+                        "maxLength" : 30,
+                        "type" : "string"
+                     },
+                     "workContact" : {
+                        "properties" : {
+                           "email" : {
+                              "description" : "E-mail do Contato para Obra",
+                              "maxLength" : 100,
+                              "type" : "string"
+                           },
+                           "name" : {
+                              "description" : "Nome do Contato para Obra",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "phone" : {
+                              "description" : "Telefone do Contato para Obra",
+                              "maxLength" : 40,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     }
+                  },
+                  "required" : [
+                     "name",
+                     "subscriberId",
+                     "phoneNumber"
+                  ],
+                  "type" : "object"
+               }
+            }
+         },
+         "descriptionType" : {
+            "properties" : {
+               "description" : {
+                  "description" : "DescriÃ§Ã£o da pendÃªncia",
+                  "enum" : [
+                     "PendÃªncia Cancelamento por Duplicidade",
+                     "PendÃªncia Agendamento Futuro Obra 7 dias",
+                     "PendÃªncia de Aprovisionamento 5 dias",
+                     "PendÃªncia Cancelamento por Inviabilidade TÃ©cnica",
+                     "PendÃªncia Cancelamento e ReemissÃ£o",
+                     "PendÃªncia Equipamento Cliente",
+                     "PendÃªncia Rede Interna Cliente",
+                     "PendÃªncia Cancelamento por DesistÃªncia do ServiÃ§o",
+                     "PendÃªncia Cliente Ausente",
+                     "PendÃªncia Cliente Solicita nova data de Agendamento",
+                     "PendÃªncia de Rede 3 dias",
+                     "PendÃªncia Cliente Interrompe e Solicita nova data de Agendamento",
+                     "PendÃªncia Agendamento",
+                     "PendÃªncia Ã¡rea de Risco MomentÃ¢nea",
+                     "PendÃªncia Ãrea de Risco Indeterminada 15 dias",
+                     "PendÃªncia Impedimento de Atividade por Chuva",
+                     "PendÃªncia Local Fechado",
+                     "PendÃªncia Acesso Impossibilitado",
+                     "PendÃªncia EndereÃ§o NÃ£o Localizado",
+                     "PendÃªncia Cliente NÃ£o Solicitou InstalaÃ§Ã£o",
+                     "PendÃªncia Cancelamento por Ãrea de Risco",
+                     "PendÃªncia Cancelamento por Impossibilidade de ExecuÃ§Ã£o",
+                     "PendÃªncia Sem Contato Obra",
+                     "PendÃªncia agendamento nÃ£o cumprido",
+                     "PendÃªncia SeguranÃ§a do Trabalho 15 dias",
+                     "PendÃªncia EndereÃ§o correto InviÃ¡vel"
+                  ],
+                  "maxLength" : 100,
+                  "type" : "string"
+               }
+            }
+         },
+         "equipmentsType" : {
+            "properties" : {
+               "equipments" : {
+                  "properties" : {
+                     "equipment" : {
+                        "items" : {
+                           "properties" : {
+                              "action" : {
+                                 "description" : "AÃ§Ã£o a ser realizada",
+                                 "enum" : [
+                                    "adicionar"
+                                 ],
+                                 "maxLength" : 30,
+                                 "type" : "string"
+                              },
+                              "code" : {
+                                 "description" : "CÃ³digo de identificaÃ§Ã£o do tipo de material",
+                                 "maxLength" : 50,
+                                 "type" : "number"
+                              },
+                              "serialNumber" : {
+                                 "description" : "Serial do equipamento",
+                                 "maxLength" : 16,
+                                 "type" : "string"
+                              },
+                              "type" : {
+                                 "description" : "Tipo do equipamento",
+                                 "enum" : [
+                                    "ONT"
+                                 ],
+                                 "maxLength" : 20,
+                                 "type" : "string"
+                              }
+                           }
+                        },
+                        "type" : "array"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "issueType" : {
+            "properties" : {
+               "issue" : {
+                  "properties" : {
+                     "action" : {
+                        "description" : "AÃ§Ã£o da pendÃªncia",
+                        "enum" : [
+                           "abrir",
+                           "fechar",
+                           "redirecionar"
+                        ],
+                        "maxLength" : 15,
+                        "type" : "string"
+                     },
+                     "code" : {
+                        "$ref" : "#/components/schemas/codeType"
+                     },
+                     "description" : {
+                        "$ref" : "#/components/schemas/descriptionType"
+                     },
+                     "fieldActivity" : {
+                        "description" : "Flag indicativa da atividade de campo",
+                        "enum" : [
+                           "True",
+                           "False"
+                        ],
+                        "maxLength" : 20,
+                        "type" : "string"
+                     },
+                     "observation" : {
+                        "description" : "ObservaÃ§Ã£o da pendÃªncia",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "reason" : {
+                        "description" : "Motivo da pendÃªncia de uma OS",
+                        "maxLength" : 1000,
+                        "type" : "string"
+                     },
+                     "task" : {
+                        "description" : "Tarefa onde a OS estÃ¡ em caso de pendÃªncia",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "type" : {
+                        "description" : "Tipo de pendÃªncia",
+                        "enum" : [
+                           "CLIENTE",
+                           "TECNICA"
+                        ],
+                        "maxLength" : 10,
+                        "type" : "string"
+                     },
+                     "updateDate" : {
+                        "description" : "Data de atualizaÃ§Ã£o da pendÃªncia",
+                        "format" : "date-time",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "notificationEvent" : {
+            "$ref" : "#/components/schemas/notificationType"
+         },
+         "notificationType" : {
+            "properties" : {
+               "notification" : {
+                  "properties" : {
+                     "customer" : {
+                        "properties" : {
+                           "subscriberId" : {
+                              "description" : "NÃºmero identificador do cliente",
+                              "maxLength" : 30,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "date" : {
+                        "description" : "Data da NotificaÃ§Ã£o",
+                        "format" : "date-time",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     },
+                     "order" : {
+                        "properties" : {
+                           "associatedDocument" : {
+                              "description" : "NÃºmero do documento associado Ã  ordem informado pelo cliente. Os caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                              "maxLength" : 30,
+                              "type" : "string"
+                           },
+                           "code" : {
+                              "description" : "CÃ³digo da notificaÃ§Ã£o enviada.",
+                              "enum" : [
+                                 "-1",
+                                 "0",
+                                 "1",
+                                 "2",
+                                 "3",
+                                 "4"
+                              ],
+                              "type" : "string"
+                           },
+                           "correlationOrder" : {
+                              "description" : "NÃºmero identificador da ordem informado pelo cliente",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "description" : {
+                              "description" : "DescriÃ§Ã£o do CÃ³digo enviado na NotificaÃ§Ã£o<br> -1 - O Equipamento jÃ¡ estÃ¡ em uso por outro cliente<br> 0 - Ordem encerrada com sucesso<br> 1  - Enviando AtualizaÃ§Ã£o de Ordem<br> 2  - Ordem cancelada<br> 3  - InÃ­cio do Processo de Obra<br> 4  - TÃ©rmino do Processo de Obra",
+                              "maxLength" : 50,
+                              "type" : "string"
+                           },
+                           "id" : {
+                              "description" : "Identificador unico da ordem de servico criada",
+                              "maxLength" : 25,
+                              "type" : "string"
+                           },
+                           "issue" : {
+                              "$ref" : "#/components/schemas/issueType"
+                           },
+                           "lostEquipment" : {
+                              "description" : "Informa o extravio do equipamento verificado durante a visita tÃ©cnica. Retorna apenas em notificaÃ§Ãµes referentes a ordem do tipo FTTH.",
+                              "enum" : [
+                                 "True",
+                                 "False"
+                              ],
+                              "maxLength" : 20,
+                              "type" : "string"
+                           },
+                           "resource" : {
+                              "$ref" : "#/components/schemas/resourceType"
+                           },
+                           "type" : {
+                              "description" : "Tipo do processo",
+                              "maxLength" : 12,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "orderType" : {
+            "properties" : {
+               "order" : {
+                  "properties" : {
+                     "addressChange" : {
+                        "properties" : {
+                           "flag" : {
+                              "default" : false,
+                              "description" : "Flag indicadora de mudanÃ§a de endereÃ§o em um pedido de InstalaÃ§Ã£o e/ou Retirada, ou seja, ordem serviÃ§o de instalaÃ§Ã£o ou retirada, oriundo de uma mudanÃ§a de endereÃ§o. Preenchimento permitido apenas para ordens do tipo InstalaÃ§Ã£o e Retirada (type=Instalacao ou type=Retirada). IMPORTANTE: Se addressChange/flag=true, obrigatoriamente serÃ¡ necessÃ¡rio informar o identificador antido da instalaÃ§Ã£o do cliente, parametro 'order/customer/subscriberIdOld'",
+                              "type" : "boolean"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "addresses" : {
+                        "$ref" : "#/components/schemas/addressesType"
+                     },
+                     "appointment" : {
+                        "$ref" : "#/components/schemas/appointmentType"
+                     },
+                     "associatedDocument" : {
+                        "description" : "NÃºmero do documento associado Ã  ordem informado pelo cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                        "maxLength" : 30,
+                        "type" : "string"
+                     },
+                     "associatedDocumentDate" : {
+                        "description" : "Data relacionada ao documento associado",
+                        "format" : "date-time",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     },
+                     "correlationOrder" : {
+                        "description" : "NÃºmero identificador da ordem informado pelo cliente",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "customer" : {
+                        "$ref" : "#/components/schemas/customerType"
+                     },
+                     "equipments" : {
+                        "$ref" : "#/components/schemas/equipmentsType"
+                     },
+                     "infraType" : {
+                        "description" : "Tipo do produto",
+                        "enum" : [
+                           "FTTP",
+                           "FTTH"
+                        ],
+                        "maxLength" : 4,
+                        "type" : "string"
+                     },
+                     "issue" : {
+                        "$ref" : "#/components/schemas/issueType"
+                     },
+                     "orderItem" : {
+                        "items" : {
+                           "properties" : {
+                              "resource" : {
+                                 "properties" : {
+                                    "resourceSpecification" : {
+                                       "items" : {
+                                          "properties" : {
+                                             "name" : {
+                                                "description" : "Nome do recurso",
+                                                "maxLength" : 10,
+                                                "type" : "string"
+                                             },
+                                             "value" : {
+                                                "description" : "Identificador do recurso",
+                                                "maxLength" : 50,
+                                                "type" : "string"
+                                             }
+                                          }
+                                       },
+                                       "maximum" : 1,
+                                       "type" : "array"
+                                    }
+                                 },
+                                 "type" : "object"
+                              }
+                           }
+                        },
+                        "maximum" : 2,
+                        "type" : "array"
+                     },
+                     "products" : {
+                        "$ref" : "#/components/schemas/productsType"
+                     },
+                     "task" : {
+                        "properties" : {
+                           "action" : {
+                              "description" : "AÃ§Ã£o da pendÃªncia",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "code" : {
+                              "$ref" : "#/components/schemas/codeType"
+                           },
+                           "description" : {
+                              "description" : "DescriÃ§Ã£o da pendÃªncia",
+                              "maxLength" : 100,
+                              "type" : "string"
+                           },
+                           "updateDate" : {
+                              "description" : "Data de atualizaÃ§Ã£o da pendÃªncia",
+                              "format" : "date-time",
+                              "maxLength" : 25,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : {
+                        "description" : "Tipo da Ordem de ServiÃ§o que serÃ¡ enviada.",
+                        "enum" : [
+                           "Instalacao",
+                           "Retirada",
+                           "Bloqueio",
+                           "Desbloqueio",
+                           "AssociarCPE",
+                           "Modificacao de Velocidade",
+                           "RemanejamentoPonto"
+                        ],
+                        "maxLength" : 50,
+                        "type" : "string"
+                     }
+                  },
+                  "required" : [
+                     "correlationOrder",
+                     "associatedDocument",
+                     "associatedDocumentDate",
+                     "type",
+                     "infraType",
+                     "customer",
+                     "appointment",
+                     "addresses"
+                  ],
+                  "type" : "object"
+               }
+            }
+         },
+         "productsType" : {
+            "properties" : {
+               "products" : {
+                  "properties" : {
+                     "product" : {
+                        "items" : {
+                           "properties" : {
+                              "action" : {
+                                 "description" : "AÃ§Ã£o a ser executada para o produto",
+                                 "enum" : [
+                                    "adicionar",
+                                    "reparar",
+                                    "remover",
+                                    "bloquear total",
+                                    "bloquear parcial",
+                                    "desbloquear total",
+                                    "modificar"
+                                 ],
+                                 "maxLength" : 25,
+                                 "type" : "string"
+                              },
+                              "catalogId" : {
+                                 "description" : "Identificador do produto no catÃ¡logo",
+                                 "enum" : [
+                                    "BL_100MB",
+                                    "BL_200MB",
+                                    "BL_300MB",
+                                    "BL_400MB",
+                                    "BL_500MB",
+                                    "BL_600MB",
+                                    "BL_700MB",
+                                    "BL_800MB",
+                                    "BL_900MB",
+                                    "BL_1000MB"
+                                 ],
+                                 "maxLength" : 30,
+                                 "type" : "string"
+                              }
+                           },
+                           "required" : [
+                              "catalogId",
+                              "action"
+                           ]
+                        },
+                        "type" : "array"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "resourceType" : {
+            "properties" : {
+               "resource" : {
+                  "description" : "Recursos da ordem",
+                  "properties" : {
+                     "devices" : {
+                        "properties" : {
+                           "device" : {
+                              "items" : {
+                                 "properties" : {
+                                    "category" : {
+                                       "description" : "Categoria do recurso",
+                                       "maxLength" : 4,
+                                       "type" : "string"
+                                    },
+                                    "description" : {
+                                       "description" : "DescriÃ§Ã£o do recurso",
+                                       "maxLength" : 255,
+                                       "type" : "string"
+                                    },
+                                    "resourceCharacteristic" : {
+                                       "items" : {
+                                          "properties" : {
+                                             "name" : {
+                                                "description" : "DescriÃ§Ã£o do item",
+                                                "maxLength" : 100,
+                                                "type" : "string"
+                                             },
+                                             "value" : {
+                                                "description" : "Valor do item",
+                                                "maxLength" : 100,
+                                                "type" : "string"
+                                             }
+                                          }
+                                       },
+                                       "type" : "array"
+                                    },
+                                    "startOperatingDate" : {
+                                       "description" : "Data de inicio do uso",
+                                       "format" : "date-time",
+                                       "maxLength" : 25,
+                                       "type" : "string"
+                                    },
+                                    "state" : {
+                                       "description" : "Status da ativaÃ§Ã£o",
+                                       "maxLength" : 15,
+                                       "type" : "string"
+                                    },
+                                    "type" : {
+                                       "description" : "Tipo de recurso",
+                                       "maxLength" : 50,
+                                       "type" : "string"
+                                    },
+                                    "usageState" : {
+                                       "description" : "Status de uso",
+                                       "maxLength" : 10,
+                                       "type" : "string"
+                                    }
+                                 }
+                              },
+                              "type" : "array"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "fiberPath" : {
+                        "description" : "Caminho da fibra",
+                        "properties" : {
+                           "items" : {
+                              "properties" : {
+                                 "item" : {
+                                    "items" : {
+                                       "properties" : {
+                                          "name" : {
+                                             "description" : "DescriÃ§Ã£o do item",
+                                             "maxLength" : 100,
+                                             "type" : "string"
+                                          },
+                                          "value" : {
+                                             "description" : "Valor do item",
+                                             "maxLength" : 100,
+                                             "type" : "string"
+                                          }
+                                       }
+                                    },
+                                    "type" : "array"
+                                 }
+                              },
+                              "type" : "object"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "gponAccess" : {
+                        "description" : "Identificador do GPON",
+                        "maxLength" : 20,
+                        "type" : "string"
+                     }
+                  },
+                  "type" : "object"
+               }
+            }
+         },
+         "updateOrderRequest" : {
+            "properties" : {
+               "order" : {
+                  "properties" : {
+                     "addresses" : {
+                        "$ref" : "#/components/schemas/addressesType"
+                     },
+                     "appointment" : {
+                        "$ref" : "#/components/schemas/appointmentType"
+                     },
+                     "associatedDocument" : {
+                        "description" : "NÃºmero do documento associado Ã  ordem informado pelo cliente. Os Ãºnicos caracteres especiais permitidos sÃ£o o underline e o hÃ­fen.",
+                        "maxLength" : 30,
+                        "type" : "string"
+                     },
+                     "associatedDocumentDate" : {
+                        "description" : "Data relacionada ao documento associado",
+                        "format" : "date-time",
+                        "maxLength" : 25,
+                        "type" : "string"
+                     },
+                     "correlationOrder" : {
+                        "description" : "NÃºmero identificador da ordem informado pelo cliente",
+                        "maxLength" : 255,
+                        "type" : "string"
+                     },
+                     "customer" : {
+                        "$ref" : "#/components/schemas/customerType"
+                     },
+                     "equipments" : {
+                        "$ref" : "#/components/schemas/equipmentsType"
+                     },
+                     "infraType" : {
+                        "description" : "Tipo do produto",
+                        "enum" : [
+                           "FTTP",
+                           "FTTH"
+                        ],
+                        "maxLength" : 4,
+                        "type" : "string"
+                     },
+                     "issue" : {
+                        "$ref" : "#/components/schemas/issueType"
+                     },
+                     "orderItem" : {
+                        "items" : {
+                           "properties" : {
+                              "resource" : {
+                                 "properties" : {
+                                    "resourceSpecification" : {
+                                       "items" : {
+                                          "properties" : {
+                                             "name" : {
+                                                "description" : "Nome do recurso",
+                                                "maxLength" : 10,
+                                                "type" : "string"
+                                             },
+                                             "value" : {
+                                                "description" : "Identificador do recurso",
+                                                "maxLength" : 50,
+                                                "type" : "string"
+                                             }
+                                          }
+                                       },
+                                       "maximum" : 1,
+                                       "type" : "array"
+                                    }
+                                 },
+                                 "type" : "object"
+                              }
+                           }
+                        },
+                        "maximum" : 2,
+                        "type" : "array"
+                     },
+                     "products" : {
+                        "$ref" : "#/components/schemas/productsType"
+                     },
+                     "task" : {
+                        "properties" : {
+                           "action" : {
+                              "description" : "AÃ§Ã£o da pendÃªncia",
+                              "maxLength" : 255,
+                              "type" : "string"
+                           },
+                           "code" : {
+                              "$ref" : "#/components/schemas/codeType"
+                           },
+                           "description" : {
+                              "description" : "DescriÃ§Ã£o da pendÃªncia",
+                              "maxLength" : 100,
+                              "type" : "string"
+                           },
+                           "updateDate" : {
+                              "description" : "Data de atualizaÃ§Ã£o da pendÃªncia",
+                              "format" : "date-time",
+                              "maxLength" : 25,
+                              "type" : "string"
+                           }
+                        },
+                        "type" : "object"
+                     },
+                     "type" : {
+                        "description" : "Tipo da Ordem de ServiÃ§o que serÃ¡ enviada.",
+                        "enum" : [
+                           "Instalacao",
+                           "Retirada",
+                           "Bloqueio",
+                           "Desbloqueio",
+                           "AssociarCPE",
+                           "Modificacao de Velocidade",
+                           "RemanejamentoPonto"
+                        ],
+                        "maxLength" : 50,
+                        "type" : "string"
+                     }
+                  },
+                  "required" : [
+                     "correlationOrder",
+                     "associatedDocument",
+                     "associatedDocumentDate",
+                     "type",
+                     "infraType",
+                     "addresses"
+                  ],
+                  "type" : "object"
+               }
+            }
+         }
+      }
+   },
+   "info" : {
+      "title" : "ProductOrdering",
+      "version" : "2.8.2"
+   },
+   "openapi" : "3.0.1",
+   "paths" : {
+      "/cancelProductOrder/{order.Id}" : {
+         "post" : {
+            "operationId" : "Cancel Product Order By Id",
+            "parameters" : [
+               {
+                  "description" : "identificador unico da ordem do serviÃ§o a ser cancelada",
+                  "example" : "20230315000001",
+                  "in" : "path",
+                  "name" : "order.Id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  }
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "example" : {
+                        "order" : {
+                           "associatedDocument" : "VTT001",
+                           "customer" : {
+                              "subscriberId" : "SVTAL001"
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/cancelOrderRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "200" : {
+                  "$ref" : "#/components/responses/Success"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "406" : {
+                  "$ref" : "#/components/responses/NotAcceptable"
+               },
+               "423" : {
+                  "content" : {
+                     "application/json" : {
+                        "example" : {
+                           "control" : {
+                              "code" : "423",
+                              "message" : "Agendamento nÃ£o pode ser alterado",
+                              "type" : "E"
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/control"
+                        }
+                     }
+                  },
+                  "description" : "Locked"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "Cancel Product Order By Id",
+            "tags" : [
+               "Cancel Order"
+            ]
+         }
+      },
+      "/listener/cancelProductOrderCreateEvent" : {
+         "post" : {
+            "operationId" : "Cancel Product Order Create Event By Client",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "example" : {
+                        "notification" : {
+                           "order" : {
+                              "associatedDocument" : "VTT001",
+                              "id" : "20230315000001"
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/notificationEvent"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "204" : {
+                  "description" : "OperaÃ§Ã£o realizada com sucesso"
+               },
+               "400" : {
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "description" : "Unauthorized"
+               },
+               "500" : {
+                  "description" : "ServerError"
+               },
+               "503" : {
+                  "description" : "Unavailable"
+               },
+               "504" : {
+                  "description" : "Timeout"
+               }
+            },
+            "summary" : "Cancel Product Order Create Event By Client",
+            "tags" : [
+               "Notification"
+            ]
+         }
+      },
+      "/listener/productOrderCreateEvent" : {
+         "post" : {
+            "operationId" : "Product Order Create Event By Client",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "example" : {
+                        "notification" : {
+                           "date" : "2021-06-05T20:23:29-03:00",
+                           "order" : {
+                              "associatedDocument" : "VTT001",
+                              "correlationOrder" : "10",
+                              "id" : "20230315000001"
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/notificationEvent"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "204" : {
+                  "description" : "OperaÃ§Ã£o realizada com sucesso"
+               },
+               "400" : {
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "description" : "Unauthorized"
+               },
+               "500" : {
+                  "description" : "ServerError"
+               },
+               "503" : {
+                  "description" : "Unavailable"
+               },
+               "504" : {
+                  "description" : "Timeout"
+               }
+            },
+            "summary" : "Product Order Create Event By Client",
+            "tags" : [
+               "Notification"
+            ]
+         }
+      },
+      "/listener/productOrderInformationRequiredEvent" : {
+         "post" : {
+            "operationId" : "Product Order Information Required Event",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Notification client pendency" : {
+                           "value" : {
+                              "notification" : {
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "correlationOrder" : "10",
+                                    "id" : "20230315000001",
+                                    "issue" : {
+                                       "action" : "abrir",
+                                       "code" : "7029",
+                                       "description" : "Pendencia de agendamento",
+                                       "fieldActivity" : "true",
+                                       "observation" : "",
+                                       "reason" : "PROJETO",
+                                       "task" : "",
+                                       "type" : "CLIENTE",
+                                       "updateDate" : "2021-02-17T17:19:50-03:00"
+                                    }
+                                 }
+                              }
+                           }
+                        },
+                        "Notification technical pendency" : {
+                           "value" : {
+                              "notification" : {
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "correlationOrder" : "10",
+                                    "id" : "20230315000001",
+                                    "issue" : {
+                                       "action" : "abrir",
+                                       "code" : "7030",
+                                       "description" : "Pendencia de agendamento",
+                                       "fieldActivity" : "false",
+                                       "observation" : "",
+                                       "reason" : "MANUNTENÃÃO",
+                                       "task" : "",
+                                       "type" : "TECNICA",
+                                       "updateDate" : "2022-02-25T11:50:50.566-03:00"
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/notificationEvent"
+                     }
+                  }
+               },
+               "description" : ""
+            },
+            "responses" : {
+               "204" : {
+                  "description" : "Success"
+               },
+               "400" : {
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "description" : "Unauthorized"
+               },
+               "500" : {
+                  "description" : "ServerError"
+               },
+               "503" : {
+                  "description" : "Unavailable"
+               },
+               "504" : {
+                  "description" : "Timeout"
+               }
+            },
+            "summary" : "Product Order Information Required Event",
+            "tags" : [
+               "Notification"
+            ]
+         }
+      },
+      "/listener/productOrderStateChangeEvent" : {
+         "post" : {
+            "operationId" : "State Change Event By Client",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Cancel Notification" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "234567654"
+                                 },
+                                 "date" : "2021-09-29T18:42:24.641-03:00",
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "code" : "2",
+                                    "correlationOrder" : "10",
+                                    "description" : "Ordem cancelada",
+                                    "id" : "20230315000001",
+                                    "type" : "Cancelamento"
+                                 }
+                              }
+                           }
+                        },
+                        "Closing Notification" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "234567654"
+                                 },
+                                 "date" : "2020-12-16T10:09:31-03:00",
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "code" : "0",
+                                    "correlationOrder" : "10",
+                                    "description" : "Ordem encerrada com sucesso.",
+                                    "id" : "20230315000001",
+                                    "lostEquipment" : "True",
+                                    "resource" : {
+                                       "fiberPath" : {
+                                          "items" : {
+                                             "item" : [
+                                                {
+                                                   "name" : "enderecoCDO",
+                                                   "value" : "RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913"
+                                                },
+                                                {
+                                                   "name" : "producer_olt",
+                                                   "value" : "HUAWEI"
+                                                },
+                                                {
+                                                   "name" : "CDO",
+                                                   "value" : "CDOI-4704-PTP.FO.O:45"
+                                                },
+                                                {
+                                                   "name" : "CDO",
+                                                   "value" : "CDOI-4704-PTP.FO.I:S32_2_IN 1"
+                                                },
+                                                {
+                                                   "name" : "estacao",
+                                                   "value" : "BEL"
+                                                },
+                                                {
+                                                   "name" : "cnl",
+                                                   "value" : "CBF"
+                                                },
+                                                {
+                                                   "name" : "olt",
+                                                   "value" : "MA-CTO04-GHUA"
+                                                },
+                                                {
+                                                   "name" : "primaryCable",
+                                                   "value" : "MA.CTO.F-7.CEO-15/1"
+                                                },
+                                                {
+                                                   "name" : "secondaryCable",
+                                                   "value" : "MA.CTO.F-7.CEOS-165"
+                                                }
+                                             ]
+                                          }
+                                       },
+                                       "gponAccess" : "A000009QS"
+                                    },
+                                    "type" : "Encerramento"
+                                 }
+                              }
+                           }
+                        },
+                        "Closing Notification (ontOwner Vtal - Install)" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "234567654"
+                                 },
+                                 "date" : "2022-12-26T12:15:35.174-03:00",
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "code" : "0",
+                                    "correlationOrder" : "10",
+                                    "description" : "BA de campo encerrado com sucesso",
+                                    "id" : "20230315000001",
+                                    "resource" : {
+                                       "devices" : {
+                                          "device" : [
+                                             {
+                                                "category" : "ONT",
+                                                "description" : "Equipment - ONT device",
+                                                "resourceCharacteristic" : [
+                                                   {
+                                                      "name" : "serialNumber",
+                                                      "value" : "0251990119989"
+                                                   },
+                                                   {
+                                                      "name" : "firmware",
+                                                      "value" : "FW-XPTO-123"
+                                                   },
+                                                   {
+                                                      "name" : "manufacturer",
+                                                      "value" : "Sagemcom"
+                                                   },
+                                                   {
+                                                      "name" : "model",
+                                                      "value" : "F@ST 5340 TFN"
+                                                   }
+                                                ],
+                                                "startOperatingDate" : "2022-12-26T12:15:35.174-03:00",
+                                                "state" : "completed",
+                                                "type" : "PhsysicalResource",
+                                                "usageState" : "active"
+                                             }
+                                          ]
+                                       },
+                                       "fiberPath" : {
+                                          "items" : {
+                                             "item" : [
+                                                {
+                                                   "name" : "enderecoCDO",
+                                                   "value" : "RUA GENERAL RENATO PAQUET, 199, BARRA DA TIJUCA, RIO DE JANEIRO - RJ 22793913"
+                                                },
+                                                {
+                                                   "name" : "producer_olt",
+                                                   "value" : "HUAWEI"
+                                                },
+                                                {
+                                                   "name" : "CDO",
+                                                   "value" : "CDOI-4704-PTP.FO.O:45"
+                                                },
+                                                {
+                                                   "name" : "CDO",
+                                                   "value" : "CDOI-4704-PTP.FO.I:S32_2_IN 1"
+                                                },
+                                                {
+                                                   "name" : "estacao",
+                                                   "value" : "BEL"
+                                                },
+                                                {
+                                                   "name" : "cnl",
+                                                   "value" : "CBF"
+                                                },
+                                                {
+                                                   "name" : "olt",
+                                                   "value" : "MA-CTO04-GHUA"
+                                                },
+                                                {
+                                                   "name" : "primaryCable",
+                                                   "value" : "MA.CTO.F-7.CEO-15/1"
+                                                },
+                                                {
+                                                   "name" : "secondaryCable",
+                                                   "value" : "MA.CTO.F-7.CEOS-165"
+                                                }
+                                             ]
+                                          }
+                                       },
+                                       "gponAccess" : "A000009QS"
+                                    },
+                                    "type" : "Encerramento"
+                                 }
+                              }
+                           }
+                        },
+                        "ONT already in use" : {
+                           "value" : {
+                              "notification" : {
+                                 "customer" : {
+                                    "subscriberId" : "234567654"
+                                 },
+                                 "date" : "2021-10-26T17:53:25.497-03:00",
+                                 "order" : {
+                                    "associatedDocument" : "VTT001",
+                                    "code" : "-1",
+                                    "correlationOrder" : "10",
+                                    "description" : "O Equipamento jÃ¡ estÃ¡ em uso por outro cliente",
+                                    "id" : "20230315000001",
+                                    "lostEquipment" : "True",
+                                    "resource" : {
+                                       "fiberPath" : {
+                                          "items" : ""
+                                       }
+                                    },
+                                    "type" : "Encerramento"
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/notificationEvent"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "204" : {
+                  "description" : "OperaÃ§Ã£o realizada com sucesso"
+               },
+               "400" : {
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "description" : "Unauthorized"
+               },
+               "500" : {
+                  "description" : "ServerError"
+               },
+               "503" : {
+                  "description" : "Unavailable"
+               },
+               "504" : {
+                  "description" : "Timeout"
+               }
+            },
+            "summary" : "State Change Event By Client",
+            "tags" : [
+               "Notification"
+            ]
+         }
+      },
+      "/productOrder" : {
+         "post" : {
+            "operationId" : "Request Opening Order",
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Associate CPE Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2020-10-22T14:00:00-03:00",
+                                 "correlationOrder" : "2310",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "21965400000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "equipments" : {
+                                    "equipment" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "code" : 616551,
+                                          "serialNumber" : "ALCLF718RF05",
+                                          "type" : "ONT"
+                                       }
+                                    ]
+                                 },
+                                 "infraType" : "FTTP",
+                                 "type" : "AssociarCPE"
+                              }
+                           }
+                        },
+                        "Installation Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "2021-05-05T08:00:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Obrigatorio",
+                                    "workOrderId" : "SA-562403"
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Instalacao"
+                              }
+                           }
+                        },
+                        "Installation Order Type FTTH arising from a address change (flagged address change)" : {
+                           "value" : {
+                              "order" : {
+                                 "addressChange" : {
+                                    "flag" : true
+                                 },
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "2021-05-05T08:00:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Obrigatorio",
+                                    "workOrderId" : "SA-562403"
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "21999999999",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "subscriberIdOld" : "SVTALOLD001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Instalacao"
+                              }
+                           }
+                        },
+                        "Installation Order Type FTTH with partial viability" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Obrigatorio",
+                                    "workOrderId" : ""
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "21999999999",
+                                          "11900000009",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Instalacao"
+                              }
+                           }
+                        },
+                        "Installation Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Proximo a padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "",
+                                    "hasSlot" : false,
+                                    "mandatoryType" : "Permitido",
+                                    "workOrderId" : ""
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "21999999999",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Instalacao"
+                              }
+                           }
+                        },
+                        "Installation Order Type FTTP arising from a address change (flagged address change)" : {
+                           "value" : {
+                              "order" : {
+                                 "addressChange" : {
+                                    "flag" : true
+                                 },
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Proximo a padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "subscriberIdOld" : "SVTALOLD001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Instalacao"
+                              }
+                           }
+                        },
+                        "Partial Block Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "bloquear parcial",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Bloqueio"
+                              }
+                           }
+                        },
+                        "Partial Block Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "bloquear parcial",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Bloqueio"
+                              }
+                           }
+                        },
+                        "Point Relocation Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "2021-06-14T08:00:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Obrigatorio",
+                                    "workOrderId" : "SA-521109"
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "923467432",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "type" : "RemanejamentoPonto"
+                              }
+                           }
+                        },
+                        "Removal Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "2020-11-13T16:20:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Obrigatorio",
+                                    "workOrderId" : "SA-562403"
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Retirada"
+                              }
+                           }
+                        },
+                        "Removal Order Type FTTH arising from a address change (flagged address change)" : {
+                           "value" : {
+                              "order" : {
+                                 "addressChange" : {
+                                    "flag" : true
+                                 },
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Retirada"
+                              }
+                           }
+                        },
+                        "Removal Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "appointment" : {
+                                    "date" : "",
+                                    "hasSlot" : false,
+                                    "mandatoryType" : "Permitido",
+                                    "workOrderId" : ""
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Retirada"
+                              }
+                           }
+                        },
+                        "Removal Order Type FTTP arising from a address change (flagged address change)" : {
+                           "value" : {
+                              "order" : {
+                                 "addressChange" : {
+                                    "flag" : true
+                                 },
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Do lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Retirada"
+                              }
+                           }
+                        },
+                        "Speed Modification Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_1000MB"
+                                       },
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Modificacao de Velocidade"
+                              }
+                           }
+                        },
+                        "Speed Modification Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "adicionar",
+                                          "catalogId" : "BL_1000MB"
+                                       },
+                                       {
+                                          "action" : "remover",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Modificacao de Velocidade"
+                              }
+                           }
+                        },
+                        "Total Block Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "bloquear total",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Bloqueio"
+                              }
+                           }
+                        },
+                        "Total Block Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "bloquear total",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Bloqueio"
+                              }
+                           }
+                        },
+                        "Unblock Order Type FTTH" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "9",
+                                 "customer" : {
+                                    "businessUnity" : "varejo",
+                                    "fantasyName" : "InterHome Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTH",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "desbloquear total",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Desbloqueio"
+                              }
+                           }
+                        },
+                        "Unblock Order Type FTTP" : {
+                           "value" : {
+                              "order" : {
+                                 "addresses" : {
+                                    "address" : {
+                                       "complement" : {
+                                          "complements" : [
+                                             {
+                                                "type" : "ES",
+                                                "value" : "ARC201"
+                                             }
+                                          ]
+                                       },
+                                       "id" : 14393,
+                                       "inventoryId" : "1766156",
+                                       "reference" : "Ao lado da padaria"
+                                    }
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "associatedDocumentDate" : "2021-06-09T18:20:53-03:00",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "businessUnity" : "empresarial",
+                                    "fantasyName" : "InterCorp Internet",
+                                    "name" : "Sandbox V.tal",
+                                    "phoneNumber" : {
+                                       "phoneNumbers" : [
+                                          "000000000",
+                                          "",
+                                          ""
+                                       ]
+                                    },
+                                    "subscriberId" : "SVTAL001",
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sindico Vtal",
+                                       "phone" : "21999900000"
+                                    }
+                                 },
+                                 "infraType" : "FTTP",
+                                 "products" : {
+                                    "product" : [
+                                       {
+                                          "action" : "desbloquear total",
+                                          "catalogId" : "BL_200MB"
+                                       }
+                                    ]
+                                 },
+                                 "type" : "Desbloqueio"
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/createOrderRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "201" : {
+                  "content" : {
+                     "application/json" : {
+                        "example" : {
+                           "control" : {
+                              "code" : "201",
+                              "message" : "Created",
+                              "type" : "S"
+                           },
+                           "order" : {
+                              "id" : "20230315000001"
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/createOrderResponse"
+                        }
+                     }
+                  },
+                  "description" : "Created"
+               },
+               "400" : {
+                  "content" : {
+                     "application/json" : {
+                        "examples" : {
+                           "Catalog ID out of standard" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : "400",
+                                    "message" : "Campo Catalog ID fora do padrÃ£o esperado",
+                                    "type" : "E"
+                                 }
+                              }
+                           },
+                           "Catalog ID with greater speed than allowed" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : "400",
+                                    "message" : "O campo Catalog ID estÃ¡ com velocidade superior a permitida",
+                                    "type" : "E"
+                                 }
+                              }
+                           },
+                           "General Bad Request" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : "400",
+                                    "message" : "Bad Request",
+                                    "type" : "E"
+                                 }
+                              }
+                           },
+                           "Not allowed to inform products" : {
+                              "value" : {
+                                 "control" : {
+                                    "code" : "400",
+                                    "message" : "NÃ£o Ã© permitido informar produtos para esse tipo de ordem",
+                                    "type" : "E"
+                                 }
+                              }
+                           }
+                        },
+                        "schema" : {
+                           "$ref" : "#/components/schemas/control"
+                        }
+                     }
+                  },
+                  "description" : "BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "406" : {
+                  "$ref" : "#/components/responses/NotAcceptable"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "Request Opening Order",
+            "tags" : [
+               "Create Order"
+            ]
+         }
+      },
+      "/productOrder/{order.Id}" : {
+         "patch" : {
+            "operationId" : "Patch Product Order By Id",
+            "parameters" : [
+               {
+                  "description" : "identificador unico da ordem do serviÃ§o a ser atualizada",
+                  "example" : "20230315000001",
+                  "in" : "path",
+                  "name" : "order.Id",
+                  "required" : true,
+                  "schema" : {
+                     "type" : "string"
+                  },
+                  "style" : "simple"
+               }
+            ],
+            "requestBody" : {
+               "content" : {
+                  "application/json" : {
+                     "examples" : {
+                        "Closed house pendency resolution" : {
+                           "value" : {
+                              "order" : {
+                                 "appointment" : {
+                                    "date" : "2021-06-07T12:47:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Permitido",
+                                    "workOrderId" : ""
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "correlationOrder" : "10",
+                                 "issue" : {
+                                    "action" : "fechar",
+                                    "code" : "7016",
+                                    "observation" : "Reagendamento por ausÃªncia",
+                                    "updateDate" : "2021-12-09T15:20:00"
+                                 }
+                              }
+                           }
+                        },
+                        "Schedule pendency resolution" : {
+                           "value" : {
+                              "order" : {
+                                 "appointment" : {
+                                    "date" : "2021-06-07T12:47:00",
+                                    "hasSlot" : true,
+                                    "mandatoryType" : "Permitido",
+                                    "workOrderId" : ""
+                                 },
+                                 "associatedDocument" : "VTT001",
+                                 "correlationOrder" : "10",
+                                 "issue" : {
+                                    "action" : "fechar",
+                                    "code" : "7029",
+                                    "observation" : "ResoluÃ§Ã£o de pendÃªncia de agendamento",
+                                    "updateDate" : "2021-12-09T15:20:00"
+                                 }
+                              }
+                           }
+                        },
+                        "Work Contact pendency resolution" : {
+                           "value" : {
+                              "order" : {
+                                 "associatedDocument" : "VTT001",
+                                 "correlationOrder" : "10",
+                                 "customer" : {
+                                    "workContact" : {
+                                       "email" : "sindicovtal@vtal.com",
+                                       "name" : "sÃ­ndico Vtal",
+                                       "phone" : 21999900000
+                                    }
+                                 },
+                                 "issue" : {
+                                    "action" : "fechar",
+                                    "code" : "7100",
+                                    "observation" : "ResoluÃ§Ã£o de pendÃªncia de contato de obra",
+                                    "updateDate" : "2021-12-09T15:20:00"
+                                 }
+                              }
+                           }
+                        }
+                     },
+                     "schema" : {
+                        "$ref" : "#/components/schemas/updateOrderRequest"
+                     }
+                  }
+               }
+            },
+            "responses" : {
+               "200" : {
+                  "$ref" : "#/components/responses/Success"
+               },
+               "400" : {
+                  "$ref" : "#/components/responses/BadRequest"
+               },
+               "401" : {
+                  "$ref" : "#/components/responses/Unauthorized"
+               },
+               "403" : {
+                  "$ref" : "#/components/responses/Forbidden"
+               },
+               "404" : {
+                  "$ref" : "#/components/responses/NotFound"
+               },
+               "406" : {
+                  "$ref" : "#/components/responses/NotAcceptable"
+               },
+               "429" : {
+                  "$ref" : "#/components/responses/TooManyRequests"
+               },
+               "500" : {
+                  "$ref" : "#/components/responses/ServerError"
+               },
+               "503" : {
+                  "$ref" : "#/components/responses/Unavailable"
+               },
+               "504" : {
+                  "$ref" : "#/components/responses/Timeout"
+               }
+            },
+            "summary" : "Patch Product Order By Id",
+            "tags" : [
+               "Update Order"
+            ]
+         }
+      }
+   },
+   "tags" : [
+      {
+         "name" : "Create Order"
+      },
+      {
+         "name" : "Update Order"
+      },
+      {
+         "name" : "Cancel Order"
+      },
+      {
+         "name" : "Notification"
+      }
+   ]
+}
