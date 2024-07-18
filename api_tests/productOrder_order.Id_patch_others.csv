@@ -1,0 +1,11 @@
+order.Id^|^appointment.date^|^appointment.hasSlot^|^appointment.mandatoryType^|^appointment.workOrderId^|^associatedDocument^|^correlationOrder^|^issue.action^|^issue.code^|^issue.observation^|^issue.updateDate
+20230315000001^|^2021-06-07T12:47:00^|^True^|^Permitido^|^AB1234^|^VTT001^|^10^|^fechar^|^7016^|^Reagendamento por ausÃªncia^|^2021-12-09T15:20:00
+20230315000002^|^2021-06-07T12:47:00^|^True^|^Permitido^|^XC5678^|^VTT002^|^20^|^fechar^|^7029^|^ResoluÃ§Ã£o de pendÃªncia de agendamento^|^2021-12-09T15:20:00
+20230315000003^|^No value for this field^|^No value for this field^|^Obrigatório^|^EG9012^|^VTT003^|^30^|^Invalid action data^|^7100^|^ResoluÃ§Ã£o de pendÃªncia de contato de obra^|^2021-12-09T15:20:00
+20230315000004^|^2021-06-07T12:47:00^|^Yes^|^Permitido^|^FR3456^|^VTT004^|^40^|^resolve^|^7031^|^ResoluÃ§Ã£o de pendÃªncia de agendamento^|^2021-12-09T15:20:00
+20230315000005^|^No Date^|^Yes^|^Obligatorio^|^GH7890^|^VTT005^|^50^|^fechar^|^No code^|^Inconsistente resolution^|^No Date
+20230315000006^|^No value for this field^|^Invalid boolean data^|^Permissão^|^No value for this field^|^VTT006^|^60^|^Invalid action data^|^7022^|^ResoluÃ§Ã£o de pendÃªncia de agendamento^|^2021-12-09T15:20:00
+20230315000007^|^2021-06-07T12:47:00^|^True^|^Invalid datatype^|^JK1234^|^VTT007^|^70^|^resolve^|^7092^|^ResoluÃ§Ã£o de pendÃªncia de agendamento^|^No Date
+20230315000008^|^2021-07-07T14:50:00^|^False^|^Obrigatorio^|^LM5678^|^VTT008^|^80^|^fechar^|^7054^|^No value for this field^|^2021-12-09T15:20:00
+20230315000009^|^2021-06-25T16:00:00^|^Invalid boolean data^|^Permissão^|^NO9012^|^VTT009^|^90^|^Invalid action data^|^Invalid code^|^ResoluÃ§Ã£o de pendÃªncia aus\u00EAncia^|^2021-12-09T15:20:00
+20230315000010^|^2021-06-07T10:45:00^|^True^|^Permitido^|^PQ3456^|^VTT010^|^100^|^fechar^|^7067^|^No value for this field^|^No Date
