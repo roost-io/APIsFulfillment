@@ -1,0 +1,11 @@
+fileName^|^url^|^methodType^|^responseCode^|^responseType^|^responseMessage
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/5892341^|^get^|^200^|^S^|^Success
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/7634982^|^get^|^404^|^E^|^Address not found
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^201^|^S^|^Order created successfully
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/1234567^|^get^|^400^|^E^|^Invalid address ID
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/9876543^|^get^|^200^|^S^|^Address complements retrieved
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^400^|^E^|^Invalid request body
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/8765432^|^get^|^429^|^E^|^Too many requests
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/2345678^|^get^|^503^|^E^|^Service unavailable
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^500^|^E^|^Internal server error
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/3456789^|^get^|^200^|^S^|^Address details retrieved

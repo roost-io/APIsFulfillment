@@ -1,0 +1,11 @@
+fileName^|^url^|^methodType^|^responseCode^|^responseType^|^addressId^|^appointmentId^|^orderId^|^controlCode^|^controlMessage^|^controlType
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^201^|^object^|^^|^APT-12345^|^^|^S001^|^Appointment created successfully^|^S
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/789012^|^get^|^200^|^object^|^789012^|^^|^^|^G001^|^Address details retrieved^|^S
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/345678^|^get^|^200^|^object^|^345678^|^^|^^|^C001^|^Address complements fetched^|^S
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^201^|^object^|^^|^^|^ORD-67890^|^P001^|^Product order created^|^S
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^400^|^string^|^^|^^|^^|^E001^|^Invalid appointment data^|^E
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/901234^|^get^|^404^|^string^|^901234^|^^|^^|^E002^|^Address not found^|^E
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/567890^|^get^|^429^|^string^|^567890^|^^|^^|^E003^|^Too many requests^|^E
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^503^|^string^|^^|^^|^^|^E004^|^Service temporarily unavailable^|^E
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^201^|^object^|^^|^APT-67891^|^^|^S002^|^Appointment scheduled successfully^|^S
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/123456^|^get^|^200^|^object^|^123456^|^^|^^|^G002^|^Address information retrieved^|^S
