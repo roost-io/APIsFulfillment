@@ -1,0 +1,12 @@
+orderId,associatedDocument,subscriberId,statusCode,statusMessage,statusType
+""20230315000001"",""VTT001"",""SVTAL001"","200",""OK"",""Success""
+""20230315555555"",""VTT001"",""SVTAL001"","400",""Bad Request"",""Error""
+""20230315555555"",""VTT002"",""SVTAL001"","401",""Unauthorized"",""Error""
+""20230315000001"",""VTT002"",""SVTAL002"","404",""Not Found"",""Error""
+""20230315000002"",""VTT003"",""SVTAL003"","500",""Internal Server Error"",""Technical""
+""20230315000003"",""VTT004"",""SVTAL004"","503",""Service Unavailable"",""Technical""
+""20230315000004"",""VTT001"",""SVTAL005"","504",""Gateway Timeout"",""Technical""
+""20230315000005"",""VTT006"",""SVTAL006"","423",""Agendamento nÃ£o pode ser alterado"",""Error""
+""20230315000006"",""VTT007"",""SVTAL007"","429",""Too Many Requests - Exceeded Quota"",""Error""
+""20230315000007"",""VTT008"",""SVTAL008"","403",""Forbidden - Scope Not Permitted"",""Error""
+""20230315000008"",""VTT009"",""SVTAL009"","406",""Not Acceptable (AssociatedDocument jÃ¡ existente/utilizado)"",""Error""
