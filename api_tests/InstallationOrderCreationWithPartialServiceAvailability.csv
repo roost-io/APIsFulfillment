@@ -1,0 +1,11 @@
+addressId^|^complementId^|^appointmentId^|^statusCode^|^scenario
+12345678^|^987654^|^APT-20230601-001^|^201^|^New Installation
+23456789^|^876543^|^APT-20230602-002^|^200^|^Address Verification
+34567890^|^765432^|^APT-20230603-003^|^201^|^Product Order
+45678901^|^654321^|^APT-20230604-004^|^400^|^Invalid Request
+56789012^|^543210^|^APT-20230605-005^|^201^|^Appointment Scheduling
+67890123^|^432109^|^APT-20230606-006^|^404^|^Address Not Found
+78901234^|^321098^|^APT-20230607-007^|^201^|^Order Confirmation
+89012345^|^210987^|^APT-20230608-008^|^429^|^Rate Limit Exceeded
+90123456^|^109876^|^APT-20230609-009^|^500^|^Internal Server Error
+01234567^|^098765^|^APT-20230610-010^|^201^|^Complement Retrieval
