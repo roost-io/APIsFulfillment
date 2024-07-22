@@ -1,0 +1,11 @@
+addressId^|^associatedDocument^|^startDate^|^finishDate^|^orderType
+101^|^Doc_001^|^2022-01-01^|^2022-01-10^|^Installation
+102^|^Doc_002^|^2022-02-01^|^2022-02-10^|^Removal
+103^|^Doc_003^|^2022-03-01^|^2022-03-10^|^TechnicalSupport
+104^|^Doc_004^|^2022-04-01^|^2022-04-10^|^Installation
+105^|^Doc_005^|^2022-05-01^|^2022-05-10^|^TechnicalSupport
+106^|^Doc_006^|^2022-06-01^|^2022-06-10^|^Removal
+107^|^Doc_007^|^2022-07-01^|^2022-07-10^|^Installation
+108^|^Doc_008^|^2022-08-01^|^2022-08-10^|^TechnicalSupport
+109^|^Doc_009^|^2022-09-01^|^2022-09-10^|^Removal
+110^|^Doc_010^|^2022-10-01^|^2022-10-10^|^Installation
