@@ -1,0 +1,125 @@
+openapi: 3.0.0
+info:
+  title: Postman API Spec Test Execution API
+  version: 1.0.0
+  description: API for executing and managing tests for Postman API Specs
+
+servers:
+  - url: https://api.postman.com/v1
+
+paths:
+  /api-specs/{specId}/tests:
+    get:
+      summary: Get test execution status
+      parameters:
+        - name: specId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestStatus'
+    post:
+      summary: Execute tests for a specific API spec
+      parameters:
+        - name: specId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '202':
+          description: Test execution initiated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestExecution'
+        '400':
+          description: Invalid request
+        '404':
+          description: API spec not found
+
+  /api-specs/{specId}/tests/{executionId}:
+    get:
+      summary: Get test execution results
+      parameters:
+        - name: specId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: executionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TestResults'
+        '404':
+          description: Test execution not found
+    delete:
+      summary: Cancel ongoing test execution
+      parameters:
+        - name: specId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: executionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Test execution cancelled successfully
+        '404':
+          description: Test execution not found
+
+components:
+  schemas:
+    TestStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [ready, running, completed, error]
+        message:
+          type: string
+
+    TestExecution:
+      type: object
+      properties:
+        executionId:
+          type: string
+        status:
+          type: string
+          enum: [initiated, running]
+
+    TestResults:
+      type: object
+      properties:
+        executionId:
+          type: string
+        status:
+          type: string
+          enum: [completed, error]
+        passedTests:
+          type: integer
+        failedTests:
+          type: integer
+        errorMessage:
+          type: string
+        executionTime:
+          type: number
+          format: float
