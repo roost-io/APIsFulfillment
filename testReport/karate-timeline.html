@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulGeographicAddressValidationAndServiceAvailabilityCheck[1:34]","start":1722425121742,"end":1722425151781,"title":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulGeographicAddressValidationAndServiceAvailabilityCheck[1:34] 11:25:21.742-11:25:51.781 Successful Geographic Address Validation","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulGeographicAddressValidationAndServiceAvailabilityCheck[2:41]","start":1722425151788,"end":1722425181825,"title":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulGeographicAddressValidationAndServiceAvailabilityCheck[2:41] 11:25:51.788-11:26:21.825 Successful Service Availability Check","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[1:35]","start":1722425031401,"end":1722425061448,"title":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[1:35] 11:23:51.401-11:24:21.448 Initial Retrieval of Trouble Ticket","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[2:42]","start":1722425061455,"end":1722425091490,"title":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[2:42] 11:24:21.455-11:24:51.490 Escalate Trouble Ticket and Create Work Order","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[3:50]","start":1722425091496,"end":1722425121505,"title":"src\/test\/java\/org\/springframework\/api_tests\/SuccessfulTroubleTicketEscalationWithWorkOrderAndStatusUpdate[3:50] 11:24:51.496-11:25:21.505 Verify Trouble Ticket Status Update","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
