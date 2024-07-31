@@ -1,0 +1,8 @@
+name,password,statusCode,scenario
+"John Doe","password123",201,"login success"
+"Jane Smith","securePass456",201,"login success"
+"InvalidUser","wrongPass",401,"Unauthorized error"
+"ErrorUser","errorPass",500,"Internal server error"
+"Alice Johnson","strongPwd789",201,"login success"
+"Bob Wilson","pass1234",401,"Unauthorized error"
+"Eve Brown","badPassword",500,"Internal server error"
