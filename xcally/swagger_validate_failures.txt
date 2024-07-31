@@ -1,0 +1,633 @@
+Swagger schema validation failed.
+  #/paths must NOT have additional properties
+  #/paths must NOT have additional properties
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must NOT have additional properties
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5 must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5 must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must NOT have additional properties
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must NOT have additional properties
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody must match exactly one schema in oneOf
+  #/paths/~1settings~1env~1 must NOT have additional properties
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody must have required property '$ref'
+  #/paths/~1timing/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite/post must be object
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles/get must be object
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings/get must be object
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post/responses must be object
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/components/schemas/WhatsappMessage/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/components/schemas/WhatsappMessage must have required property '$ref'
+  #/components/schemas/WhatsappMessage must match exactly one schema in oneOf
+
+Error: Swagger schema validation failed.
+  #/paths must NOT have additional properties
+  #/paths must NOT have additional properties
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must NOT have additional properties
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5 must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5 must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must NOT have additional properties
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must NOT have additional properties
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody must match exactly one schema in oneOf
+  #/paths/~1settings~1env~1 must NOT have additional properties
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody must have required property '$ref'
+  #/paths/~1timing/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite/post must be object
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles/get must be object
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings/get must be object
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post/responses must be object
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/components/schemas/WhatsappMessage/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/components/schemas/WhatsappMessage must have required property '$ref'
+  #/components/schemas/WhatsappMessage must match exactly one schema in oneOf
+
+at o (<https://apitools.dev/swagger-parser/online/js/bundle.min.js:1:95564)>
+at <https://apitools.dev/swagger-parser/online/js/bundle.min.js:29:45042>
+
+SyntaxError: Swagger schema validation failed.
+  #/paths must NOT have additional properties
+  #/paths must NOT have additional properties
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups/post/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters/type must be equal to one of the allowed values
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema/properties/dialingParameters must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign_groups~1{id}/put/requestBody must have required property '$ref'
+  #/paths/~1campaign_groups~1{id}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-voice-queues-old/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema/properties/voiceQueues must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-voice-queues/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema/properties/users must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1add-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-users/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams/type must be equal to one of the allowed values
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema/properties/teams must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must have required property '$ref'
+  #/paths/~1campaign-groups~1{id}~1remove-teams/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1/in must be equal to one of the allowed values
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must NOT have additional properties
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must have required property '$ref'
+  #/paths/~1canned_answers~1{id}~1preview/post/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1custom_fields/get/parameters/5 must have required property '$ref'
+  #/paths/~1cm~1custom_fields/get/parameters/5 must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must NOT have additional properties
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1hopper_final~1voice~1queue~1countAttributes~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema/type must be equal to one of the allowed values
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1fields/get/parameters/1 must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must NOT have additional properties
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions/items must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema/properties/actions must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must have required property '$ref'
+  #/paths/~1cm~1lists~1{id}~1related-accounts/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must be object
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1profiles/delete/requestBody must have required property '$ref'
+  #/paths/~1profiles/delete/requestBody must match exactly one schema in oneOf
+  #/paths/~1settings~1env~1 must NOT have additional properties
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing/post/requestBody must have required property '$ref'
+  #/paths/~1timing/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/active must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/startAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt/type must be equal to one of the allowed values
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema/properties/endAt must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}/put/requestBody must have required property '$ref'
+  #/paths/~1timing~1{timingId}/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite must NOT have additional properties
+  #/paths/~1timing~1{timingId}~1queues~1rewrite/post must be object
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1sentiment_analysis/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1transcribe-and-sentiment/put/requestBody must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json must NOT have additional properties
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds/type must be equal to one of the allowed values
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/voiceRecordingIds must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region/required must be array
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema/properties/region must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must have required property '$ref'
+  #/paths/~1job~1voicerecording~1start~1post_call_analytics/post/requestBody must match exactly one schema in oneOf
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles must NOT have additional properties
+  #/paths/~1users~1{userId}~1profiles/get must be object
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings must NOT have additional properties
+  #/paths/~1users~1{userId}~1timings/get must be object
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post must NOT have additional properties
+  #/paths/~1voice~1mails~1messages/post/responses must be object
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/200 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema/items must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/get/responses/206 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/get/responses/206 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages/post/responses/201 must have required property '$ref'
+  #/paths/~1whatsapp~1messages/post/responses/201 must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200/content/application~1json/schema must match exactly one schema in oneOf
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must have required property '$ref'
+  #/paths/~1whatsapp~1messages~1{id}/get/responses/200 must match exactly one schema in oneOf
+  #/components/schemas/WhatsappMessage/required must NOT have duplicate items (items ## 8 and 1 are identical)
+  #/components/schemas/WhatsappMessage must have required property '$ref'
+  #/components/schemas/WhatsappMessage must match exactly one schema in oneOf
+
+at Function.o [as syntax] (<https://apitools.dev/swagger-parser/online/js/bundle.min.js:1:95564)>
+at validateSchema (<https://apitools.dev/swagger-parser/online/js/bundle.min.js:1:6322)>
+at SwaggerParser.validate (<https://apitools.dev/swagger-parser/online/js/bundle.min.js:1:3391)>
