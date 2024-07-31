@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[1.1:30]","start":1722426482312,"end":1722426483104,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[1.1:30] 11:48:02.312-11:48:03.104 Create a new password reset token","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[1.2:30]","start":1722426483125,"end":1722426483164,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[1.2:30] 11:48:03.125-11:48:03.164 Create a new password reset token","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[2:32]","start":1722426483183,"end":1722426483225,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[2:32] 11:48:03.183-11:48:03.225 Attempt to create a password reset token with missing email","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[3:38]","start":1722426483238,"end":1722426483265,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_forgot_post[3:38] 11:48:03.238-11:48:03.265 Internal server error when creating password reset token","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[1.1:38]","start":1722426484696,"end":1722426484742,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[1.1:38] 11:48:04.696-11:48:04.742 Create a new User token","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[1.2:38]","start":1722426484753,"end":1722426484776,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[1.2:38] 11:48:04.753-11:48:04.776 Create a new User token","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[2:40]","start":1722426484786,"end":1722426484829,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[2:40] 11:48:04.786-11:48:04.829 Attempt login with invalid credentials","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[3:59]","start":1722426484839,"end":1722426484860,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[3:59] 11:48:04.839-11:48:04.860 Attempt login with missing required fields","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[4:77]","start":1722426484868,"end":1722426484914,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_post[4:77] 11:48:04.868-11:48:04.914 Simulate server error during login","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[1.1:30]","start":1722426485272,"end":1722426485365,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[1.1:30] 11:48:05.272-11:48:05.365 Reset password with valid token","className":"failed"},{"id":11,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[1.2:30]","start":1722426485373,"end":1722426485398,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[1.2:30] 11:48:05.373-11:48:05.398 Reset password with valid token","className":"failed"},{"id":12,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[2:32]","start":1722426485406,"end":1722426485424,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[2:32] 11:48:05.406-11:48:05.424 Reset password with invalid token","className":"failed"},{"id":13,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[3:46]","start":1722426485431,"end":1722426485450,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[3:46] 11:48:05.431-11:48:05.450 Reset password with missing password","className":"failed"},{"id":14,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[4:53]","start":1722426485459,"end":1722426485477,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[4:53] 11:48:05.459-11:48:05.477 Reset password with empty password","className":"failed"},{"id":15,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[5:65]","start":1722426485484,"end":1722426485521,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/auth_local_reset_token_post[5:65] 11:48:05.484-11:48:05.521 Reset password with invalid request body","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
