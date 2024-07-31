@@ -1,0 +1,503 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "xCALLY MOTION API",
+    "license": {
+      "name": "XCally EULA",
+      "url": "https://www.xcally.com/XCALLY-EULA.pdf"
+    },
+    "contact": {
+      "name": "xCALLY Support",
+      "url": "https://wiki.xcallymotion.com/display/XCAL/Support+Request",
+      "email": "support@xcally.com"
+    },
+    "description": "## General API Description\n\nThis is the interactive documentation for the xCALLY MOTION API.\nWe make changes to the APIs from time to time. For more information, see [Changelog](https://wiki.xcallymotion.com/display/XMV/Motion+GUI).\nThe xCALLY MOTION API consists of several different API endpoints.\nThe API is a JSON API. XML is not supported. To learn more, see [Working with JSON](https://developer.zendesk.com/documentation/developer-tools/getting-started/working-with-json/).\n\nEndpoints are documented with the HTTP method for the request and a partial resource identifier.\nExample:\n\n```sh\nGET /api/users\n```\n\nPrepend your xCALLY URL to the resource identifier to get the full endpoint URL:\n\n```sh\nhttps://motion.xcally.com/api/users\n```\n\nCurly braces, `{}`, indicate values you have to supply. Example:\n\n```sh\nGET  /api/users/{id}\n```\n\nThe examples in the docs are cURL statements. You can run the statements on a command line to try out different API requests. To learn more, see [Installing and using cURL](https://developer.zendesk.com/documentation/developer-tools/getting-started/installing-and-using-curl/). In Windows, you'll need to modify some of the examples in the docs to make them work. See [Using cURL in Windows](https://developer.zendesk.com/documentation/developer-tools/getting-started/installing-and-using-curl/#using-curl-in-windows).\n\nThe examples use basic authentication requiring a xCALLY username and password.\n\n## Security and Authentication\n\nThis is an SSL-only API, regardless of how your account is configured. You can authorize against the API using either basic authentication with your username and password or with an OAuth access token or API Key.\nClient-side CORS requests are supported if the request is authenticated with an OAuth access token. The requests are not supported if the request uses basic authentication or API Key.\n\n### Basic authentication\n\nUse the following authentication format with your username and password:\n`{username}:{password}`\n\nExample:\n\n```sh\ncurl -u admin:password https://motion.xcally.com/api/users\n```\n\n### OAuth access token\n\nThe xCALLY API supports OAuth authorization flows.\nOAuth access tokens also permit client-side API requests.\nIn your requests, specify the access token in an Authorization header as follows:\n`Authorization: Bearer {token}`\n\nExample:\n\n```sh\ncurl -H \"Authorization: Bearer gErypPlm4dOVgGRvA1ZzMH5MQ3nLo8bo\" https://motion.xcally.com/api/users\n```\n\n### API Key\n\nAuthentication for requests using the API Key is supported through two distinct methods:\n\n- **Query Parameter**: append the API Key to the endpoint URL as the `apikey` query string parameter\n\nExample:\n\n```sh\ncurl https://motion.xcally.com/api/users?apikey=eyJhbGciOiJIUzUxMiIsInR5cC...\n```\n\n- **HTTP Header**: include the API Key in the `X-API-Key` HTTP header\n\nExample:\n\n```sh\ncurl -H \"X-API-Key: eyJhbGciOiJIUzUxMiIsInR5cC...\" https://motion.xcally.com/api/users\n```\n\n## Request Format\n\nThe xCALLY API is a JSON API. You must supply a `Content-Type: application/json` header in `PUT` and `POST` requests.\nYou must set an `Accept: application/json` header on all requests.\nYou may get a `text/plain` response for some error responses.\nYou should treat this as an error you need to fix.\n\n## Response Format\n\nThe xCALLY API responds to successful requests with HTTP status codes in the 200 or 300 range.\nWhen you create or update a resource, the API renders the resulting JSON representation in the response body.\nResponses may have the status codes described in the following sections.\n\n### 200 range\n\nThe request was successful. The HTTP status code is:\n\n- 200 for successful GET and PUT requests and some POST requests\n- 201 for most POST requests (especially those that create new items)\n- 204 for DELETE requests\n- 206 for partial contents (see Paging in the following section)\n\n### 400 range\n\nThe request was handled by the server but was not successful because of user-side errors.\nThe HTTP status code is:\n\n- 400 (Bad Request) request failed because of errors in the request format or data\n- 401 (Unauthorized) request failed because of wrong/expired user credentials\n- 403 (Forbidden) request failed because of insufficient user privileges\n- 404 (Not Found) request failed because the data does not exist in the database\n\nThe content type of the response may be `text/plain` for API-level error messages, such as when trying to call the API without SSL.\nThe content type is `application/json` for business-level error messages because the response includes a JSON object with information about the error.\n\nIf you see a response from a known endpoint that looks like plain text, you probably made a syntax error in your request. This type of response commonly occurs when making a request to a nonexistent xCALLY Support instance.\n\n### 500 range\n\nWhen building an API client, we recommend treating any 500 status codes as a warning or temporary state.\nHowever, if the status persists and we don't have a publicly announced maintenance or service disruption, contact us at [support@xcally.com](mailto:support@xcally.com).\n\nThe HTTP status code is:\n\n- 500 (Internal Server error) the requested was handled by motion, but caused an internal error (exception)\n- 502 (Bad Gateway) the requested was _not_ handled by motion because the server was down\n\nIf submitting a ticket to Support, provide the complete HTTP response. This helps the Support team track down the request in the logs more quickly.\n\n## Data Types\n\nThe API returns and accepts JSON values, which can be strings in double quotes, numbers, objects, arrays, true or false, or null. Most programming languages have tools to parse this data.\n\n## ID integers\n\nMost xCALLY Support resources such as queues and users are identified by the integer specified by the id attribute of API responses.\nThe default numeric type in JavaScript, Ruby, Python, and PHP is sufficient to represent xCALLY Support ID integers.\n\n## Time stamps\n\nTime stamps use UTC time and are formatted as ISO 8601 strings. Example: `2017-04-16T09:14:57Z`\n\n## Sorting and filtering results\n\nThis section describes how to generally read paged data when performing `GET` requests, and how to sort or filter data by attribute.\nThis section uses `/api/example/endpoint` as a fictious example endpoint, but the same rules apply to most API described in this documentation.\nSpecific examples may be included in each API endpoint description.\n\n### Paging\n\nFor most entity listing endpoints (`GET`), Motion will return paged results.\nPaged data include the `Content-Range` header in the form start - end / total.\nIf the whole data collection of the endpoint is included in the response, Motion will return a HTTP status code `200`, otherwise it will return a HTTP status code `206` Partial Content.\nThe number of returned items depends on filtering, offset and limit parameters (see below).\n\nMotion renders the resulting JSON representation in the response body.\n\n### Retrieving Specific Fields\n\nTo return only specific fields for a result set you can use the `fields` parameter. This parameter accepts a comma-separated list.\n\nExample: A call returning only `id` and `name` for a result set would look like this:\n\n`GET /api/example/endpoint?fields=id,name`\n\n### Filtering\n\nYou can perform exact-match filtering on any of an entity fields by using the field name as the key and supplying it with a value.\nThese parameters accept a comma-separated list.\n\nExample: A call returning a result set for records with `name` of `john.doe` or `jane.miller`.\n\n`GET /api/example/endpoint?name=john.doe,jane.miller`\n\nExample: If you use the key `filter` the result will be filtered by the value you specify:\n\n`GET /api/example/endpoint?filter=john`\n\n### Sorting\n\nTo sort a result set based on one or several fields you can use the `sort` parameter. This parameters accepts a comma-separated list.\nResults will be sorted in the order of the fields provided. The default sorting order for fields is ascending. Fields can be sorted in descending order by prefixing them with a dash (`-`).\n\nExample: A call sorting a result by `id` ascending and then `name` descending would look like this:\n\n`GET /api/example/endpoint?sort=id,-name`\n\n### Offset and Limit\n\nQuery results are always paged. Motion leverages the `offset` and `limit` parameters to facilitate this.\nWhen neither of these parameters are explicitly supplied the handler will assume the a default `limit` of `100`.\n`offset` is a number indicating the start position in the result set you want to return.\n`limit` is a number indicating how many records past the start position you want returned.\n\nExample: A call with a result set starting at `5` and returning no more than `25` records would look like this.\n\n`GET /api/example/endpoint?offset=5&limit=25`\n\nExample: If there were `50` records in total, the returned `Content-Range` header would look like this:\n\n`Content-Range: 5-30/50`\n",
+    "version": "3.38.0"
+  },
+  "servers": [
+    {
+      "url": "https://zatanna.xcally.com/api",
+      "description": "Current Server"
+    },
+    {
+      "url": "http://localhost:9000/api",
+      "description": "Localhost instance"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    },
+    {
+      "basicAuth": []
+    },
+    {
+      "motionApiKey": []
+    },
+    {
+      "googleId": []
+    }
+  ],
+  "paths": {
+    "/auth/local": {
+      "post": {
+        "summary": "Creates a new User token",
+        "operationId": "localLogin",
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "data for creating new authLocal",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "password"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "login success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "user id"
+                    },
+                    "statusCall": {
+                      "type": "string",
+                      "description": "user call status"
+                    },
+                    "token": {
+                      "type": "string",
+                      "description": "jwt for authenticated calls"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        }
+      }
+    },
+    "/auth/local/forgot": {
+      "post": {
+        "summary": "Creates a new password reset token",
+        "operationId": "localForgotPassword",
+        "tags": [
+          "Authentication"
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "data for creating new authLocal",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "email"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "password reset token successfully issued"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        }
+      }
+    },
+    "/auth/local/reset/{token}": {
+      "post": {
+        "summary": "Reset user password",
+        "operationId": "localResetPassword",
+        "tags": [
+          "Authentication"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "token",
+            "schema": {
+              "type": "string"
+            },
+            "required": true,
+            "description": "token issued by `/auth/local/forgot`"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "data for creating new authLocal",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "password"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "password reset success"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalServerError"
+          }
+        }
+      }
+    },
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      },
+      "basicAuth": {
+        "type": "http",
+        "scheme": "basic"
+      },
+      "motionApiKey": {
+        "name": "apikey",
+        "type": "apiKey",
+        "in": "query"
+      },
+      "googleId": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://accounts.google.com/.well-known/openid-configuration"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "description": "Represents an HTTP Error returned by motion API",
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "description": "HTTP Error code",
+            "enum": [
+              400,
+              401,
+              403,
+              404,
+              409,
+              500
+            ],
+            "default": 500
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "stack": {
+            "type": "string",
+            "description": "Error stack (optional)"
+          },
+          "details": {
+            "type": "object",
+            "description": "Other data"
+          }
+        }
+      },
+      "APIError": {
+        "description": "Represents an HTTP Error returned by motion API",
+        "required": [
+          "code",
+          "message"
+        ],
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "format": "int32",
+            "description": "HTTP Error code",
+            "enum": [
+              400,
+              401,
+              403,
+              404,
+              409,
+              500
+            ],
+            "default": 500
+          },
+          "message": {
+            "type": "string",
+            "description": "Error message"
+          },
+          "stack": {
+            "type": "string",
+            "description": "Error stack (optional)"
+          },
+          "details": {
+            "type": "object",
+            "description": "Other data"
+          }
+        }
+      }
+    },
+    "parameters": {
+      "fieldsParam": {
+        "in": "query",
+        "name": "fields",
+        "allowReserved": true,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Return only specific fields for a result set. \n\nThis parameter accepts a comma-separated list. \n\nE.g. `fields=id,name` will return only id and name of each object.\n",
+        "examples": {
+          "filter": {
+            "value": "id,name",
+            "summary": "A call returning only id and name attributes of each entity"
+          }
+        }
+      },
+      "filterParam": {
+        "in": "query",
+        "name": "filter",
+        "allowReserved": true,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "The result will be filtered by the value you specify. \n\nThis parameter accepts a comma-separated list. \n\nE.g. `filter=john.doe,jane.miller` will return only records with name equal to `john.doe` or `jane.miller`\n",
+        "examples": {
+          "none": {
+            "value": null,
+            "summary": "A call returning all records"
+          },
+          "name": {
+            "value": "john.doe,jane.miller",
+            "summary": "A call returning a result set for records with name of john.doe or jane.miller"
+          },
+          "filter": {
+            "value": "john",
+            "summary": "the result will be filtered by the value you specify"
+          }
+        }
+      },
+      "sortParam": {
+        "in": "query",
+        "name": "sort",
+        "allowReserved": true,
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Sort a result set based on one or several fields. This parameter accepts a comma-separated list. \n\nResults will be sorted in the order of the fields provided. \n\nThe default sorting order for fields is ascending. \n\nFields can be sorted in descending order by prefixing them with a dash (-). \n\nE.g. `sort=id,-name` will sort results by `id` ascending and then `name` descending\n",
+        "examples": {
+          "sort": {
+            "value": "id,-name",
+            "summary": "sorting results by id ascending and then name descending"
+          }
+        }
+      },
+      "offsetParam": {
+        "in": "query",
+        "name": "offset",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "number"
+        },
+        "description": "Number indicating the start position in the result set you want to return. \n\nE.g. `offset=5` will return a result set starting at 5th element.\n",
+        "examples": {
+          "none": {
+            "value": 0,
+            "summary": "a result set starting at 0"
+          },
+          "offset": {
+            "value": 5,
+            "summary": "a result set starting at 5"
+          }
+        }
+      },
+      "limitParam": {
+        "in": "query",
+        "name": "limit",
+        "style": "form",
+        "explode": false,
+        "schema": {
+          "type": "string"
+        },
+        "description": "Number indicating how many records past the start position you want returned (default = `100`). \n\nE.g. `limit=25` will return a maximum of `25` elements.\n",
+        "examples": {
+          "none": {
+            "value": null,
+            "summary": "returning no more than 250 records"
+          },
+          "limit": {
+            "value": 25,
+            "summary": "returning no more than 25 records"
+          }
+        }
+      }
+    },
+    "responses": {
+      "Ok": {
+        "description": "the operation is OK"
+      },
+      "Success": {
+        "description": "the operation is successfull"
+      },
+      "Updated": {
+        "description": "the resource was successfully updated"
+      },
+      "Created": {
+        "description": "the resource was successfully created"
+      },
+      "Deleted": {
+        "description": "the resource was successfully deleted"
+      },
+      "BadRequest": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/APIError"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "HTTP Error code",
+                      "enum": [
+                        400
+                      ],
+                      "default": 400
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message",
+                      "default": "Bad Request"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "description": "Bad Request error"
+      },
+      "Unauthorized": {
+        "description": "Unauthorized error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/APIError"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "HTTP Error code",
+                      "enum": [
+                        401
+                      ],
+                      "default": 401
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message",
+                      "default": "Unauthorized"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+      },
+      "InternalServerError": {
+        "description": "Internal server error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/APIError"
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "integer",
+                      "format": "int32",
+                      "description": "HTTP Error code",
+                      "enum": [
+                        500
+                      ],
+                      "default": 500
+                    },
+                    "message": {
+                      "type": "string",
+                      "description": "Error message",
+                      "default": "Internal Server Error"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}
