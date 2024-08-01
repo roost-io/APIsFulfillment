@@ -1,0 +1,6 @@
+name,password,statusCode,scenario
+"John Doe","password123",201,"login success"
+"Alice Smith","securePass456",401,"Unauthorized error"
+"Bob Johnson","strongPw789",500,"Internal server error"
+"Eve Wilson","1234abcd",201,"login success"
+"Charlie Brown","qwerty",401,"Unauthorized error"
