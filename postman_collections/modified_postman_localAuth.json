@@ -1,0 +1,599 @@
+{
+  "item": [
+    {
+      "id": "c3bd020e-827b-4751-9147-d045e4122da6",
+      "name": "auth/local",
+      "item": [
+        {
+          "id": "37202754-a131-4200-88aa-e2afa25ca2c4",
+          "name": "Creates a new User token",
+          "request": {
+            "name": "Creates a new User token",
+            "description": {},
+            "url": {
+              "path": [
+                "auth",
+                "local"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"{{name}}\",\n    \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "29959548-a55b-4c4c-8fdc-5adceaa2fda5",
+              "name": "login success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"{{name}}\",\n    \"password\": \"{{password}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": -72024684,\n  \"statusCall\": \"irure tempor\",\n  \"token\": \"dolore\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "86f3e06a-f7ac-47c6-99dd-8c79cf2fc02d",
+              "name": "Unauthorized error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"{{name}}\",\n    \"password\": \"{{password}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 500,\n  \"message\": \"Unauthorized\",\n  \"stack\": \"aute esse veniam\",\n  \"details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8384427a-a124-45e1-991d-52886d225ba0",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"name\": \"{{name}}\",\n    \"password\": \"{{password}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 500,\n  \"message\": \"Internal Server Error\",\n  \"stack\": \"Ut ad eu\",\n  \"details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test xcally-final-test using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /auth/local for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 201){\n    pm.test(\"login success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Created\");\n        pm.test('Response has the `id` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`id`)){\n                if(pm.expect(ld.get(responseData, `id`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `id`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `statusCall` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`statusCall`)){\n                if(pm.expect(ld.get(pm.response.json(), `statusCall`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `statusCall`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `token` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`token`)){\n                if(pm.expect(ld.get(pm.response.json(), `token`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `token`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"Unauthorized error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"400\",\"401\",\"403\",\"404\",\"409\",\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `stack` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`stack`)){\n                if(pm.expect(ld.get(pm.response.json(), `stack`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `stack`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"401\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal server error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"400\",\"401\",\"403\",\"404\",\"409\",\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `stack` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`stack`)){\n                if(pm.expect(ld.get(pm.response.json(), `stack`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `stack`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "10cc01d3-c84b-4e74-8d02-a9d5310039a1",
+          "name": "Creates a new password reset token",
+          "request": {
+            "name": "Creates a new password reset token",
+            "description": {},
+            "url": {
+              "path": [
+                "auth",
+                "local",
+                "forgot"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\": \"{{email}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9491baa6-e9ce-48a6-8e09-97caf1de98d2",
+              "name": "password reset token successfully issued",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local",
+                    "forgot"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"{{email}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "4ea4ae21-b559-4f74-aa54-9cf6572e6a7c",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local",
+                    "forgot"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"email\": \"{{email}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 500,\n  \"message\": \"Internal Server Error\",\n  \"stack\": \"Ut ad eu\",\n  \"details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test xcally-final-test using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /auth/local/forgot for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 201){\n    pm.test(\"password reset token successfully issued\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Created\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal server error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"400\",\"401\",\"403\",\"404\",\"409\",\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `stack` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`stack`)){\n                if(pm.expect(ld.get(pm.response.json(), `stack`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `stack`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a6f8f1cc-111a-478e-8bf4-5cab6ec57188",
+          "name": "Reset user password",
+          "request": {
+            "name": "Reset user password",
+            "description": {},
+            "url": {
+              "path": [
+                "auth",
+                "local",
+                "reset",
+                ":token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "{{token}}",
+                  "key": "token",
+                  "description": "(Required) token issued by `/auth/local/forgot`"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"password\": \"{{password}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6efc17a8-8820-4ae4-a792-e6c782ce4ea2",
+              "name": "password reset success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local",
+                    "reset",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{token}}",
+                      "key": "token",
+                      "description": "(Required) token issued by `/auth/local/forgot`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"password\": \"{{password}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "f038af70-be62-47e2-9f0b-2027cf9b0078",
+              "name": "Internal server error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "auth",
+                    "local",
+                    "reset",
+                    ":token"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{token}}",
+                      "key": "token",
+                      "description": "(Required) token issued by `/auth/local/forgot`"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "{{Authorization}}"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"password\": \"{{password}}\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"code\": 500,\n  \"message\": \"Internal Server Error\",\n  \"stack\": \"Ut ad eu\",\n  \"details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test xcally-final-test using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /auth/local/reset/:token for http method type post in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 201){\n    pm.test(\"password reset success\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Created\");\n    });\n\n}\n\nif (pm.response.code == 500){\n    pm.test(\"Internal server error\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Internal Server Error\");\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"400\",\"401\",\"403\",\"404\",\"409\",\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `stack` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`stack`)){\n                if(pm.expect(ld.get(pm.response.json(), `stack`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `stack`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `details` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`details`)){\n                if(pm.expect(ld.get(pm.response.json(), `details`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `details`, null)).to.equal(\"object\");\n                }\n\n            }\n\n        })\n\n        pm.test('Response has the `code` field',function(){\n            if(pm.expect(responseData).to.have.nested.property(`code`)){\n                if(pm.expect(ld.get(responseData, `code`, 200)).to.exist){\n                  pm.expect(typeof ld.get(responseData, `code`, 200)).to.equal(\"number\");\n                }\n\n            }\n\n        })\n \n        pm.test('code to be one of enum', function(){ \n            pm.expect(ld.get(responseData, \"code\", \"\")).to.include.oneOf([\"500\"]);\n        })\n\n        pm.test('Response has the `message` field',function(){\n            if(pm.expect(pm.response.json()).to.have.nested.property(`message`)){\n                if(pm.expect(ld.get(pm.response.json(), `message`, null)).to.exist){\n                  pm.expect(typeof ld.get(pm.response.json(), `message`, null)).to.equal(\"string\");\n                }\n\n            }\n\n        })\n\n    });\n\n}\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://zatanna.xcally.com/api",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d897fe93-b0a7-4fb3-9b62-3aff37b21879",
+    "name": "xCALLY MOTION API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "## General API Description\n\nThis is the interactive documentation for the xCALLY MOTION API.\nWe make changes to the APIs from time to time. For more information, see [Changelog](https://wiki.xcallymotion.com/display/XMV/Motion+GUI).\nThe xCALLY MOTION API consists of several different API endpoints.\nThe API is a JSON API. XML is not supported. To learn more, see [Working with JSON](https://developer.zendesk.com/documentation/developer-tools/getting-started/working-with-json/).\n\nEndpoints are documented with the HTTP method for the request and a partial resource identifier.\nExample:\n\n```sh\nGET /api/users\n```\n\nPrepend your xCALLY URL to the resource identifier to get the full endpoint URL:\n\n```sh\nhttps://motion.xcally.com/api/users\n```\n\nCurly braces, `{}`, indicate values you have to supply. Example:\n\n```sh\nGET  /api/users/{id}\n```\n\nThe examples in the docs are cURL statements. You can run the statements on a command line to try out different API requests. To learn more, see [Installing and using cURL](https://developer.zendesk.com/documentation/developer-tools/getting-started/installing-and-using-curl/). In Windows, you'll need to modify some of the examples in the docs to make them work. See [Using cURL in Windows](https://developer.zendesk.com/documentation/developer-tools/getting-started/installing-and-using-curl/#using-curl-in-windows).\n\nThe examples use basic authentication requiring a xCALLY username and password.\n\n## Security and Authentication\n\nThis is an SSL-only API, regardless of how your account is configured. You can authorize against the API using either basic authentication with your username and password or with an OAuth access token or API Key.\nClient-side CORS requests are supported if the request is authenticated with an OAuth access token. The requests are not supported if the request uses basic authentication or API Key.\n\n### Basic authentication\n\nUse the following authentication format with your username and password:\n`{username}:{password}`\n\nExample:\n\n```sh\ncurl -u admin:password https://motion.xcally.com/api/users\n```\n\n### OAuth access token\n\nThe xCALLY API supports OAuth authorization flows.\nOAuth access tokens also permit client-side API requests.\nIn your requests, specify the access token in an Authorization header as follows:\n`Authorization: Bearer {token}`\n\nExample:\n\n```sh\ncurl -H \"Authorization: Bearer gErypPlm4dOVgGRvA1ZzMH5MQ3nLo8bo\" https://motion.xcally.com/api/users\n```\n\n### API Key\n\nAuthentication for requests using the API Key is supported through two distinct methods:\n\n- **Query Parameter**: append the API Key to the endpoint URL as the `apikey` query string parameter\n\nExample:\n\n```sh\ncurl https://motion.xcally.com/api/users?apikey=eyJhbGciOiJIUzUxMiIsInR5cC...\n```\n\n- **HTTP Header**: include the API Key in the `X-API-Key` HTTP header\n\nExample:\n\n```sh\ncurl -H \"X-API-Key: eyJhbGciOiJIUzUxMiIsInR5cC...\" https://motion.xcally.com/api/users\n```\n\n## Request Format\n\nThe xCALLY API is a JSON API. You must supply a `Content-Type: application/json` header in `PUT` and `POST` requests.\nYou must set an `Accept: application/json` header on all requests.\nYou may get a `text/plain` response for some error responses.\nYou should treat this as an error you need to fix.\n\n## Response Format\n\nThe xCALLY API responds to successful requests with HTTP status codes in the 200 or 300 range.\nWhen you create or update a resource, the API renders the resulting JSON representation in the response body.\nResponses may have the status codes described in the following sections.\n\n### 200 range\n\nThe request was successful. The HTTP status code is:\n\n- 200 for successful GET and PUT requests and some POST requests\n- 201 for most POST requests (especially those that create new items)\n- 204 for DELETE requests\n- 206 for partial contents (see Paging in the following section)\n\n### 400 range\n\nThe request was handled by the server but was not successful because of user-side errors.\nThe HTTP status code is:\n\n- 400 (Bad Request) request failed because of errors in the request format or data\n- 401 (Unauthorized) request failed because of wrong/expired user credentials\n- 403 (Forbidden) request failed because of insufficient user privileges\n- 404 (Not Found) request failed because the data does not exist in the database\n\nThe content type of the response may be `text/plain` for API-level error messages, such as when trying to call the API without SSL.\nThe content type is `application/json` for business-level error messages because the response includes a JSON object with information about the error.\n\nIf you see a response from a known endpoint that looks like plain text, you probably made a syntax error in your request. This type of response commonly occurs when making a request to a nonexistent xCALLY Support instance.\n\n### 500 range\n\nWhen building an API client, we recommend treating any 500 status codes as a warning or temporary state.\nHowever, if the status persists and we don't have a publicly announced maintenance or service disruption, contact us at [support@xcally.com](mailto:support@xcally.com).\n\nThe HTTP status code is:\n\n- 500 (Internal Server error) the requested was handled by motion, but caused an internal error (exception)\n- 502 (Bad Gateway) the requested was _not_ handled by motion because the server was down\n\nIf submitting a ticket to Support, provide the complete HTTP response. This helps the Support team track down the request in the logs more quickly.\n\n## Data Types\n\nThe API returns and accepts JSON values, which can be strings in double quotes, numbers, objects, arrays, true or false, or null. Most programming languages have tools to parse this data.\n\n## ID integers\n\nMost xCALLY Support resources such as queues and users are identified by the integer specified by the id attribute of API responses.\nThe default numeric type in JavaScript, Ruby, Python, and PHP is sufficient to represent xCALLY Support ID integers.\n\n## Time stamps\n\nTime stamps use UTC time and are formatted as ISO 8601 strings. Example: `2017-04-16T09:14:57Z`\n\n## Sorting and filtering results\n\nThis section describes how to generally read paged data when performing `GET` requests, and how to sort or filter data by attribute.\nThis section uses `/api/example/endpoint` as a fictious example endpoint, but the same rules apply to most API described in this documentation.\nSpecific examples may be included in each API endpoint description.\n\n### Paging\n\nFor most entity listing endpoints (`GET`), Motion will return paged results.\nPaged data include the `Content-Range` header in the form start - end / total.\nIf the whole data collection of the endpoint is included in the response, Motion will return a HTTP status code `200`, otherwise it will return a HTTP status code `206` Partial Content.\nThe number of returned items depends on filtering, offset and limit parameters (see below).\n\nMotion renders the resulting JSON representation in the response body.\n\n### Retrieving Specific Fields\n\nTo return only specific fields for a result set you can use the `fields` parameter. This parameter accepts a comma-separated list.\n\nExample: A call returning only `id` and `name` for a result set would look like this:\n\n`GET /api/example/endpoint?fields=id,name`\n\n### Filtering\n\nYou can perform exact-match filtering on any of an entity fields by using the field name as the key and supplying it with a value.\nThese parameters accept a comma-separated list.\n\nExample: A call returning a result set for records with `name` of `john.doe` or `jane.miller`.\n\n`GET /api/example/endpoint?name=john.doe,jane.miller`\n\nExample: If you use the key `filter` the result will be filtered by the value you specify:\n\n`GET /api/example/endpoint?filter=john`\n\n### Sorting\n\nTo sort a result set based on one or several fields you can use the `sort` parameter. This parameters accepts a comma-separated list.\nResults will be sorted in the order of the fields provided. The default sorting order for fields is ascending. Fields can be sorted in descending order by prefixing them with a dash (`-`).\n\nExample: A call sorting a result by `id` ascending and then `name` descending would look like this:\n\n`GET /api/example/endpoint?sort=id,-name`\n\n### Offset and Limit\n\nQuery results are always paged. Motion leverages the `offset` and `limit` parameters to facilitate this.\nWhen neither of these parameters are explicitly supplied the handler will assume the a default `limit` of `100`.\n`offset` is a number indicating the start position in the result set you want to return.\n`limit` is a number indicating how many records past the start position you want returned.\n\nExample: A call with a result set starting at `5` and returning no more than `25` records would look like this.\n\n`GET /api/example/endpoint?offset=5&limit=25`\n\nExample: If there were `50` records in total, the returned `Content-Range` header would look like this:\n\n`Content-Range: 5-30/50`\n\n\nContact Support:\n Name: xCALLY Support\n Email: support@xcally.com",
+      "type": "text/plain"
+    }
+  }
+}

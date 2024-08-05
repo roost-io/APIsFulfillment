@@ -1,0 +1,10 @@
+name,password,statusCode,scenario
+abc,abc123,201,"login success"
+def,def123,401,"Unauthorized error"
+ghi,ghi123,500,"Internal server error"
+jkl,jkl123,201,"login success"
+mno,mno123,401,"Unauthorized error"
+pqr,pqr123,500,"Internal server error"
+stu,stu123,201,"login success"
+vwx,vwx123,401,"Unauthorized error"
+yz,yz123,500,"Internal server error"
