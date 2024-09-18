@@ -1,0 +1,7 @@
+name,password,statusCode,scenario
+"helperData_name1","helperData_password1",201,"login success"
+"helperData_name2","helperData_password2",201,"login success"
+"random_name3","random_password3",401,"Unauthorized error"
+"random_name4","random_password4",401,"Unauthorized error"
+"random_name5","random_password5",500,"Internal server error"
+"random_name6","random_password6",500,"Internal server error"
