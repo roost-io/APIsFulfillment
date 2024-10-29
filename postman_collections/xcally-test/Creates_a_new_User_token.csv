@@ -1,0 +1,7 @@
+name,password,statusCode,scenario
+"John Doe"^|"Password1"^|201^|"login success"
+"Jane Smith"^|"Password2"^|201^|"login success"
+"David Jones"^|"RandomValue1"^|401^|"Unauthorized error"
+"Lisa Evans"^|"RandomValue2"^|401^|"Unauthorized error"
+"Michael Brown"^|"RandomValue3"^|500^|"Internal server error"
+"Susan Clark"^|"RandomValue4"^|500^|"Internal server error"
