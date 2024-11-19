@@ -1,0 +1,11 @@
+eventName^|^statusCode^|^scenario
+LoginEvent^|^200^|^UserLogin
+LogoutEvent^|^200^|^UserLogout
+PasswordChangeEvent^|^200^|^ChangePassword
+AccountCreationEvent^|^201^|^CreateAccount
+AccountDeletionEvent^|^204^|^DeleteAccount
+PaymentEvent^|^200^|^MakePayment
+RefundEvent^|^200^|^RequestRefund
+ProductViewEvent^|^200^|^ViewProduct
+CartAdditionEvent^|^200^|^AddToCart
+OrderPlacementEvent^|^201^|^PlaceOrder
