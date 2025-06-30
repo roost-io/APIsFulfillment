@@ -185,7 +185,7 @@
           }
         }
       }
-    },
+    }
   },
   "components": {
     "securitySchemes": {
@@ -462,7 +462,7 @@
               ]
             }
           }
-        },
+        }
       },
       "InternalServerError": {
         "description": "Internal server error",
