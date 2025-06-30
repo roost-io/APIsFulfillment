@@ -1,0 +1,13 @@
+orgSlugOrId,name,prefix,auth,authType
+"gh/CircleCI-Public","Allow URL orbs from raw.githubusercontent.com/CircleCI-Public","https://raw.githubusercontent.com/CircleCI-Public/orbs/refs/heads/main/","github-app","github-oauth"
+"gh/test-org","Allow Bitbucket orbs","https://bitbucket.org/test-org/orbs/","bitbucket-oauth","none"
+"circleci/12345","Allow GitHub OAuth orbs","https://raw.githubusercontent.com/test-org/orbs/","github-oauth","bitbucket-oauth"
+"vcs-slug/org-name","No auth orbs","https://example.com/orbs/","none","github-app"
+"circleci/12345","Allow GitHub OAuth orbs","https://raw.githubusercontent.com/org/repo/","github-oauth","bitbucket-oauth"
+"vcs-slug/org-name","No auth orbs","https://bitbucket.org/workspace/repo/raw/","none","github-app"
+"circleci/12345","Allow GitHub OAuth orbs","https://gitlab.com/group/project/-/raw/","github-oauth","bitbucket-oauth"
+"vcs-slug/org-name","No auth orbs","https://example.com/path/to/orbs/","none","github-app"
+"circleci/12345","Allow GitHub OAuth orbs","https://gitlab.com/group/project/-/raw/","github-oauth","bitbucket-oauth"
+"vcs-slug/org-name","No auth orbs","https://example.com/path/to/orbs/","none","github-app"
+"circleci/12345","Allow GitHub OAuth orbs","https://gitlab.com/group/project/-/raw/","github-oauth","bitbucket-oauth"
+"vcs-slug/org-name","No auth orbs","https://example.com/path/to/orbs/","none","github-app"

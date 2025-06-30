@@ -1,0 +1,7 @@
+project-slug,name,value,encoded-project-slug
+"gh/CircleCI-Public/api-preview-docs","foo","xxxx1234","gh%2FCircleCI-Public%2Fapi-preview-docs"
+"gh/test-org/test-repo","API_KEY","secret123","circleci%2F12345%2F67890"
+"circleci/12345/67890","DATABASE_URL","postgres://","gh%2FCircleCI-Public%2Fapi-preview-docs"
+"bb/bitbucket-org/sample-project","ENV_VAR","test_value","circleci%2F12345%2F67890"
+"circleci/12345/67890","TEST_VAR","test123","gh%2FCircleCI-Public%2Fapi-preview-docs"
+"bb/bitbucket-org/sample-project","API_VAR","api456","circleci%2F12345%2F67890"
