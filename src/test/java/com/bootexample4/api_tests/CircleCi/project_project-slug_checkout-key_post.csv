@@ -1,0 +1,5 @@
+project-slug,type
+"gh/CircleCI-Public/api-preview-docs","deploy-key"
+"gh/CircleCI-Public/api-preview-docs","user-key"
+"circleci/123456/789012","deploy-key"
+"circleci/123456/789012","user-key"

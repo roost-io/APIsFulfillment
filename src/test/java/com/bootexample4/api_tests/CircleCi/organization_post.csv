@@ -1,0 +1,4 @@
+name,vcs_type
+"Test Organization","github"
+"My Company","bitbucket"
+"CircleCI Standalone Org","circleci"
