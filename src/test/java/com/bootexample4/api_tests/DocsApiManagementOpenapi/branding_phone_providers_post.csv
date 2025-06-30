@@ -1,0 +1,3 @@
+name,auth_token,sid,delivery_methods
+"twilio","token123","sid01","['text', 'voice']"
+"custom","token456","sid02","['text']"

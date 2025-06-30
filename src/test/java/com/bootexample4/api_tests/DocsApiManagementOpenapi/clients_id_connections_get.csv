@@ -1,0 +1,3 @@
+id,strategy,from,take,fields,include_fields
+"client_1","auth0","null","50","null","true"
+"client_2","google-oauth2","abc","100","name","false"

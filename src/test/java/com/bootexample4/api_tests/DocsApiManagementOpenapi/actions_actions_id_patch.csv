@@ -1,0 +1,2 @@
+id,name,trigger_id,trigger_version,trigger_status,trigger_runtimes,default_runtime,compatible_id,compatible_version,binding_policy,code,dependency_name,dependency_version,registry_url,runtime,secret_name,secret_value
+910,"my-action","trigger1","v1","active","[""node12""]","node12","comp1","v1","trigger-bound","module.exports = () => {}","lodash",4,"null","node12","mySecret","mySecretValue"

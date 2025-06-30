@@ -1,0 +1,3 @@
+name,description,app_type
+"Test Client","Test Description","spa"
+"Another App","Another Desc","native"

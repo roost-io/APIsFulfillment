@@ -1,0 +1,3 @@
+enabled,shields,allowlist,mode,max_attempts
+"true","['block', 'user_notification']","['192.168.1.1', '10.0.0.0/24']","count_per_identifier","5"
+"false","['user_notification']","['2001:db8::1', '2001:db8::/32']","count_per_identifier_and_ip","10"

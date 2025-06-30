@@ -1,0 +1,3 @@
+enabled,shields,allowlist,stage
+"true","['block', 'admin_notification']","['192.168.1.1', '10.0.0.0/24']","{""pre-login"":{""max_attempts"":100,""rate"":864000},""pre-user-registration"":{""max_attempts"":50,""rate"":1728000}}"
+"false","['admin_notification']","['::1', '2001:db8::/32']","{""pre-login"":{""max_attempts"":200,""rate"":432000},""pre-user-registration"":{""max_attempts"":100,""rate"":864000}}"

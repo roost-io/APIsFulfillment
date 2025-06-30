@@ -1,0 +1,3 @@
+id,name,disabled,credentials,configuration
+"123","twilio","false","{""auth_token"":""some_token""}","{""sid"":""some_sid"",""delivery_methods"":[""text"",""voice""]}"
+"456","custom","true","{""auth_token"":""another_token""}","{""delivery_methods"":[""text""]}"

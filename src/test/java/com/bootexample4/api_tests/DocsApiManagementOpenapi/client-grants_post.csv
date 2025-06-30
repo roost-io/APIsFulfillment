@@ -1,0 +1,3 @@
+client_id,audience,scope,organization_usage,allow_any_organization
+"abc123","api://xyz","['read:data', 'write:data']","allow","true"
+"def456","api://uvw","['read:data']","deny","false"

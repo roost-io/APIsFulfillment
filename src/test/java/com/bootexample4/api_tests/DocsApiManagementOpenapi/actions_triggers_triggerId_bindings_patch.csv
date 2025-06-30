@@ -1,0 +1,3 @@
+triggerId,refType,refValue,displayName,secretName,secretValue
+"abc123","action_id","my-action","my-action-1","mySecret","secret123"
+"def456","action_name","my-action2","my-action-2","mySecret2","secret456"
