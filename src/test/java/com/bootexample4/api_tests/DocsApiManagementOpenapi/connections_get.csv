@@ -1,0 +1,3 @@
+per_page,page,include_totals,from,take,strategy,name,fields,include_fields
+"100","0","false","","50","[]","","","true"
+"50","1","true","","100","['auth0']","conn","name","false"

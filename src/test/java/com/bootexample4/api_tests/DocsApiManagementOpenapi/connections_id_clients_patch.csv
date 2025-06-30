@@ -1,0 +1,3 @@
+id,client_id,status
+"conn123","client1","true"
+"conn456","client2","false"

@@ -1,0 +1,2 @@
+id,user_id_attribute,mapping
+"1234","userId","[{""auth0"":""email"",""scim"":""userName""},{""auth0"":""name"",""scim"":""displayName""}]"

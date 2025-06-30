@@ -1,0 +1,3 @@
+requestBody
+"{""colors"":{""primary"":""#FF5733"",""page_background"":""#FFFFFF""},""favicon_url"":""https://example.com/favicon.ico"",""logo_url"":""https://example.com/logo.png"",""font"":{""url"":""https://example.com/font.ttf""}}"
+"{""colors"":{""primary"":""#123456"",""page_background"":{""type"":""linear-gradient"",""start"":""#FFFFFF"",""end"":""#000000"",""angle_deg"":35}},""favicon_url"":""https://example.com/favicon.ico"",""logo_url"":""https://example.com/logo.png"",""font"":{""url"":""https://example.com/font.ttf""}}"

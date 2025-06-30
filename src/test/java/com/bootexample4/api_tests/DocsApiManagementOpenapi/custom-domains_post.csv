@@ -1,0 +1,3 @@
+domain,type,verification_method,tls_policy,custom_client_ip_header
+"login.mycompany.com","auth0_managed_certs","txt","recommended","true-client-ip"
+"secure.mycompany.com","self_managed_certs","txt","recommended","cf-connecting-ip"

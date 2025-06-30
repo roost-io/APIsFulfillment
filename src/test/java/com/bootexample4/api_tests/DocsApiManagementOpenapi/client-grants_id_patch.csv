@@ -1,0 +1,3 @@
+id,scope,organization_usage,allow_any_organization
+"123","['read', 'write']","allow","true"
+"456","['admin']","deny","false"

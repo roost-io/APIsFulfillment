@@ -1,0 +1,3 @@
+id,scopes,token_lifetime
+"""123""","[""read"",""write""]","3600"
+"""456""","[""read""]","7200"
