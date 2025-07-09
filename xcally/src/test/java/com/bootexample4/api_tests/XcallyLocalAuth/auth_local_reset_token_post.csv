@@ -1,0 +1,13 @@
+token,password
+"valid_reset_token_123","newPassword123"
+"another_valid_token","strongPassword456"
+"reset_token_abc","myNewSecurePass"
+"valid_reset_token_123","newPassword123"
+"another_valid_token","strongPassword456"
+"valid_reset_token_123","P@ssw0rd!@#"
+"another_valid_token","$pecial&Ch@rs123"
+"reset_token_abc","Complex!P@ssw0rd$"
+"valid_reset_token_123","ThisIsAVeryLongPasswordThatContainsMoreThan50CharactersToTestTheSystemBehavior"
+"another_valid_token","AnotherExtremelyLongPasswordWithSpecialCharacters!@#$%^&*()1234567890"
+"valid_reset_token_123","1234567890"
+"another_valid_token","9876543210"

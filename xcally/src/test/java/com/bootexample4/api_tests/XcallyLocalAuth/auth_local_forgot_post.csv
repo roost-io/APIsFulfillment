@@ -1,0 +1,7 @@
+email,invalidValue
+"user@example.com","extraData"
+"test.user@domain.org","12345"
+"admin@company.co.uk","extraData"
+"support@service.net","12345"
+"valid@example.com","extraData"
+"user@domain.org","12345"
