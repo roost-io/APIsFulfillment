@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[1:19]","start":1752119929178,"end":1752119930853,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[1:19] 03:58:49.178-03:58:50.853 Get current user information - Success"},{"id":2,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[2:29]","start":1752119930860,"end":1752119931124,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[2:29] 03:58:50.860-03:58:51.124 Get current user information - Unauthorized"},{"id":3,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[3:37]","start":1752119931131,"end":1752119931371,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[3:37] 03:58:51.131-03:58:51.371 Get current user information - Invalid token"},{"id":4,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.1:56]","start":1752119931380,"end":1752119931646,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.1:56] 03:58:51.380-03:58:51.646 Get current user information with different auth scenarios","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.2:57]","start":1752119931656,"end":1752119931947,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.2:57] 03:58:51.656-03:58:51.947 Get current user information with different auth scenarios","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.3:58]","start":1752119931953,"end":1752119932721,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.3:58] 03:58:51.953-03:58:52.721 Get current user information with different auth scenarios","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.4:59]","start":1752119932729,"end":1752119932732,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[4.4:59] 03:58:52.729-03:58:52.732 Get current user information with different auth scenarios","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[5:61]","start":1752119932739,"end":1752119933002,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[5:61] 03:58:52.739-03:58:53.002 Validate response structure for successful request"},{"id":9,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[6:74]","start":1752119933007,"end":1752119933245,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[6:74] 03:58:53.007-03:58:53.245 Validate UUID format for user ID"},{"id":10,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[7:82]","start":1752119933252,"end":1752119933486,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/CircleCi\/me_get[7:82] 03:58:53.252-03:58:53.486 Validate response content type"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
