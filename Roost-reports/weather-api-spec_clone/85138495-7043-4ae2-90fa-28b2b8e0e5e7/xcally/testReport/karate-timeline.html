@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.1:73]","start":1752123686486,"end":1752123687691,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.1:73] 05:01:26.486-05:01:27.691 Get current weather data with valid parameters","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.2:73]","start":1752123687708,"end":1752123688067,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.2:73] 05:01:27.708-05:01:28.067 Get current weather data with valid parameters","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.3:73]","start":1752123688076,"end":1752123688429,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.3:73] 05:01:28.076-05:01:28.429 Get current weather data with valid parameters","className":"failed"},{"id":4,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.4:73]","start":1752123688436,"end":1752123688793,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[1.4:73] 05:01:28.436-05:01:28.793 Get current weather data with valid parameters","className":"failed"},{"id":5,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[2:75]","start":1752123688799,"end":1752123689144,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[2:75] 05:01:28.799-05:01:29.144 Get current weather data without language parameter","className":"failed"},{"id":6,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[3.1:130]","start":1752123689151,"end":1752123689169,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[3.1:130] 05:01:29.151-05:01:29.169 Get current weather data with error responses - Bad Request","className":"failed"},{"id":7,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[3.2:131]","start":1752123689176,"end":1752123689181,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[3.2:131] 05:01:29.176-05:01:29.181 Get current weather data with error responses - Bad Request","className":"failed"},{"id":8,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[4:133]","start":1752123689187,"end":1752123689599,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[4:133] 05:01:29.187-05:01:29.599 Get current weather data without API key - Unauthorized","className":"failed"},{"id":9,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[5:142]","start":1752123689605,"end":1752123689957,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[5:142] 05:01:29.605-05:01:29.957 Get current weather data with invalid API key - Unauthorized","className":"failed"},{"id":10,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[6:152]","start":1752123689963,"end":1752123690145,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[6:152] 05:01:29.963-05:01:30.145 Get current weather data with exceeded quota - Forbidden","className":"failed"},{"id":11,"group":1,"content":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[7:162]","start":1752123690151,"end":1752123690493,"title":"src\/test\/java\/com\/bootexample4\/api_tests\/Weather\/current.json_get[7:162] 05:01:30.151-05:01:30.493 Get current weather data without required parameter q","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
