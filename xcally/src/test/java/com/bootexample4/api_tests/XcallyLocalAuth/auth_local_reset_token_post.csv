@@ -1,0 +1,13 @@
+token,password
+"valid-reset-token-123","newPassword123!"
+"another-valid-token","SecurePass456@"
+"token-abc-def-ghi","MyNewPassword789#"
+"valid-token-1","SimplePass"
+"valid-token-2","Complex!Pass@123"
+"valid-token-3","12345678"
+"valid-token-4","password with spaces"
+"valid-token-5","UPPERCASE_PASSWORD"
+"valid-token-6","lowercase_password"
+"token-with-dashes-123","newPassword123!"
+"token_with_underscores_456","SecurePass456@"
+"token.with.dots.789","MyNewPassword789#"
