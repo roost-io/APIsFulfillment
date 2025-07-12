@@ -99,6 +99,19 @@
       <version>0.0.40</version>
       <!--Dependency added by RoostGPT-->
     </dependency>
+    <dependency>
+      <groupId>io.karatelabs</groupId>
+      <artifactId>karate-core</artifactId>
+      <version>1.5.1</version>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
+    <dependency>
+      <groupId>io.karatelabs</groupId>
+      <artifactId>karate-junit5</artifactId>
+      <version>1.5.1</version>
+      <scope>test</scope>
+      <!--Dependency added by RoostGPT-->
+    </dependency>
   </dependencies>
   <build>
     <plugins>
