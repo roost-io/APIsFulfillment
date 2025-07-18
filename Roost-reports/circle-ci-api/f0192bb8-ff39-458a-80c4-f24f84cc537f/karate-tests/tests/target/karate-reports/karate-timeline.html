@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"me_get[1:18]","start":1752844594078,"end":1752844594092,"title":"me_get[1:18] 13:16:34.078-13:16:34.092 Get current user information with API Key authentication","className":"failed"},{"id":2,"group":1,"content":"me_get[2:29]","start":1752844594097,"end":1752844594108,"title":"me_get[2:29] 13:16:34.097-13:16:34.108 Get current user information with Basic authentication","className":"failed"},{"id":3,"group":1,"content":"me_get[3:44]","start":1752844594113,"end":1752844594121,"title":"me_get[3:44] 13:16:34.113-13:16:34.121 Get current user information with query parameter authentication","className":"failed"},{"id":4,"group":1,"content":"me_get[4:55]","start":1752844594125,"end":1752844594130,"title":"me_get[4:55] 13:16:34.125-13:16:34.130 Get current user information with invalid API Key authentication","className":"failed"},{"id":5,"group":1,"content":"me_get[5:62]","start":1752844594135,"end":1752844594140,"title":"me_get[5:62] 13:16:34.135-13:16:34.140 Get current user information with invalid Basic authentication","className":"failed"},{"id":6,"group":1,"content":"me_get[6:70]","start":1752844594144,"end":1752844594149,"title":"me_get[6:70] 13:16:34.144-13:16:34.149 Get current user information with invalid query parameter authentication","className":"failed"},{"id":7,"group":1,"content":"me_get[7:77]","start":1752844594153,"end":1752844594157,"title":"me_get[7:77] 13:16:34.153-13:16:34.157 Get current user information without authentication","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
