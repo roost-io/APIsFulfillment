@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"employees_get[1.1:28]","start":1753439670441,"end":1753439671551,"title":"employees_get[1.1:28] 10:34:30.441-10:34:31.551 Search Employees with valid and invalid searchString query parameter","className":"failed"},{"id":2,"group":1,"content":"employees_get[1.2:29]","start":1753439671556,"end":1753439672612,"title":"employees_get[1.2:29] 10:34:31.556-10:34:32.612 Search Employees with valid and invalid searchString query parameter","className":"failed"},{"id":3,"group":1,"content":"employees_get[1.3:30]","start":1753439672617,"end":1753439673424,"title":"employees_get[1.3:30] 10:34:32.617-10:34:33.424 Search Employees with valid and invalid searchString query parameter","className":"failed"},{"id":4,"group":1,"content":"employees_get[1.4:31]","start":1753439673429,"end":1753439674165,"title":"employees_get[1.4:31] 10:34:33.429-10:34:34.165 Search Employees with valid and invalid searchString query parameter","className":"failed"},{"id":5,"group":1,"content":"employees_get[2:33]","start":1753439674170,"end":1753439675237,"title":"employees_get[2:33] 10:34:34.170-10:34:35.237 Validate response schema and data types for 200 status code"},{"id":6,"group":1,"content":"employees_get[3:44]","start":1753439675240,"end":1753439676036,"title":"employees_get[3:44] 10:34:35.240-10:34:36.036 Make request with missing required fields and validate error response for 400 status code","className":"failed"},{"id":7,"group":1,"content":"employees_id_get[1.1:38]","start":1753439667134,"end":1753439668216,"title":"employees_id_get[1.1:38] 10:34:27.134-10:34:28.216 Retrieve Employee by valid ID"},{"id":8,"group":1,"content":"employees_id_get[2.1:48]","start":1753439668220,"end":1753439669284,"title":"employees_id_get[2.1:48] 10:34:28.220-10:34:29.284 Retrieve Employee with invalid or non-existent ID","className":"failed"},{"id":9,"group":1,"content":"employees_id_get[2.2:49]","start":1753439669289,"end":1753439670348,"title":"employees_id_get[2.2:49] 10:34:29.289-10:34:30.348 Retrieve Employee with invalid or non-existent ID","className":"failed"},{"id":10,"group":1,"content":"employees_post[1:19]","start":1753439661343,"end":1753439663363,"title":"employees_post[1:19] 10:34:21.343-10:34:23.363 Add a new employee with valid details"},{"id":11,"group":1,"content":"employees_post[2.1:46]","start":1753439663372,"end":1753439664559,"title":"employees_post[2.1:46] 10:34:23.372-10:34:24.559 Test invalid input for employee creation","className":"failed"},{"id":12,"group":1,"content":"employees_post[2.2:47]","start":1753439664567,"end":1753439665547,"title":"employees_post[2.2:47] 10:34:24.567-10:34:25.547 Test invalid input for employee creation","className":"failed"},{"id":13,"group":1,"content":"employees_post[2.3:48]","start":1753439665553,"end":1753439666522,"title":"employees_post[2.3:48] 10:34:25.553-10:34:26.522 Test invalid input for employee creation","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
