@@ -1,0 +1,155 @@
+openapi: 3.0.0
+info:
+  title: Credit Card Information and Payment Management API
+  version: 1.0.0
+  description: API for managing credit card information, payments, and arranging calls for overdue balances.
+
+servers:
+  - url: https://api.creditcardmanagement.com/v1
+
+paths:
+  /credit-card-info/{cardNumber}:
+    get:
+      summary: Fetch credit card due date and balance
+      description: Retrieve information for a given credit card number, including due date and balance.
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          example: "1234-5678-9012-3456"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreditCardInfo'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - BearerAuth: []
+
+  /check-card-status/{cardNumber}:
+    get:
+      summary: Check card status and arrange call if necessary
+      description: Check the status of a credit card and arrange a call if the balance is unpaid and overdue.
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          example: "2468-1357-8642-9753"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CardStatus'
+      security:
+        - BearerAuth: []
+
+  /update-balance/{cardNumber}:
+    post:
+      summary: Update card balance after payment
+      description: Update the balance of a credit card after a payment is made.
+      parameters:
+        - name: cardNumber
+          in: path
+          required: true
+          schema:
+            type: string
+          example: "1234-5678-9012-3456"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UpdatedBalance'
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      security:
+        - BearerAuth: []
+
+components:
+  schemas:
+    CreditCardInfo:
+      type: object
+      properties:
+        due_date:
+          type: string
+          format: date
+        balance:
+          type: number
+          format: float
+      required:
+        - due_date
+        - balance
+
+    CardStatus:
+      type: object
+      properties:
+        call_arranged:
+          type: boolean
+        balance:
+          type: number
+          format: float
+        due_date:
+          type: string
+          format: date
+      required:
+        - call_arranged
+        - balance
+        - due_date
+
+    PaymentRequest:
+      type: object
+      properties:
+        amount:
+          type: number
+          format: float
+      required:
+        - amount
+
+    UpdatedBalance:
+      type: object
+      properties:
+        balance:
+          type: number
+          format: float
+      required:
+        - balance
+
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+security:
+  - BearerAuth: []
