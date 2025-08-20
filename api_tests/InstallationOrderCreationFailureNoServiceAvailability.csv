@@ -1,0 +1,11 @@
+addressId^|^statusCode^|^scenario
+1234567890^|^200^|^geographicAddress
+9876543210^|^404^|^geographicAddress
+2468135790^|^200^|^addressComplements
+1357924680^|^403^|^addressComplements
+3692581470^|^201^|^productOrder
+7539514682^|^400^|^productOrder
+8642097531^|^500^|^geographicAddress
+5793146820^|^429^|^addressComplements
+4680213579^|^503^|^productOrder
+9517534682^|^504^|^geographicAddress

@@ -1,0 +1,11 @@
+addressId^|^appointmentId^|^statusCode^|^scenario
+12345678^|^APT-20230601-001^|^201^|^Successful appointment creation
+87654321^|^APT-20230602-002^|^400^|^Bad request - Invalid appointment data
+23456789^|^APT-20230603-003^|^201^|^Successful appointment creation with address change
+34567890^|^APT-20230604-004^|^403^|^Forbidden - Unauthorized access attempt
+45678901^|^APT-20230605-005^|^201^|^Successful appointment creation for installation
+56789012^|^APT-20230606-006^|^404^|^Not found - Invalid address ID
+67890123^|^APT-20230607-007^|^201^|^Successful appointment creation for technical support
+78901234^|^APT-20230608-008^|^429^|^Too many requests - Rate limit exceeded
+89012345^|^APT-20230609-009^|^201^|^Successful appointment creation with priority flag
+90123456^|^APT-20230610-010^|^500^|^Internal server error during appointment creation
