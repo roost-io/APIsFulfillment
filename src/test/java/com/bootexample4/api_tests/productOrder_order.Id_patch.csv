@@ -1,0 +1,7 @@
+order.Id,appointment.date,appointment.hasSlot,appointment.mandatoryType,appointment.workOrderId,associatedDocument,correlationOrder,issue.action,issue.code,issue.observation,issue.updateDate,expectedStatus,expectedCode,expectedMessage,expectedType
+"20230315000001",2021,"true","Permitido","","VTT001","10","fechar","7016","Reagendamento por ausência",2021,"400","400","Bad Request","E"
+"20230315000001",2021,"true","Permitido","","VTT001","10","fechar","7029","Resolução de pendência de agendamento",2021,"400","400","Bad Request","E"
+"20230315000001",2021,"true","InvalidType","","VTT001","10","fechar","7016","Reagendamento por ausência",2021,"400","400","Bad Request","E"
+"20230315000001",2021,"true","Permitido","","VTT001","10","invalid","7029","Resolução de pendência de agendamento",2021,"404","404","Not Found","E"
+"20230315000001",2021,"true","Permitido","","VTT001","10","fechar","9999","Resolução de pendência de agendamento",2021,"400","400","Bad Request","E"
+"InvalidId",2021,"true","Permitido","","VTT001","10","fechar","7029","Resolução de pendência de agendamento",2021,"404","404","Not Found","E"
