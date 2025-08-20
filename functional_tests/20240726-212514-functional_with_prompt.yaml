@@ -1,0 +1,132 @@
+openapi: 3.0.0
+info:
+  title: API Specification Test Execution API
+  version: 1.0.0
+  description: API for executing tests on various API specifications
+
+servers:
+  - url: https://api.example.com/v1
+
+paths:
+  /api-specs/{specType}/execute-test:
+    post:
+      summary: Execute test for a specific API specification
+      parameters:
+        - name: specType
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [postman, artillery, swagger, openapi]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                testConfig:
+                  type: object
+                  description: Test configuration details
+      responses:
+        '202':
+          description: Test execution initiated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  executionId:
+                    type: string
+                  status:
+                    type: string
+                    enum: [initiated]
+        '400':
+          description: Bad request
+        '404':
+          description: API specification not found
+        '500':
+          description: Internal server error
+
+  /api-specs/{specType}/test-status/{executionId}:
+    get:
+      summary: Get the status of a test execution
+      parameters:
+        - name: specType
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [postman, artillery, swagger, openapi]
+        - name: executionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Test execution status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  executionId:
+                    type: string
+                  status:
+                    type: string
+                    enum: [in_progress, completed, failed]
+                  progress:
+                    type: number
+                    format: float
+                    minimum: 0
+                    maximum: 100
+        '404':
+          description: Test execution not found
+        '500':
+          description: Internal server error
+
+  /api-specs/{specType}/test-results/{executionId}:
+    get:
+      summary: Get the results of a completed test execution
+      parameters:
+        - name: specType
+          in: path
+          required: true
+          schema:
+            type: string
+            enum: [postman, artillery, swagger, openapi]
+        - name: executionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Test results retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  executionId:
+                    type: string
+                  status:
+                    type: string
+                    enum: [completed, failed]
+                  results:
+                    type: object
+                    description: Detailed test results
+        '404':
+          description: Test results not found or test execution still in progress
+        '500':
+          description: Internal server error
+
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+
+security:
+  - BearerAuth: []
