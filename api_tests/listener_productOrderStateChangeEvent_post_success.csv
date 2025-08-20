@@ -1,0 +1,11 @@
+subscriberId^|^date^|^associatedDocument^|^code^|^correlationOrder^|^description^|^id^|^type
+123456789^|^2022-01-01T18:42:24.641-03:00^|^ABC123^|^5^|^10^|^Order Completed Successfully^|^20230315000001^|^Cancellation
+123456790^|^2022-01-02T18:42:24.641-03:00^|^ABC124^|^7^|^10^|^Order Cancelled^|^20230315000002^|^Completion
+123456791^|^2022-01-03T18:42:24.641-03:00^|^ABC125^|^2^|^10^|^Order Under Processing^|^20230315000003^|^Cancellation
+123456792^|^2022-01-04T18:42:24.641-03:00^|^ABC126^|^9^|^10^|^Order Document Verification^|^20230315000004^|^Completion
+123456793^|^2022-01-05T18:42:24.641-03:00^|^ABC127^|^1^|^10^|^Order Failed^|^20230315000005^|^Cancellation
+123456794^|^2022-01-06T18:42:24.641-03:00^|^ABC128^|^6^|^10^|^Order Success^|^20230315000006^|^Completion
+123456795^|^2022-01-07T18:42:24.641-03:00^|^ABC129^|^3^|^10^|^Order Review^|^20230315000007^|^Cancellation
+123456796^|^2022-01-08T18:42:24.641-03:00^|^ABC130^|^8^|^10^|^Order Placed^|^20230315000008^|^Completion
+123456797^|^2022-01-09T18:42:24.641-03:00^|^ABC131^|^0^|^10^|^Order Adjustment^|^20230315000009^|^Cancellation
+123456798^|^2022-01-10T18:42:24.641-03:00^|^ABC132^|^4^|^10^|^Order Completed^|^20230315000010^|^Completion
