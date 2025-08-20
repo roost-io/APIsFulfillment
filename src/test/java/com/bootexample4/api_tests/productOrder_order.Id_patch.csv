@@ -1,0 +1,3 @@
+order.Id,appointment.date,appointment.hasSlot,appointment.mandatoryType,appointment.workOrderId,associatedDocument,correlationOrder,issue.action,issue.code,issue.observation,issue.updateDate
+"20230315000001",2021,"true","Permitido","","VTT001","10","fechar","7016","Reagendamento por ausência",2021
+"20230315000001",2021,"true","Permitido","","VTT001","10","fechar","7029","Resolução de pendência de agendamento",2021
