@@ -1,0 +1,11 @@
+addressId^|^appointmentId^|^subscriberId^|^associatedDocument^|^orderType^|^productType^|^startDate^|^finishDate^|^order_Id^|^reason
+1^|^A123^|^S001^|^doc1^|^Installation^|^Internet^|^2022-01-01^|^2022-02-01^|^ORD1^|^Setup new connection
+2^|^A124^|^S002^|^doc2^|^Removal^|^TV^|^2022-02-01^|^2022-03-01^|^ORD2^|^End of subscription
+3^|^A125^|^S003^|^doc3^|^Relocation^|^Telephone^|^2022-03-01^|^2022-04-01^|^ORD3^|^Change of address
+4^|^A126^|^S004^|^doc4^|^Technical Call^|^Broadband^|^2022-04-01^|^2022-05-01^|^ORD4^|^Technical issue
+5^|^A127^|^S005^|^doc5^|^Installation^|^Fibre^|^2022-05-01^|^2022-06-01^|^ORD5^|^Upgrade to fibre
+6^|^A128^|^S006^|^doc6^|^Removal^|^Cable^|^2022-06-01^|^2022-07-01^|^ORD6^|^Switching to a new provider
+7^|^A129^|^S007^|^doc7^|^Relocation^|^Internet^|^2022-07-01^|^2022-08-01^|^ORD7^|^Moving to a new city
+8^|^A130^|^S008^|^doc8^|^Technical Call^|^TV^|^2022-08-01^|^2022-09-01^|^ORD8^|^Signal issue
+9^|^A131^|^S009^|^doc9^|^Installation^|^Telephone^|^2022-09-01^|^2022-10-01^|^ORD9^|^New line setup
+10^|^A132^|^S010^|^doc10^|^Removal^|^Broadband^|^2022-10-01^|^2022-11-01^|^ORD10^|^Closure of business
