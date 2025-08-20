@@ -1,0 +1,12 @@
+order.Id,associatedDocument,subscriberId,statusCode,scenario
+ORD123,"VTT001","SVTAL001",200,Success
+ORD124,"DOC002","SUB002",400,Bad Request
+ORD125,"DOC003","SUB003",401,Unauthorized
+ORD126,"DOC004","SUB004",403,Forbidden - Scope Not Permitted
+ORD127,"DOC005","SUB005",404,Not Found
+ORD128,"DOC006","SUB006",406,Not Found
+ORD129,"DOC007","SUB007",423,Locked
+ORD130,"DOC008","SUB008",429,Too Many Requests - Exceeded Quota
+ORD131,"DOC009","SUB009",500,Internal Server Error
+ORD132,"DOC010","SUB010",503,Service Unavailable
+ORD133,"DOC011","SUB011",504,Gateway Timeout
