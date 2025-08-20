@@ -1,0 +1,11 @@
+subscriberId^|^addressId^|^complementType^|^complementDescription^|^complementValue
+ID1234567890123^|^ADDR001^|^CT1^|^Extended area^|^20.5
+ID1234567890124^|^ADDR002^|^CT2^|^Left wing^|^15.0
+ID1234567890125^|^ADDR003^|^CT3^|^Right wing^|^45.0
+ID1234567890126^|^ADDR004^|^CT4^|^Main hall^|^50.0
+ID1234567890127^|^ADDR005^|^CT1^|^Basement^|^75.0
+ID1234567890128^|^ADDR006^|^CT2^|^Upper floor^|^65.0
+ID1234567890129^|^ADDR007^|^CT3^|^Lower floor^|^55.0
+ID1234567890130^|^ADDR008^|^CT4^|^Rooftop^|^85.0
+ID1234567890131^|^ADDR009^|^CT1^|^Parking lot^|^30.0
+ID1234567890132^|^ADDR010^|^CT2^|^Garden area^|^25.0
