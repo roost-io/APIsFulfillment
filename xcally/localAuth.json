@@ -85,27 +85,21 @@
                       "type": "string",
                       "description": "user call status"
                     },
-                    "token": {
+                    "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "user id"
+                    },
+                    "statusCall": {
                       "type": "string",
-                      "description": "jwt for authenticated calls"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/Unauthorized"
-          },
-          "500": {
-            "$ref": "#/components/responses/InternalServerError"
-          }
-        }
-      }
-    },
-    "/auth/local/forgot": {
-      "post": {
-        "summary": "Creates a new password reset token",
+                      "description": "user call status"
+                    },
+                    "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "user id"
+                    },
+              ates a new password reset token",
         "operationId": "localForgotPassword",
         "tags": [
           "Authentication"
