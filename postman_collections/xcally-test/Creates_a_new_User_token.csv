@@ -1,0 +1,11 @@
+name,password,statusCode,scenario
+"John Doe","password123",201,"login success"
+"Jane Smith","securePass456",401,"Unauthorized error"
+"Alice Johnson","strongPwd789",500,"Internal server error"
+"Bob Wilson","weakPass",401,"Unauthorized error"
+"Eva Brown","p@ssw0rd!",201,"login success"
+"Mike Davis","123456",401,"Unauthorized error"
+"Sarah Lee","qwerty",500,"Internal server error"
+"Tom Jackson","letmein",401,"Unauthorized error"
+"Emily White","admin123",201,"login success"
+"Chris Green","welcome1",500,"Internal server error"
