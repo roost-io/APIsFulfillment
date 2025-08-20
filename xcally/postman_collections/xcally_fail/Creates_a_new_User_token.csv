@@ -1,0 +1,7 @@
+name,password,statusCode,scenario
+"John Doe","password1",201,"login success"
+"Jane Doe","password2",401,"Unauthorized error"
+"Random User","randompassword",500,"Internal server error"
+"Test User","testpassword",201,"login success"
+"Unauthorized User","unauthpassword",401,"Unauthorized error"
+"ServerError User","servererrorpassword",500,"Internal server error"
