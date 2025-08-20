@@ -1,0 +1,11 @@
+symbol^|^apikey^|^function^|^statusCode^|^scenario
+AAPL^|^123456789^|^time_series_daily^|^200^|^Scenario1
+MSFT^|^987654321^|^time_series_weekly^|^200^|^Scenario2
+GOOGL^|^456789123^|^time_series_monthly^|^200^|^Scenario3
+AMZN^|^321654987^|^time_series_daily^|^200^|^Scenario4
+FB^|^654321789^|^time_series_weekly^|^200^|^Scenario5
+TSLA^|^789123456^|^time_series_monthly^|^200^|^Scenario6
+NFLX^|^123789456^|^time_series_daily^|^200^|^Scenario7
+NVDA^|^456123789^|^time_series_weekly^|^200^|^Scenario8
+PYPL^|^789456123^|^time_series_monthly^|^200^|^Scenario9
+AMD^|^321789654^|^time_series_daily^|^200^|^Scenario10
