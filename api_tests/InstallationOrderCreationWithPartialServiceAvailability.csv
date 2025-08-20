@@ -1,0 +1,11 @@
+fileName^|^url^|^methodType^|^responseCode^|^responseType^|^responseMessage
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^201^|^S^|^Appointment created successfully
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^400^|^E^|^Invalid request parameters
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/12345^|^get^|^200^|^S^|^Address details retrieved
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/67890^|^get^|^404^|^E^|^Address not found
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/54321^|^get^|^200^|^S^|^Address complements retrieved
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/addressComplements/98765^|^get^|^429^|^E^|^Too many requests
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^201^|^S^|^Product order created successfully
+PRODUCTORDERING_V2_E3ABAC83BD^|^/productOrder^|^post^|^403^|^E^|^Forbidden access
+APPOINTMENT_V2_80D7DADBB1^|^/appointment^|^post^|^503^|^E^|^Service temporarily unavailable
+GEOGRAPHICADDRESSMANAGEMENT_V1_E8356B219B^|^/geographicAddress/13579^|^get^|^500^|^E^|^Internal server error
