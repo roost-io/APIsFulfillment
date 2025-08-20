@@ -1,0 +1,7 @@
+date,subscriberId,id,correlationOrder,associatedDocument,code,description,type,observation,updateDate,action,task,fieldActivity,reason,lostEquipment,gponAccess,device,item,statusCode,scenario
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Successful installation","Instalacao","All checks passed","2021-06-10","adicionar","Installation","FTTH","NA","NA","Yes","ONT","BL_200MB",204,"Success"
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Invalid document","Instalacao","Mismatch in document","2021-06-10","adicionar","Installation","FTTH","Invalid document","NA","Yes","ONT","BL_200MB",400,"BadRequest"
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Unauthorized access","Instalacao","Unauthorized user attempted access","2021-06-10","adicionar","Installation","FTTH","Unauthorized access","NA","No","ONT","BL_200MB",401,"Unauthorized"
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Server error","Instalacao","Error during processing","2021-06-10","adicionar","Installation","FTTH","Server error","NA","Yes","ONT","BL_200MB",500,"ServerError"
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Service unavailable","Instalacao","Service down for maintenance","2021-06-10","adicionar","Installation","FTTH","Service maintenance","NA","No","ONT","BL_200MB",503,"Unavailable"
+"2021-06-09","SVTAL001","14393","10","VTT001","616551","Timeout occurred","Instalacao","Request timed out","2021-06-10","adicionar","Installation","FTTH","Timeout error","NA","Yes","ONT","BL_200MB",504,"Timeout"
