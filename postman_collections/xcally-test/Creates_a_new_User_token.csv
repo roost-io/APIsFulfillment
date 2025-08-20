@@ -1,0 +1,11 @@
+name,password,statusCode,scenario
+"John Doe","password123",201,"login success"
+"Jane Smith","securePass456",201,"login success"
+"Invalid User","wrongPassword789",401,"Unauthorized error"
+"Error User","serverErrorPass",500,"Internal server error"
+"Alice Johnson","alicePass789",201,"login success"
+"Bob Wilson","bobSecure123",201,"login success"
+"Hacker Attempt","sqlInjection1",401,"Unauthorized error"
+"System Crash","crashTest123",500,"Internal server error"
+"Emma Brown","emmaBrown2023",201,"login success"
+"Invalid Input","!@#$%^&*()",401,"Unauthorized error"
