@@ -1,0 +1,11 @@
+ Thank you for providing the context and instructions. Here is the generated CSV data using the provided set of variables:
+
+name,password,statusCode,scenario
+John,Do1,201,Successful login
+Mary,M8y,201,Successful login
+Bob,B0b,401,Unauthorized error
+Alice,Al1ce,401,Unauthorized error
+Dave,D4v3,200,valid helper string
+Jane,J4yn33,500,Internal server error
+```
+        Keep
